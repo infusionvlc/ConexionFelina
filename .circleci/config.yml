@@ -1,0 +1,61 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+       - image: circleci/ruby:2.4.1-node-browsers
+         environment:
+           DATABASE_URL: "postgres://conexion_felina@localhost/conexion_felina-test"
+           PGHOST: 127.0.0.1
+           PGUSER: root
+           RAILS_ENV: test
+           RACK_ENV: test
+       - image: postgres:9.5-alpine
+         environment:
+            POSTGRES_USER: conexion_felina
+            POSTGRES_DB: conexion_felina-test
+
+    working_directory: ~/conexion_felina
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      # Database setup
+      - run:
+          name: setup db
+          command: |
+            bundle exec rake db:create
+            bundle exec rake db:migrate
+            bundle exec rake db:schema:load
+
+      # run tests!
+      - run:
+          name: run tests
+          command: |
+            rails test
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: conexionfelina
