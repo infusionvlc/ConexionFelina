@@ -1,0 +1,16 @@
+es:
+  landing:
+    work:
+      intro: 'Somos un equipo de voluntarios que dedicamos parte de nuestro tiempo libre a cuidar de la Colonia de los gatos de los Jardines de Viveros.'
+      labor: 'Nuestra labor consiste en:'
+      sterilize: 
+        title: 'Esterilizar'
+        paragraph1: 'Para evitar la sobrepoblación felina en la ciudad es muy importante controlar el crecimiento de la Colonia de manera sostenible.'
+        paragraph2: 'De este modo evitamos que los gatos sufran, ya que son animales muy territoriales y además se enfrentan a muchas amenazas externas constantemente.'
+      coexist: 
+        title: 'Convivir'
+        paragraph1: 'Nuestra colonia es sociable e inofensiva gracias al trabajo y los cuidados de los voluntarios que dedican tiempo a jugar con ellos cada día.'
+        paragraph2: 'No tengas miedo a conocer a los gatos, pero respeta siempre su espacio. El parque es su hogar y debemos aprender a convivir con ellos.'
+      care: 
+        title: 'Cuidar'
+        paragraph1: 'Los voluntarios conocen el nombre y el carácter cada miembro de la colonia y, por lo tanto, también sus dolencias y necesidades. '
