@@ -1,5 +1,29 @@
 es:
   landing:
+    shared:
+      default_button: 'Ir'
+    collaborate:
+      intro:
+        title: 'Colabora'
+        text_1: 'Nuestra misión es posible gracias a la ayuda de la comunidad. Personas como tú que reconocen la importancia de la diversidad, del respeto y de la convivencia.  Y sobretodo con los seres indefensos e invisibilizados en nuestra sociedad.'
+        text_2: 'Necesitamos tu ayuda, la de tu prima y la de tu vecino del cuarto. No te preocupes, existen distintas formas para hacerlo.'
+      sponsor:
+        title: 'Apadrina'
+        text:  'Dentro de la Colonia hay espíritus indomables, que viven en libertad y no se pueden adaptar a un nuevo hogar fácilmente. A ellos también puedes ayudarles apadrinándolos para asegurarles una vida digna.'
+      adopt:
+        title: 'Adopta'
+        text:  'A nuestra colonia muchas veces llegan gatos cuya misión siempre ha sido cuidar del hogar en el que vivían y han sido abandonados. Estos tienen menos posibilidades de sobrevivir y adaptarse a la vida fuera de casa. Por eso es necesario ubicarlos en un nuevo hogar donde pueda proteger a su nueva familia.'
+      donate:
+        title: 'Dona'
+        text:  'Liga Gatuna sigue combatiendo las fuerzas del mal que perturban el orden en Valencia gracias a los donativos que aseguran su bienestar y control. Tú también puedes formar parte de la comunidad que apoya a estos súper héroes.'
+      volunteer:
+        title: 'Hazte voluntario'
+        text: 'La Liga Gatuna te necesita. Cuidar de estos súper héroes es muy gratificante y con apenas una pequeña parte de tu tiempo puedes generar un gran impacto social. '
+      form:
+        email:  'Email'
+        name:  'Nombre'
+        message: 'Mensaje'
+        submit: 'Enviar'
     work:
       intro: 'Somos un equipo de voluntarios que dedicamos parte de nuestro tiempo libre a cuidar de la Colonia de los gatos de los Jardines de Viveros.'
       labor: 'Nuestra labor consiste en:'
