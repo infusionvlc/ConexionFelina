@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
   def home; end
 
-  def join; end
-
-  def contact; end
+  def collaborate; end
 
   def about; end
 
