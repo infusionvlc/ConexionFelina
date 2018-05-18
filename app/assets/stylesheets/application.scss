@@ -15,6 +15,78 @@
  */
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Zilla+Slab:400,600i,700');
+
+
+/* PALETA */
+
+:root {
+  --sky: #354093;
+  --heaven: #F7F2BF;
+  --eter: #FAFAFA;
+  --shadow: #F2F2F2;
+  --fire: #E8654D;
+  --sea: #68C1BD;
+  --sun: #ECBB3B;
+  --blackish: #9f9f9f;
+}
+
+/* FIN PALETA */
+
+body {
+	color: var(--sky);
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+	overflow-x: hidden;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+footer {
+	bottom: 0px;
+	padding: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	margin-bottom: 0.8em;
+}
+
+section {
+	padding-top: 6em;
+	padding-bottom: 6em;
+}
+
+.action-button {
+  background: var(--fire);
+  border-radius: 50px;
+  color: var(--eter);
+  cursor: pointer; /* mouse se convierte a mano */
+  display: inline-block;
+  font-size: 1.5em;
+  margin-top: 4em;
+  padding: 1em;
+  text-align: center;
+  transition: all 0.5s ease; /* activamos animaciones */
+  width: 60%;
+}
+
+.action-button:hover {
+	background: var(--sky); /* animamos el color */
+	color: var(--eter);
+}
+
+.brand-logo {
+	height: 8em;
+	margin-bottom: -40%;
+}
+
+.breathe {
+  display: block;
+  height: 8em;
+}
 
 .cat-avatar {
 	padding: 2em;
@@ -22,9 +94,110 @@
 }
 
 .center {
-	text-align: center;	
+	text-align: center;
+}
+
+.container {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.eter-section {
+	background: var(--eter);
+}
+
+.flex-center {
+	align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.grey-section {
+	background: var(--shadow);
+}
+
+.huge-title {
+	font-size: 3em;
+}
+
+.landing-illustration {
+	width: 50%;
+}
+
+.left-margin { /* HOJAS */
+  position: fixed; /* paralax */
+  left: -75px;
+  top: 0%;
+  width: 200px;
+  z-index: 999; /* para que estén por encima de todo */
+}
+
+.min-spacing {
+	margin-bottom: 0.1em;
+}
+
+.navbar-nav {
+	align-items: center;
+	font-family: 'Raleway', sans-serif;
+	font-style: italic;
+	font-variant-caps: all-petite-caps;
+	font-size: 1.2em;
+	font-weight: 600;
+	justify-content: center;
+	overflow-y: visible;
+	padding: 1.5em;
+	width: 100%;
+}
+
+.nav-item {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.orange {
+	color: var(--fire);
+	font-family: 'Zilla Slab', serif;
+	font-size: 1.8em;
+}
+
+.orange-title {
+	color: var(--fire);
+	font-size: 2em;
 }
 
 .padding-top {
 	padding-top: 3em;
 }
+
+.right-margin { /* HOJAS */
+  position: fixed; /* paralax */
+  right: -75px;
+  top: 0%;
+  width: 200px;
+  z-index: 999; /* para que estén por encima de todo */
+}
+
+
+/* MEDIA QUERIES PARA LAS HOJAS */
+
+@media only screen and (max-width: 950px) {
+  .left-margin, .right-margin {
+    width: 120px;
+  }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 1075px) {
+  .left-margin, .right-margin {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 1076px) {
+  .left-margin, .right-margin {
+    width: 200px;
+  }
+}
+
+/* FIN MEDIA QUERIES PARA LAS HOJAS */

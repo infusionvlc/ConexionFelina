@@ -2,6 +2,7 @@ es:
   landing:
     shared:
       default_button: 'Ir'
+      action_button: '¡Vamos!'
     collaborate:
       intro:
         title: 'Colabora'
@@ -27,17 +28,45 @@ es:
     work:
       intro: 'Somos un equipo de voluntarios que dedicamos parte de nuestro tiempo libre a cuidar de la Colonia de los gatos de los Jardines de Viveros.'
       labor: 'Nuestra labor consiste en:'
-      sterilize: 
+      sterilize:
         title: 'Esterilizar'
         paragraph1: 'Para evitar la sobrepoblación felina en la ciudad es muy importante controlar el crecimiento de la Colonia de manera sostenible.'
         paragraph2: 'De este modo evitamos que los gatos sufran, ya que son animales muy territoriales y además se enfrentan a muchas amenazas externas constantemente.'
-      coexist: 
+      coexist:
         title: 'Convivir'
         paragraph1: 'Nuestra colonia es sociable e inofensiva gracias al trabajo y los cuidados de los voluntarios que dedican tiempo a jugar con ellos cada día.'
         paragraph2: 'No tengas miedo a conocer a los gatos, pero respeta siempre su espacio. El parque es su hogar y debemos aprender a convivir con ellos.'
-      care: 
+      care:
         title: 'Cuidar'
         paragraph1: 'Los voluntarios conocen el nombre y el carácter cada miembro de la colonia y, por lo tanto, también sus dolencias y necesidades. '
     league:
       intro: 'La Liga Gatuna está formada por más de 40 miembros con habilidades excepcionales: escaladores, cazadores, espías, ninjas, luchadores… '
       subtitle: 'Conócelos bajo tu propia responsabilidad. Corres el peligro de enamorarte de ellos.'
+    home:
+      intro: 'La ciudad de Valencia amanece cada día bajo la amenaza de plagas, intrusos y roedores con el único propósito de destruir nuestras zonas verdes y propagar las fuerzas del mal.'
+      intro2: 'Pero Súper Covi y la Liga Gatuna están aquí para protegernos.'
+      plagues:
+        title: 'Bye bye plagas'
+        paragraph1: 'Mientras dormimos Súper Covi y su equipo se esfuerzan por defender nuestra ciudad contra los intrusos.'
+        paragraph2: 'Su labor hace posible que se utilicen menos pesticidas en las zonas verdes y que sean más seguras para los más pequeños, ya que se mantienen las plagas controladas.'
+      heroes:
+        title: 'Héroes de noche, compañeros de día'
+        paragraph1: 'En sus ratos de descanso durante el día el equipo se encarga de hacernos compañía y saben bien cómo hacernos reír.'
+      example:
+        title: 'Un ejemplo a seguir'
+        paragraph1: 'Tienen el superpoder de hacernos mejores personas y ser más compasivos.'
+        paragraph2: 'Su carácter también nos enseña a ser independientes.'
+      power:
+        title: 'El poder sanador del purr'
+        paragraph1: 'Cuidar gatos mejora la salud física y mental de quienes se preocupan por ellos.'
+        paragraph2: 'Son animales muy agradecidos y ayudan a combatir la soledad y la depresión con su ronroneo y sus muestras de afecto.'
+        paragraph3: 'Además, disminuyen el riesgo de enfermedades cardiovasculares, los trastornos del sueño y la ansiedad.'
+      guardian:
+        title: 'Guardianes de los jardines'
+        paragraph1: 'Nuestros aliados felinos vigilan que los roedores traviesos no devoren los frutos y plantas de las zonas verdes.'
+      adorable:
+        title: '¡Ah, y también son adorables!'
+      society:
+        title: 'Respetar a los animales es propio de una sociedad civilizada'
+        paragraph1: 'Estas son solo algunas de las razones por las que debemos cuidar de los gatos de nuestra ciudad.'
+      action: 'Si quieres saber más sobre nuestra campaña pulsa aquí.'
