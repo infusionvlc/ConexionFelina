@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516165945) do
+ActiveRecord::Schema.define(version: 20180516170345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adoptions", force: :cascade do |t|
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "assignments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cats", force: :cascade do |t|
     t.string "name"
@@ -28,6 +39,13 @@ ActiveRecord::Schema.define(version: 20180516165945) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "colonies", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "donations", force: :cascade do |t|
     t.integer "amount"
     t.date "date"
@@ -35,7 +53,26 @@ ActiveRecord::Schema.define(version: 20180516165945) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posesions", force: :cascade do |t|
+  create_table "illnesses", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "priority"
+    t.text "treatment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.decimal "longitude"
+    t.decimal "latitude"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posessions", force: :cascade do |t|
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -54,6 +91,49 @@ ActiveRecord::Schema.define(version: 20180516165945) do
     t.date "last_payment_date"
     t.integer "amount"
     t.boolean "renovate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sufferings", force: :cascade do |t|
+    t.date "diagnosis_date"
+    t.text "notes"
+    t.boolean "chronic"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "treatment_entries", force: :cascade do |t|
+    t.date "date"
+    t.integer "treatment"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "turns", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "pass"
+    t.integer "role"
+    t.text "bio"
+    t.string "avatar"
+    t.integer "purrs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
