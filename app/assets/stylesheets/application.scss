@@ -127,6 +127,7 @@ section {
 }
 
 .left-margin { /* HOJAS */
+	pointer-events: none;
   position: fixed; /* paralax */
   left: -75px;
   top: 0%;
@@ -172,6 +173,7 @@ section {
 }
 
 .right-margin { /* HOJAS */
+	pointer-events: none;
   position: fixed; /* paralax */
   right: -75px;
   top: 0%;
