@@ -5,8 +5,8 @@ class CreateCats < ActiveRecord::Migration[5.1]
       t.text :bio
       t.text :avatar
       t.date :birthdate_date
-      t.string :gender
-      t.string :sterilized
+      t.integer :gender
+      t.integer :sterilized
       t.date :abandoned_date
       t.string :document
 

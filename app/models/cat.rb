@@ -1,4 +1,4 @@
 class Cat < ApplicationRecord
-    enum gender: [:Male, :Famale, :Unknown]
-    enum sterilized: [:Yes, :No, :Unknown]
+    enum gender: [:male, :female]
+    enum sterilized: [:yes, :no]
 end
