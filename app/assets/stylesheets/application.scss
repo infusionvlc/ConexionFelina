@@ -55,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	padding-top: 6em;
-	padding-bottom: 6em;
+	padding-top: 10em;
+	padding-bottom: 10em;
 }
 
 .action-button {
@@ -65,9 +65,10 @@ section {
   color: var(--eter);
   cursor: pointer; /* mouse se convierte a mano */
   display: inline-block;
-  font-size: 1.5em;
-  margin-top: 4em;
-  padding: 1em;
+  font-size: 1.3em;
+	margin-top: 4em;
+	margin-bottom: 6em;
+  padding: 0.5em;
   text-align: center;
   transition: all 0.5s ease; /* activamos animaciones */
   width: 60%;
@@ -126,6 +127,10 @@ section {
 	width: 50%;
 }
 
+.landing-illustration-mini {
+	width: 25%;
+}
+
 .left-margin { /* HOJAS */
 	pointer-events: none;
   position: fixed; /* paralax */
@@ -160,12 +165,12 @@ section {
 .orange {
 	color: var(--fire);
 	font-family: 'Zilla Slab', serif;
-	font-size: 1.8em;
+	font-size: 1.2em;
 }
 
 .orange-title {
 	color: var(--fire);
-	font-size: 2em;
+	font-size: 1.8em;
 }
 
 .padding-top {
@@ -181,13 +186,38 @@ section {
   z-index: 999; /* para que estén por encima de todo */
 }
 
+.spaced-bottom {
+	margin-bottom: 1em;
+}
+
+.video-container {
+	width: 70%;
+}
+
 
 /* MEDIA QUERIES PARA LAS HOJAS */
 
 @media only screen and (max-width: 950px) {
+
+	.action-button {
+		font-size: 1em;
+	}
+
+	.huge-title {
+		font-size: 2em;
+	}
+
+	.landing-illustration-mini {
+		width: 50%;
+	}
+
   .left-margin, .right-margin {
     width: 120px;
-  }
+	}
+
+	.video-container {
+		width: 100%;
+	}
 }
 
 @media only screen and (min-width: 951px) and (max-width: 1075px) {
