@@ -1,55 +1,73 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1><%= t 'landing.collaborate.intro.title' %></h1>
-      <p><%= t 'landing.collaborate.intro.text_1' %></p>
-      <p><%= t 'landing.collaborate.intro.text_2' %></p>
+<section class="row container">
+  <div class="col-sm-12">
+    <h1><%= t 'landing.collaborate.intro.title' %></h1>
+    <p><%= t 'landing.collaborate.intro.text_1' %></p>
+    <p><%= t 'landing.collaborate.intro.text_2' %></p>
+    <div class="center">
+      <img src="corazon.svg" class="landing-illustration" />
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <h1><%= t 'landing.collaborate.sponsor.title' %></h1>
-      <p><%= t 'landing.collaborate.sponsor.text' %></p>
-      <button type="button" class="btn btn-primary"><%= t 'landing.shared.default_button' %></button>
+</section>
+<section class="eter-section">
+  <div class="row container">
+    <div class="col-sm-12 col-md-4 flex-card">
+      <div class="flex-card-main">
+        <h1><%= t 'landing.collaborate.sponsor.title' %></h1>
+        <p><%= t 'landing.collaborate.sponsor.text' %></p>
+      </div>
+      <img src="apadrina.svg" class="full-width" />
+      <div class="center">
+        <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
+      </div>
     </div>
-    <div class="col-sm-12 col-md-4">
-      <h1><%= t 'landing.collaborate.adopt.title' %></h1>
-      <p><%= t 'landing.collaborate.adopt.text' %></p>
-      <button type="button" class="btn btn-primary"><%= t 'landing.shared.default_button' %></button>
+    <div class="col-sm-12 col-md-4 flex-card">
+      <div class="flex-card-main">
+        <h1><%= t 'landing.collaborate.adopt.title' %></h1>
+        <p><%= t 'landing.collaborate.adopt.text' %></p>
+      </div>
+      <img src="adopta.svg" class="full-width" />
+      <div class="center">
+        <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
+      </div>
     </div>
-    <div class="col-sm-12 col-md-4">
-      <h1><%= t 'landing.collaborate.donate.title' %></h1>
-      <p><%= t 'landing.collaborate.donate.text' %></p>
-      <button type="button" class="btn btn-primary"><%= t 'landing.shared.default_button' %></button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-12">
-      <h1><%= t 'landing.collaborate.volunteer.title' %></h1>
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <p><%= t 'landing.collaborate.volunteer.text' %></p>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <form>
-            <div class="form-group">
-              <label for="inputEmail"><%= t 'landing.collaborate.form.email' %></label>
-              <input type="email" class="form-control" id="inputEmail">
-            </div>
-            <div class="form-group">
-              <label for="inputName"><%= t 'landing.collaborate.form.name' %></label>
-              <input type="text" class="form-control" id="inputName">
-            </div>
-            <div class="form-group">
-              <label for="inputMessage"><%= t 'landing.collaborate.form.message' %></label>
-              <textarea class="form-control" id="inputMessage" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary"><%= t 'landing.collaborate.form.submit' %></button>
-          </form>
-        </div>
+    <div class="col-sm-12 col-md-4 flex-card">
+      <div class="flex-card-main">
+        <h1><%= t 'landing.collaborate.donate.title' %></h1>
+        <p><%= t 'landing.collaborate.donate.text' %></p>
+      </div>
+      <img src="dona.svg" class="full-width" />
+      <div class="center">
+        <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="row container">
+  <div class="col-sm-12">
+    <h1><%= t 'landing.collaborate.volunteer.title' %></h1>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <p><%= t 'landing.collaborate.volunteer.text' %></p>
+        <img src="adorables.svg" class="full-width" />
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="inputEmail"><%= t 'landing.collaborate.form.email' %></label>
+            <input type="email" class="form-control" id="inputEmail">
+          </div>
+          <div class="form-group">
+            <label for="inputName"><%= t 'landing.collaborate.form.name' %></label>
+            <input type="text" class="form-control" id="inputName">
+          </div>
+          <div class="form-group">
+            <label for="inputMessage"><%= t 'landing.collaborate.form.message' %></label>
+            <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary action-button"><%= t 'landing.collaborate.form.submit' %></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
