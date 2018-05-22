@@ -238,9 +238,18 @@ section {
 		width: 50%;
 	}
 
+	.landing-illustration {
+    width: 100% !important;
+  }
+
   .left-margin, .right-margin {
     width: 120px;
 	}
+
+	section {
+    padding-bottom: 4em;
+    padding-top: 4em;
+  }
 
 	.video-container {
 		width: 100%;
