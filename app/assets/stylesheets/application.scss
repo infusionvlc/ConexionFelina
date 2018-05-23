@@ -91,7 +91,7 @@ section {
 
 .breathe {
   display: block;
-  height: 3em;
+  height: 2em;
 }
 
 .cat-avatar {
@@ -160,6 +160,10 @@ section {
 
 .manifest li {
 	margin-bottom: 1em;
+}
+
+.medal {
+	width: 50%;
 }
 
 .medium-title {
@@ -243,6 +247,10 @@ section {
 
   .left-margin, .right-margin {
     width: 120px;
+	}
+
+	.medal {
+		width: 30% !important;
 	}
 
 	section {
