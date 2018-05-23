@@ -1,4 +1,4 @@
 class ColoniesUser < ApplicationRecord
 	belongs_to :colony
-	belong_to :user
+	belongs_to :user
 end

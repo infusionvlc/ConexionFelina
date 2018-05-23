@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516170345) do
+ActiveRecord::Schema.define(version: 20180523172628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "assignments", force: :cascade do |t|
@@ -31,8 +32,8 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.text "bio"
     t.text "avatar"
     t.date "birthdate_date"
-    t.string "gender"
-    t.string "sterilized"
+    t.integer "gender"
+    t.integer "sterilized"
     t.date "abandoned_date"
     t.string "document"
     t.datetime "created_at", null: false
@@ -46,11 +47,19 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "colonies_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "colony_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "donations", force: :cascade do |t|
     t.integer "amount"
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "illnesses", force: :cascade do |t|
@@ -76,6 +85,7 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -93,6 +103,7 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.boolean "renovate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "sufferings", force: :cascade do |t|
@@ -122,6 +133,13 @@ ActiveRecord::Schema.define(version: 20180516170345) do
   create_table "turns", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "turns_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "turn_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
