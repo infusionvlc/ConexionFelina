@@ -1,0 +1,2 @@
+class ColoniesUser < ApplicationRecord
+end
