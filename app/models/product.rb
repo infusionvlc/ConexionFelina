@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-  has_many :possesions
+  has_many :posessions
 end
