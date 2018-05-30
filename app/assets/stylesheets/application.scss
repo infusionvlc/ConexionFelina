@@ -55,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	padding-top: 10em;
-	padding-bottom: 10em;
+	padding-top: 5em;
+	padding-bottom: 5em;
 }
 
 .action-button {
@@ -67,7 +67,7 @@ section {
   cursor: pointer; /* mouse se convierte a mano */
   display: inline-block;
   font-size: 1.3em;
-	margin-top: 4em;
+	margin-top: 1.5em;
 	margin-bottom: 6em;
   padding: 0.5em;
   text-align: center;
@@ -81,7 +81,7 @@ section {
 }
 
 .big-title {
-	font-size: 1.6em !important;
+	font-size: 1.6em;
 }
 
 .brand-logo {
@@ -91,7 +91,12 @@ section {
 
 .breathe {
   display: block;
-  height: 3em;
+  height: 2em;
+}
+
+.card-pic {
+	margin-bottom: 2em;
+	margin-top: 2em;
 }
 
 .cat-avatar {
@@ -115,7 +120,6 @@ section {
 .flex-card {
 	display: flex;
 	flex-direction: column;
-	padding: 1em;
 }
 
 .flex-card-main {
@@ -163,12 +167,20 @@ section {
 	margin-bottom: 1em;
 }
 
+.medal {
+	width: 50%;
+}
+
 .medium-title {
 	font-size: 1.2em;
 }
 
 .min-spacing {
 	margin-bottom: 0.1em;
+}
+
+.mini-icon {
+	width: 1.5em;
 }
 
 .navbar-nav {
@@ -214,7 +226,7 @@ section {
 }
 
 .spaced-bottom {
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 }
 
 .video-container {
@@ -226,12 +238,30 @@ section {
 
 @media only screen and (max-width: 950px) {
 
+	body {
+		font-size: 1em;
+	}
+
 	.action-button {
 		font-size: 1em;
 	}
 
+	.card-pic {
+		margin-bottom: 2em;
+		margin-top: 2em;
+		width: 80%;
+	}
+
+	.big-title {
+		font-style: 1.2em;
+	}
+
 	.huge-title {
 		font-size: 2em;
+	}
+
+	.humungous-title {
+		font-size: 3.5em !important;
 	}
 
 	.landing-illustration-mini {
@@ -244,6 +274,14 @@ section {
 
   .left-margin, .right-margin {
     width: 120px;
+	}
+
+	.medal {
+		width: 30% !important;
+	}
+
+	.responsive-header {
+		width: 100%;
 	}
 
 	section {

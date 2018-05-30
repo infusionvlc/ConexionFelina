@@ -1,28 +1,38 @@
 <div class="container">
-	<section class="row container">
+	<section class="row container responsive-header">
 		<div class="col-sm-12" >
 			<p class="orange big-title"><%= t 'landing.work.intro' %></p>
+			<img src="equipo.svg" class="full-width" />
 		</div>
 	</section>
 	<section>
-		<h1><%= t 'landing.work.labor' %></h1>
+		<h1 class="huge-title"><%= t 'landing.work.labor' %></h1>
 		<span class="breathe"></span>
 		<div class="row">
-			<div class="col-md-4 col-sm-12">
-				<h2><%= t 'landing.work.sterilize.title' %></h2>
-				<p><%= t 'landing.work.sterilize.paragraph1' %></p>
-				<p><%= t 'landing.work.sterilize.paragraph2' %></p>
+			<div class="col-md-4 col-sm-12 flex-card">
+				<div class="flex-card-main">
+					<h3><%= t 'landing.work.sterilize.title' %></h3>
+					<p><%= t 'landing.work.sterilize.paragraph1' %></p>
+					<p><%= t 'landing.work.sterilize.paragraph2' %></p>
+				</div>
+				<img src="esterilizar.svg" class="full-width" />
 			</div>
 
-			<div class="col-md-4 col-sm-12">
-				<h2><%= t 'landing.work.coexist.title' %></h2>
-				<p><%= t 'landing.work.coexist.paragraph1' %></p>
-				<p><%= t 'landing.work.coexist.paragraph2' %></p>
+			<div class="col-md-4 col-sm-12 flex-card">
+				<div class="flex-card-main">
+					<h3><%= t 'landing.work.coexist.title' %></h3>
+					<p><%= t 'landing.work.coexist.paragraph1' %></p>
+					<p><%= t 'landing.work.coexist.paragraph2' %></p>
+				</div>
+				<img src="convivir.svg" class="full-width" />
 			</div>
 
-			<div class="col-md-4 col-sm-12">
-				<h2><%= t 'landing.work.care.title' %></h2>
-				<p><%= t 'landing.work.care.paragraph1' %></p>
+			<div class="col-md-4 col-sm-12 flex-card">
+				<div class="flex-card-main">
+					<h3><%= t 'landing.work.care.title' %></h3>
+					<p><%= t 'landing.work.care.paragraph1' %></p>
+				</div>
+				<img src="cuidar.svg" class="full-width" />
 			</div>
 		</div>
 	</section>
