@@ -15,8 +15,8 @@
         <h1><%= t 'landing.collaborate.sponsor.title' %></h1>
         <p><%= t 'landing.collaborate.sponsor.text' %></p>
       </div>
-      <img src="apadrina.svg" class="full-width" />
       <div class="center">
+        <img onmouseenter="animate(this)" onmouseleave="stop(this)" src="apadrina.png" class="full-width card-pic" id="apadrina"/>
         <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
@@ -25,8 +25,8 @@
         <h1><%= t 'landing.collaborate.adopt.title' %></h1>
         <p><%= t 'landing.collaborate.adopt.text' %></p>
       </div>
-      <img src="adopta.svg" class="full-width" />
       <div class="center">
+        <img onmouseenter="animate(this)" onmouseleave="stop(this)" src="adopta.png" class="landing-illustration card-pic" id="adopta" /><br/>
         <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
@@ -35,8 +35,8 @@
         <h1><%= t 'landing.collaborate.donate.title' %></h1>
         <p><%= t 'landing.collaborate.donate.text' %></p>
       </div>
-      <img src="dona.svg" class="full-width" />
       <div class="center">
+        <img src="dona.png" class="full-width card-pic" id="dona" />
         <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
@@ -45,13 +45,13 @@
 
 <section class="row container">
   <div class="col-sm-12">
-    <h1><%= t 'landing.collaborate.volunteer.title' %></h1>
     <div class="row">
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-4">
+        <h1><%= t 'landing.collaborate.volunteer.title' %></h1>
         <p><%= t 'landing.collaborate.volunteer.text' %></p>
-        <img src="adorables.gif" class="full-width" />
       </div>
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-1"></div>
+      <div class="col-sm-12 col-md-7">
         <form>
           <div class="form-group">
             <label for="inputEmail"><%= t 'landing.collaborate.form.email' %></label>
@@ -71,3 +71,27 @@
     </div>
   </div>
 </section>
+<script>
+  $( document ).on('turbolinks:load', function() {
+    $('#dona').mouseover(function() {
+      $(this).attr('src', 'dona.gif');
+    });
+    $('#dona').mouseout(function() {
+      $(this).attr('src', 'dona.png');
+    });
+
+    $('#adopta').mouseover(function() {
+      $(this).attr('src', 'adopta.gif');
+    });
+    $('#adopta').mouseout(function() {
+      $(this).attr('src', 'adopta.png');
+    });
+
+    $('#apadrina').mouseover(function() {
+      $(this).attr('src', 'apadrina.gif');
+    });
+    $('#apadrina').mouseout(function() {
+      $(this).attr('src', 'apadrina.png');
+    });
+  });
+</script>

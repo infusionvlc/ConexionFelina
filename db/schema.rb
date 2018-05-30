@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523162548) do
+ActiveRecord::Schema.define(version: 20180523172628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180523162548) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "assignments", force: :cascade do |t|
@@ -46,11 +47,19 @@ ActiveRecord::Schema.define(version: 20180523162548) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "colonies_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "colony_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "donations", force: :cascade do |t|
     t.integer "amount"
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "illnesses", force: :cascade do |t|
@@ -74,8 +83,11 @@ ActiveRecord::Schema.define(version: 20180523162548) do
 
   create_table "posessions", force: :cascade do |t|
     t.date "date"
+    t.integer "user_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -93,6 +105,8 @@ ActiveRecord::Schema.define(version: 20180523162548) do
     t.boolean "renovate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "cat_id"
   end
 
   create_table "sufferings", force: :cascade do |t|
@@ -125,6 +139,13 @@ ActiveRecord::Schema.define(version: 20180523162548) do
   create_table "turns", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "turns_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "turn_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
