@@ -18,4 +18,6 @@ class User < ApplicationRecord
  	validates :username, length: { maximum: MAXIMUM_USERNAME_LENGTH }
 	validates :bio, length: { maximum: MAXIMUM_BIO_LENGTH }
   validates :purrs, numericality: { only_integer: true, greater_than_or_equal_to: MINIMUM_PURR_VALUE }
+	validates :email, uniqueness: true
+	validates :username, uniqueness: true
 end
