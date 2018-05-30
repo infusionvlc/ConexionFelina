@@ -57,13 +57,6 @@ ActiveRecord::Schema.define(version: 20180523172628) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "colonies_users", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "colony_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "donations", force: :cascade do |t|
     t.integer "amount"
     t.date "date"
@@ -93,7 +86,6 @@ ActiveRecord::Schema.define(version: 20180523172628) do
 
   create_table "posessions", force: :cascade do |t|
     t.date "date"
-    t.integer "user_id"
     t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
