@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516170345) do
+ActiveRecord::Schema.define(version: 20180523161856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.text "bio"
     t.text "avatar"
     t.date "birthdate_date"
-    t.string "gender"
-    t.string "sterilized"
+    t.integer "gender"
+    t.integer "sterilized"
     t.date "abandoned_date"
     t.string "document"
     t.datetime "created_at", null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "illnesses", force: :cascade do |t|
@@ -74,6 +75,8 @@ ActiveRecord::Schema.define(version: 20180516170345) do
 
   create_table "posessions", force: :cascade do |t|
     t.date "date"
+    t.integer "user_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -93,6 +96,8 @@ ActiveRecord::Schema.define(version: 20180516170345) do
     t.boolean "renovate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "cat_id"
   end
 
   create_table "sufferings", force: :cascade do |t|
