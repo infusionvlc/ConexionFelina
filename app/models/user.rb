@@ -9,5 +9,4 @@ class User < ApplicationRecord
 	has_many :cats, through: :adoptions
 	has_many :sponsors
 	has_many :cats, through: :sponsors
-
 end

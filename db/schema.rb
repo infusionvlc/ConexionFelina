@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180523172628) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "cat_id"
   end
 
   create_table "assignments", force: :cascade do |t|
@@ -38,11 +39,20 @@ ActiveRecord::Schema.define(version: 20180523172628) do
     t.string "document"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "colony_id"
   end
 
   create_table "colonies", force: :cascade do |t|
     t.string "name"
     t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "location_id"
+  end
+
+  create_table "colonies_users", force: :cascade do |t|
+    t.integer "colony_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
