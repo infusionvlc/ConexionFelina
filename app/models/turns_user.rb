@@ -1,0 +1,2 @@
+class TurnsUser < ApplicationRecord
+end
