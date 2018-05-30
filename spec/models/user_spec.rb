@@ -15,5 +15,7 @@ RSpec.describe User, type: :model do
 		it { should validate_presence_of(:purrs) }
 		it { should validate_numericality_of(:purrs).only_integer }
 		it { should validate_numericality_of(:purrs).is_greater_than_or_equal_to 0 }
+		it { should validate_length_of(:username).is_at_most(20) }
+		it { should validate_length_of(:bio).is_at_most(512) }
 	end
 end
