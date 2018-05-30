@@ -116,6 +116,8 @@ ActiveRecord::Schema.define(version: 20180523172628) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "cat_id"
+    t.integer "illness_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -131,6 +133,7 @@ ActiveRecord::Schema.define(version: 20180523172628) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "suffering_id"
   end
 
   create_table "turns", force: :cascade do |t|
