@@ -5,6 +5,8 @@ class CreateSponsors < ActiveRecord::Migration[5.1]
       t.date :last_payment_date
       t.integer :amount
       t.boolean :renovate
+      t.integer :user_id
+      t.integer :cat_id
 
       t.timestamps
     end

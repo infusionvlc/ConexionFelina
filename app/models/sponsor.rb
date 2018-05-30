@@ -1,4 +1,4 @@
 class Sponsor < ApplicationRecord
-	belongs_to :user
-	belongs_to :cat
+  belongs_to :cat
+  belongs_to :user
 end
