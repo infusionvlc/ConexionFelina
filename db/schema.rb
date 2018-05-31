@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 20180523172628) do
   end
 
   create_table "colonies_users", force: :cascade do |t|
-    t.integer "colony_id"
     t.integer "user_id"
+    t.integer "colony_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(version: 20180523172628) do
 
   create_table "posessions", force: :cascade do |t|
     t.date "date"
+    t.integer "user_id"
     t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -105,10 +105,10 @@ ActiveRecord::Schema.define(version: 20180523172628) do
     t.date "last_payment_date"
     t.integer "amount"
     t.boolean "renovate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sufferings", force: :cascade do |t|
