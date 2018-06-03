@@ -16,7 +16,10 @@
         <p><%= t 'landing.collaborate.sponsor.text' %></p>
       </div>
       <div class="center">
-        <img onmouseenter="animate(this)" onmouseleave="stop(this)" src="apadrina.png" class="full-width card-pic" id="apadrina"/>
+        <div class="card-pic">
+          <img src="apadrina.png" class="full-width static" />
+          <img src="apadrina.gif" class="full-width" />
+        </div>
         <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
@@ -26,7 +29,10 @@
         <p><%= t 'landing.collaborate.adopt.text' %></p>
       </div>
       <div class="center">
-        <img onmouseenter="animate(this)" onmouseleave="stop(this)" src="adopta.png" class="landing-illustration card-pic" id="adopta" /><br/>
+        <div class="card-pic">
+          <img src="adopta.png" class="landing-illustration static" />
+          <img src="adopta.gif" class="landing-illustration" />
+        </div>
         <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
@@ -36,7 +42,10 @@
         <p><%= t 'landing.collaborate.donate.text' %></p>
       </div>
       <div class="center">
-        <img src="dona.png" class="full-width card-pic" id="dona" />
+        <div class="card-pic">
+          <img src="dona.png" class="full-width static" />
+          <img src="dona.gif" class="full-width" />
+        </div>
         <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
       </div>
     </div>
@@ -71,27 +80,3 @@
     </div>
   </div>
 </section>
-<script>
-  $( document ).on('turbolinks:load', function() {
-    $('#dona').mouseover(function() {
-      $(this).attr('src', 'dona.gif');
-    });
-    $('#dona').mouseout(function() {
-      $(this).attr('src', 'dona.png');
-    });
-
-    $('#adopta').mouseover(function() {
-      $(this).attr('src', 'adopta.gif');
-    });
-    $('#adopta').mouseout(function() {
-      $(this).attr('src', 'adopta.png');
-    });
-
-    $('#apadrina').mouseover(function() {
-      $(this).attr('src', 'apadrina.gif');
-    });
-    $('#apadrina').mouseout(function() {
-      $(this).attr('src', 'apadrina.png');
-    });
-  });
-</script>
