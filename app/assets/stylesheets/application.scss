@@ -82,8 +82,6 @@ section {
 
 .animated {
 	position: absolute;
-	left: 0;
-	right: 0;
 }
 
 .big-title {
@@ -236,11 +234,21 @@ section {
 }
 
 .static {
-  position:absolute;
+  position: absolute;
 	background: var(--eter);
 }
 
-.static:hover {
+.static-white {
+  position: absolute;
+	background: white;
+}
+
+
+.invisible {
+	visibility: hidden;
+}
+
+.static:hover, .static-white:hover {
   opacity:0;
 }
 
