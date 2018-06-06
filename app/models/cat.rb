@@ -16,11 +16,13 @@ class Cat < ApplicationRecord
   validates :name, presence: true
   validates :name, length: { maximum: MAXIMUM_NAME_LENGTH }
   validates :bio,  length: { maximum: MAXIMUM_BIO_LENGTH }
-  validates : birthdate_date_must_be_in_the_past
+  validate :birthdate_date_must_be_in_the_past
 
   def birthdate_date_must_be_in_the_past
-    if birthdate_date > Date.today
-      errors.add(:expiration_date, "Birthdate must be in the past")
+    if birthdate_date != nil
+      if birthdate_date > Date.today
+        errors.add(:expiration_date, "Birthdate must be in the past")
+      end
     end
   end
 
