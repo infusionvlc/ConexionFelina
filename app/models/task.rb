@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
-  MAXIMUM_NAME_LENGTH = 20
-  MAXIMUM_BIO_LENGTH = 512
+  MAXIMUM_NAME_LENGTH = 50
+  MAXIMUM_BIO_LENGTH = 1024
 
   has_many :assignments
   has_many :colonies, through: :assignments

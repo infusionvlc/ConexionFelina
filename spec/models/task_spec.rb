@@ -1,8 +1,8 @@
 require "rails_helper"
 
 RSpec.describe Task, type: :model do
-  MAXIMUM_NAME_LENGTH = 20
-  MAXIMUM_BIO_LENGTH = 512
+  MAXIMUM_NAME_LENGTH = 50
+  MAXIMUM_BIO_LENGTH = 1024
 
   it { should have_many :assignments }
 
