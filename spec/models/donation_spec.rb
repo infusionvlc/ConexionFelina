@@ -9,6 +9,5 @@ RSpec.describe Donation, type: :model do
     it { should validate_presence_of(:amount) }
     it { should validate_numericality_of(:amount).is_greater_than MINIMUM_AMOUNT_VALUE }
     it { should validate_presence_of(:date) }
-    #ToDo date <= now
   end
 end
