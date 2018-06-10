@@ -17,13 +17,15 @@ ActiveRecord::Schema.define(version: 20180523172628) do
 
   create_table "adoptions", force: :cascade do |t|
     t.date "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "assignments", force: :cascade do |t|
+    t.integer "colony_id"
+    t.integer "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -141,6 +143,7 @@ ActiveRecord::Schema.define(version: 20180523172628) do
   create_table "turns", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.integer "assignment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

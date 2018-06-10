@@ -52,7 +52,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            rails test
+            rspec
 
 deployment:
   staging:

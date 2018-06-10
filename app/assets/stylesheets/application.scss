@@ -80,6 +80,10 @@ section {
 	color: var(--eter);
 }
 
+.animated {
+	position: absolute;
+}
+
 .big-title {
 	font-size: 1.6em;
 }
@@ -131,7 +135,7 @@ section {
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .grey-section {
@@ -227,6 +231,25 @@ section {
 
 .spaced-bottom {
 	margin-bottom: 3em;
+}
+
+.static {
+  position: absolute;
+	background: var(--eter);
+}
+
+.static-white {
+  position: absolute;
+	background: white;
+}
+
+
+.invisible {
+	visibility: hidden;
+}
+
+.static:hover, .static-white:hover {
+  opacity:0;
 }
 
 .video-container {
