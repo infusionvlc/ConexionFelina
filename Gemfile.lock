@@ -74,11 +74,6 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
-    factory_bot (4.10.0)
-      activesupport (>= 3.0.0)
-    factory_bot_rails (4.10.0)
-      factory_bot (~> 4.10.0)
-      railties (>= 3.0.0)
     ffi (1.9.23-x64-mingw32)
     ffi (1.9.23-x86-mingw32)
     globalid (0.4.1)
@@ -170,6 +165,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rspec-activemodel-mocks (1.0.3)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      rspec-mocks (>= 2.99, < 4.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -260,7 +259,6 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  factory_bot_rails
   high_voltage
   jbuilder (~> 2.5)
   jquery-rails
@@ -268,6 +266,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails_real_favicon
+  rspec-activemodel-mocks
   rspec-rails (~> 3.7)
   rubocop
   sass-rails (~> 5.0)

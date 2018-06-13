@@ -112,6 +112,10 @@ section {
 	text-align: center;
 }
 
+.center-block {
+	margin: 0 auto;
+}
+
 .container {
 	margin: 0 auto;
 	width: 70%;
@@ -246,6 +250,7 @@ section {
 
 .invisible {
 	visibility: hidden;
+	display: inline-block;
 }
 
 .static:hover, .static-white:hover {
