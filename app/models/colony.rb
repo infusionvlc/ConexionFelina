@@ -13,6 +13,4 @@ class Colony < ApplicationRecord
   validates :name, presence: true
   validates :name, length: {maximum: MAXIMUM_NAME_COLONY_LENGTH}
   validates :bio, length: {maximum: MAXIMUM_BIO_LENGTH}
-
-  validates_with ColonyValidator
 end
