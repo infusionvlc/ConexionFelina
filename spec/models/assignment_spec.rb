@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Assignment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to :task }
+  it { should belong_to :colony }
+  it { should have_many :turns }
 end
