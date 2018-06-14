@@ -4,7 +4,7 @@ LORE_IPSUM_250 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
 LORE_IPSUM_513 = + LORE_IPSUM_250 + LORE_IPSUM_250 + "1234567890123"
 
 RSpec.describe Cat, :type => :model do
-  context 'given a cat with only name' do
+  context 'given a cat with only name ' do
     it 'must be valid' do
       valid_cat = Cat.new(name: "Kitty")
       valid_cat.colony = Colony.new()
