@@ -1,12 +1,23 @@
 class User < ApplicationRecord
-  enum role: [ :admin, :volunteer, :basic]
+	MAXIMUM_USERNAME_LENGTH = 20
+	MAXIMUM_BIO_LENGTH = 512
+	MINIMUM_PURR_VALUE = 0
 
-  has_and_belongs_to_many :colonies
-  has_and_belongs_to_many :turns
-  has_many :posessions
-  has_many :donations
-  has_many :adoptions
-  has_many :cats, through: :adoptions
-  has_many :sponsors
-  has_many :cats, through: :sponsors
+	enum role: [ :admin, :volunteer, :basic]
+
+	has_and_belongs_to_many :colonies
+	has_and_belongs_to_many :turns
+	has_many :posessions
+	has_many :donations
+	has_many :adoptions
+	has_many :cats, through: :adoptions
+	has_many :sponsors
+	has_many :cats, through: :sponsors
+
+	validates :username, :email, :role, :purrs, presence: true
+ 	validates :username, length: { maximum: MAXIMUM_USERNAME_LENGTH }
+	validates :bio, length: { maximum: MAXIMUM_BIO_LENGTH }
+  validates :purrs, numericality: { only_integer: true, greater_than_or_equal_to: MINIMUM_PURR_VALUE }
+	validates :email, uniqueness: true
+	validates :username, uniqueness: true
 end

@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 20180523172628) do
   create_table "donations", force: :cascade do |t|
     t.integer "amount"
     t.date "date"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "illnesses", force: :cascade do |t|
