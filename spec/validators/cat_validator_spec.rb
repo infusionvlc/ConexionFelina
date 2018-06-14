@@ -9,7 +9,7 @@ RSpec.describe Cat, :type => :model do
     cat.colony = mock_model("Colony")
   end
 
-  context 'given a cat with only name ' do
+  context 'given a cat with only name' do
     it 'must be valid' do
       valid_cat = Cat.new(name: "Kitty")
        mock_relationships(valid_cat)
