@@ -165,6 +165,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rspec-activemodel-mocks (1.0.3)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      rspec-mocks (>= 2.99, < 4.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -262,6 +266,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails_real_favicon
+  rspec-activemodel-mocks
   rspec-rails (~> 3.7)
   rubocop
   sass-rails (~> 5.0)
