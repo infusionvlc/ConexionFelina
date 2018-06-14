@@ -8,6 +8,4 @@ class Task < ApplicationRecord
   validates :name, presence: true
   validates :name, length: {maximum: MAXIMUM_NAME_LENGTH}
   validates :description, length: {maximum: MAXIMUM_BIO_LENGTH}
-
-  validates_with TaskValidator
 end

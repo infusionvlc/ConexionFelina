@@ -7,6 +7,4 @@ class Product < ApplicationRecord
   validates :name, :stock, :price, presence: true
   validates :name, length: {maximum: MAXIMUM_NAME_LENGTH}
   validates :stock, :price, numericality: {only_integer: true, greater_than_or_equal_to: MINIMUM_STOCK_PRICE_VALUE}
-
-  validates_with ProductValidator
 end
