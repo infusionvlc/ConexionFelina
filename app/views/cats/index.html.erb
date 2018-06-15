@@ -1,0 +1,21 @@
+<h1>Cats#index</h1>
+<% @cats.each do |cat| %>
+    <div class="card">
+      <div class="card-container">
+      <div class="basic_info">
+        <%= image_tag(cat.avatar) %>
+        <%= link_to cat.name, "/#{cat.id}" %>
+       </div>
+      <div class="advanced_info">
+        <%= cat.bio %><br/>
+        <%= I18n.t 'cats.birthDate'%> <%= cat.birthdate_date %><br/>        
+        <%= I18n.t 'cats.gender'%> <%= cat.gender %><br/>
+        <%= I18n.t 'cats.sterilized'%> <%= cat.sterilized %><br/>
+        <% if !cat.abandoned_date.nil?%>
+          <%= I18n.t 'cats.abandonedDate'%> <%= cat.abandoned_date %><br/>
+        <% end %>
+        <%= I18n.t 'cats.document'%> <%= cat.document %><br/>
+      </div>
+    </div>
+  </div>
+<% end %>
