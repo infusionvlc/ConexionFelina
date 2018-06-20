@@ -1,0 +1,8 @@
+<h1>Locations</h1>
+
+<%= link_to "create", new_location_path  %> <br>
+
+<% @locations.each do | location | %>
+  <%= link_to location.name, location_path( location.id ) %><br/>
+  <%= location.description %><hr/>
+<% end %>
