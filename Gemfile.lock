@@ -119,6 +119,8 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.2)
     puma (3.11.4)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.5)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
@@ -264,6 +266,7 @@ DEPENDENCIES
   jquery-rails
   pg (>= 0.18, < 2.0)
   puma (~> 3.7)
+  pundit
   rails (~> 5.1.6)
   rails_real_favicon
   rspec-activemodel-mocks
