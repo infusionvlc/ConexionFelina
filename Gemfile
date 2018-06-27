@@ -48,6 +48,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'factory_bot_rails'
   gem 'selenium-webdriver'
+  gem 'factory_bot_rails'
 
   gem 'rubocop'
 end

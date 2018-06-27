@@ -292,6 +292,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   factory_bot_rails
   devise
+  factory_bot_rails
   high_voltage
   jbuilder (~> 2.5)
   jquery-rails
