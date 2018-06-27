@@ -15,6 +15,11 @@
           <%= I18n.t 'cats.abandonedDate'%> <%= cat.abandoned_date %><br/>
         <% end %>
         <%= I18n.t 'cats.document'%> <%= cat.document %><br/>
+        <% if !current_user.nil? && current_user.role == 'volunteer' %>
+             <%= link_to "Edit", edit_cat_path(cat.id) %>
+             <%= link_to "Destroy", cat_path(cat.id), method: :delete %>
+
+        <% end %>
       </div>
     </div>
   </div>
