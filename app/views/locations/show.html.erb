@@ -1,0 +1,6 @@
+<h1><%= @location.name %></h1>
+<p><%= @location.description %></p>
+<p><%= @location.address %></p>
+
+<%= link_to "edit", edit_location_path(@location.id) %><br/>
+<%= link_to "destroy", location_path(@location.id), method: :delete %>
