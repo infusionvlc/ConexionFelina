@@ -1,6 +1,6 @@
-<%= image_tag(@cat.avatar) %>
+<%= image_tag(@cat.avatar) if !@cat.avatar.nil? %>
 <hr>
-<h1>name: <%= @cat.name %>  </h1> 
+<h1>name: <%= @cat.name %>  </h1>
 <hr>
 <p>bio: <%= @cat.bio %>  </p>
 <p>birthday: <%= @cat.birthdate_date %>  </p>

@@ -4,12 +4,10 @@ RSpec.feature "CatsShowSpec", type: :feature do
     feature 'User visits a cat profile' do
       scenario 'successfully' do
 
-        user = mock_model('User')
-        cat = mock_model('Cat')
+        cat = create(:cat)
 
-        login_as user
         visit cat_path(cat)
-  
+
         expect(page).to have_content cat.name
         expect(page).to have_content cat.bio
         expect(page).to have_content cat.birthdate_date
@@ -20,4 +18,3 @@ RSpec.feature "CatsShowSpec", type: :feature do
       end
     end
   end
-  
