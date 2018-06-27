@@ -29,6 +29,4 @@ class CatsController < ApplicationController
   	flash[:alert] = "You are not autorized to perform this action"
   	redirect_to cats_path
   end
-
-
 end
