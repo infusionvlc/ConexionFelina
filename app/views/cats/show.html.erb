@@ -1,0 +1,14 @@
+<%= image_tag(@cat.avatar) if !@cat.avatar.nil? %>
+<hr>
+<h1>name: <%= @cat.name %>  </h1>
+<hr>
+<p>bio: <%= @cat.bio %>  </p>
+<p>birthday: <%= @cat.birthdate_date %>  </p>
+<p>gender: <%= @cat.gender %>  </p>
+<p>sterilized: <%= @cat.sterilized %>  </p>
+<% if !(@cat.abandoned_date.nil?) %>
+    <p>abandoned: <%= @cat.abandoned_date %>  </p>
+<% end %>
+<% if !(@cat.document.nil?) %>
+    <p>document: <%= @cat.document %>  </p>
+<% end %>

@@ -9,4 +9,12 @@ class CatPolicy < ApplicationPolicy
   def index?
     true
   end
+
+  def update?
+    !@user.nil? && (@user.role == 'volunteer' || @user.role == 'admin')
+  end
+
+  def edit?
+  	update?
+  end
 end
