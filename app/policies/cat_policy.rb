@@ -11,7 +11,7 @@ class CatPolicy < ApplicationPolicy
   end
 
   def update?
-  	!@user.nil? && @user.role == :volunteer
+    !@user.nil? && (@user.role == 'volunteer' || @user.role == 'admin')
   end
 
   def edit?

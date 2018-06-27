@@ -17,7 +17,7 @@ class CatsController < ApplicationController
 
   private
 
-  def category_params
+  def cat_params
     params.require(:cat).permit(:bio, :birthdate_date, :gender, :sterilized, :abandoned_date, :document, :colony_id)
   end
 

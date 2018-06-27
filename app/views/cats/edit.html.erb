@@ -1,3 +1,5 @@
+
+<h2>Edit <%= @cat.name %></h2>
 <%= form_for(@cat) do |f| %>
   <div class="field">
     <%= f.label :bio %><br>
@@ -9,11 +11,11 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.number_field :gender %>
+    <%= f.select(:gender, [['Male', :male], ['Female', :female]], :prompt => 'Select') %>
   </div>
   <div class="field">
-    <%= f.label :sterillized %><br>
-    <%= f.check_box :sterillized %>
+    <%= f.label :sterilized %><br>
+    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], :prompt => 'Select') %>
   </div>
   <div class="field">
     <%= f.label :abandoned_date %><br>
@@ -25,7 +27,7 @@
   </div>
   <div class="field">
     <%= f.label :colony_id %><br>
-    <%= f.select(:colony_id, Colony.find(:all).collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
+    <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
   </div>
   <br/>
   <div class="actions">

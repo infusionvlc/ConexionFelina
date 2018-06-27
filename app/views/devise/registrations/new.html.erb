@@ -13,7 +13,8 @@
   </div>
   <div class="field">
     <%= f.label :role %><br />
-    <%= f.number_field :role %>
+    <%= f.select(:role, [['Admin', :admin], ['Volunteer', :volunteer], ['Basic', :basic]], :prompt => 'Select') %>
+
   </div>
   <div class="field">
     <%= f.label :purrs %><br />
