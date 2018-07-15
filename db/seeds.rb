@@ -20,9 +20,9 @@ products = Product.create([
 
 #Illnesses
 illnesses = Illness.create([
-  {name: "Lorem ipsum dolor priority: LOW ", description: "Lorem ipsum dolor sit amet", priority: 0, treatment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque viverra ante, a ornare risus placerat quis. Nam dapibus metus ac velit sodales ornare."},
-  {name: "Lorem ipsum dolor priority: MEDIUM ", description: "Lorem ipsum dolor sit amet", priority: 1, treatment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque viverra ante, a ornare risus placerat quis. Nam dapibus metus ac velit sodales ornare."},
-  {name: "Lorem ipsum dolor priority: HIGH", description: "Lorem ipsum dolor sit amet", priority: 2, treatment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque viverra ante, a ornare risus placerat quis. Nam dapibus metus ac velit sodales ornare."},
+  {name: "LOW", description: "Lorem ipsum dolor sit amet", priority: 0, treatment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+  {name: "MEDIUM", description: "Lorem ipsum dolor sit amet", priority: 1, treatment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+  {name: "HIGH", description: "Lorem ipsum dolor sit amet", priority: 2, treatment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
 ])
 
 #Colonies
