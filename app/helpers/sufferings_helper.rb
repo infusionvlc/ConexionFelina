@@ -1,0 +1,2 @@
+module SufferingsHelper
+end
