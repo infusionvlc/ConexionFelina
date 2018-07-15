@@ -7,12 +7,14 @@ class SufferingsController < ApplicationController
 
   def new
     @suffering = Suffering.new
+    authorize @suffering
   end
 
   def create
     @suffering = Suffering.new(suffering_params)
     @suffering.cat_id = params[:cat_id]
     @suffering.illness_id = params[:illness_id]
+    authorize @suffering
     @suffering.save
     redirect_to(cats_path)
   end

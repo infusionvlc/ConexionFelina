@@ -9,4 +9,12 @@ class SufferingPolicy < ApplicationPolicy
   def show?
     !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
   end
+
+  def new?
+    !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
+  end
+
+  def create?
+    !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
+  end
 end
