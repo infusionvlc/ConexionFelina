@@ -1,0 +1,8 @@
+<p>Diagnosis date: <%= @suffering.diagnosis_date %></p>
+<p>Notes: <%= @suffering.notes %>  </p>
+<p>Chronic: <%= @suffering.chronic %>  </p>
+<p>Status: <%= @suffering.status %>  </p>
+<p><%= link_to "Cat profile", cat_path(@suffering.cat_id) %></p>
+<p><%= link_to "Illness info", cat_path(@suffering.illness_id) %></p> <!-- This will work when the illness show works-->
+
+
