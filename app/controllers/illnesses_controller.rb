@@ -5,6 +5,9 @@ class IllnessesController < ApplicationController
     authorize @illness
   end
 
+  def new
+  end
+
   private
 
   def task_params

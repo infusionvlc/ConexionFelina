@@ -16,10 +16,10 @@
 
   <%= hidden_field_tag :cat_id, params[:cat_id] %>
 
-  <!--For the illness id searcher we need implement the illness controller and do this -> https://rubyplus.com/articles/3381-Simple-Search-Form-in-Rails-5 TODO-->
-  <%= hidden_field_tag :illness_id, 1 %> <!--This will replaced with the searcher -->
+  <%= f.label "Illness" %><br/>
+  <%= f.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
 
-  <!--To Do add "new illness" link -->
-  
+  <%= link_to  "New illness", new_illness_path %><br/>
+
   <%= f.submit %>
 <% end %>
