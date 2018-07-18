@@ -14,4 +14,5 @@
 <% end %>
 <%  if policy(@cat).volunteer_or_admin? %>
     <%= link_to "New suffering", new_suffering_path(:cat_id => @cat.id) %>
+    <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
