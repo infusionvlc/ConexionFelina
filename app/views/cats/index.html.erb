@@ -4,7 +4,7 @@
       <div class="card-container">
       <div class="basic_info">
         <%= image_tag(cat.avatar) %>
-        <%= link_to cat.name, "/#{cat.id}" %>
+        <%= link_to cat.name, cat_path(cat.id) %>
        </div>
       <div class="advanced_info">
         <%= cat.bio %><br/>
@@ -15,10 +15,10 @@
           <%= I18n.t 'cats.abandonedDate'%> <%= cat.abandoned_date %><br/>
         <% end %>
         <%= I18n.t 'cats.document'%> <%= cat.document %><br/>
-        <% if !current_user.nil? && current_user.role == 'volunteer' %>
-             <%= link_to "Edit", edit_cat_path(cat.id) %>
-             <%= link_to "Destroy", cat_path(cat.id), method: :delete %>
-
+        <%  if policy(@cats).volunteer_or_admin? %>
+             <%= link_to  "Edit", edit_cat_path(cat.id) %>
+             <%= link_to  "Destroy", cat_path(cat.id), method: :delete %>
+             <%= link_to  "New suffering", new_suffering_path(:cat_id => cat.id) %>
         <% end %>
       </div>
     </div>

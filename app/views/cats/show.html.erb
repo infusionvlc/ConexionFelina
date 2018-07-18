@@ -12,3 +12,6 @@
 <% if !(@cat.document.nil?) %>
     <p>document: <%= @cat.document %>  </p>
 <% end %>
+<%  if policy(@cat).volunteer_or_admin? %>
+    <%= link_to "New suffering", new_suffering_path(:cat_id => @cat.id) %>
+<% end %>

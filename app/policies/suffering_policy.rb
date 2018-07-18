@@ -1,20 +1,20 @@
-class CatPolicy < ApplicationPolicy
-  attr_reader :user, :cat
+class SufferingPolicy < ApplicationPolicy
+  attr_reader :user, :suffering
 
-  def initialize(user, cat)
+  def initialize(user, suffering)
     @user = user
-    @cat = cat
+    @suffering = suffering
   end
 
-  def index?
-    true
-  end
-
-  def update?
+  def show?
     volunteer_or_admin?
   end
 
-  def edit?
+  def new?
+    volunteer_or_admin?
+  end
+
+  def create?
     volunteer_or_admin?
   end
 
