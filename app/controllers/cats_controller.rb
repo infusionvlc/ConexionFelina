@@ -1,5 +1,4 @@
 class CatsController < ApplicationController
-
   def show
     cat_id = params[:id]
     @cat = Cat.find(cat_id)
@@ -11,7 +10,7 @@ class CatsController < ApplicationController
 
   def new
     @cat = Cat.new
-  	authorize @cat
+    authorize @cat
   end
 
   def create
@@ -22,22 +21,22 @@ class CatsController < ApplicationController
   end
 
   def edit
-  	@cat = Cat.find(params[:id])
-  	authorize @cat
+    @cat = Cat.find(params[:id])
+    authorize @cat
   end
 
   def update
-  	@cat = Cat.find(params[:id])
-  	authorize @cat
-  	@cat.update(cat_params)
-  	redirect_to cat_path(@cat)
+    @cat = Cat.find(params[:id])
+    authorize @cat
+    @cat.update(cat_params)
+    redirect_to cat_path(@cat)
   end
 
   def destroy
-  	@cat = Cat.find(params[:id])
-  	authorize @cat
-  	@cat.destroy
-  	redirect_to cats_path
+    @cat = Cat.find(params[:id])
+    authorize @cat
+    @cat.destroy
+    redirect_to cats_path
   end
 
   private
@@ -47,7 +46,7 @@ class CatsController < ApplicationController
   end
 
   def user_not_autorized
-  	flash[:alert] = "You are not autorized to perform this action"
-  	redirect_to cats_path
+    flash[:alert] = "You are not autorized to perform this action"
+    redirect_to cats_path
   end
 end
