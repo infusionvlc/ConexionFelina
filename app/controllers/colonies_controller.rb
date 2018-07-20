@@ -8,34 +8,33 @@ class ColoniesController < ApplicationController
   end
 
   def edit
-    @colony = Colony.find( params[ :id ])
+    @colony = Colony.find(params[:id])
   end
 
   def create
-    @colony = Colony.new( colonies_params )
+    @colony = Colony.new(colonies_params)
     @colony.save
-    redirect_to( colonies_path )
+    redirect_to(colonies_path)
   end
 
   def update
-    @colony = Colony.find( params[ :id ])
-    @colony.update( colonies_params )
-    redirect_to( colonies_path )
+    @colony = Colony.find(params[:id])
+    @colony.update(colonies_params)
+    redirect_to(colonies_path)
   end
 
   def show
-    @colony = Colony.find( params[ :id ])
+    @colony = Colony.find(params[:id])
   end
 
   def destroy
     @colony = Colony.find(params[:id])
     @colony.destroy
-    redirect_to( colonies_path )
+    redirect_to(colonies_path)
   end
 
   private
-
-    def colonies_params
-      params.require(:colony).permit(:name, :bio, :location_id)
-    end
+  def colonies_params
+    params.require(:colony).permit(:name, :bio, :location_id)
+  end
 end
