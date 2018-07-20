@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   resources :cats
   resources :locations
+  resources :colonies
   resources :sufferings
   resources :illnesses
+
 
   HighVoltage.configure do |config|
     config.home_page = "home"
