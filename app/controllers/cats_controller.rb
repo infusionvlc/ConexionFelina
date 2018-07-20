@@ -1,10 +1,24 @@
 class CatsController < ApplicationController
+
   def show
     cat_id = params[:id]
     @cat = Cat.find(cat_id)
   end
+
   def index
     @cats = Cat.all
+  end
+
+  def new
+    @cat = Cat.new
+  	authorize @cat
+  end
+
+  def create
+    @cat = Cat.create(cat_params)
+    authorize @cat
+    @cat.save
+    redirect_to cat_path(@cat)
   end
 
   def edit
@@ -17,6 +31,13 @@ class CatsController < ApplicationController
   	authorize @cat
   	@cat.update(cat_params)
   	redirect_to cat_path(@cat)
+  end
+
+  def destroy
+  	@cat = Cat.find(params[:id])
+  	authorize @cat
+  	@cat.destroy
+  	redirect_to cats_path
   end
 
   private

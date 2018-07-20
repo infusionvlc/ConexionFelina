@@ -1,5 +1,5 @@
 FactoryBot.define do
-  
+
   factory :user do
     username "Joe"
     email "joe@gmail.com"
@@ -9,7 +9,7 @@ FactoryBot.define do
     bio "Hello world!"
     purrs 0
   end
-  
+
   factory :location do
     name "valencia"
   end
