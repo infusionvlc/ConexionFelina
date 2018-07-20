@@ -1,0 +1,5 @@
+<h1><%= @colony.name %></h1>
+<p><%= @colony.bio %></p>
+
+<%= link_to "edit", edit_colony_path(@colony.id) %><br/>
+<%= link_to "destroy", colony_path(@colony.id), method: :delete %>

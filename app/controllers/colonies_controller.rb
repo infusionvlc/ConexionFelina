@@ -36,6 +36,6 @@ class ColoniesController < ApplicationController
   private
 
     def colonies_params
-      params.require(:colony).permit(:name, :bio)
+      params.require(:colony).permit(:name, :bio, :location_id)
     end
 end
