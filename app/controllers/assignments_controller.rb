@@ -25,8 +25,7 @@ class AssignmentsController < ApplicationController
 
   private
 
-    def assignment_params
-        params.require(:assignment).permit(:colony_id, :task_id)
-    end
-
+  def assignment_params
+    params.require(:assignment).permit(:colony_id, :task_id)
+  end
 end
