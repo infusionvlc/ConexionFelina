@@ -1,5 +1,11 @@
 <h1><%= @colony.name %></h1>
 <p><%= @colony.bio %></p>
+<br/>
+<% @colony.tasks.each do | task | %>
+  <%= link_to task.name, task_path( task.id ) %><br/>
+  <%= task.description %><hr/>
+<% end %>
 
+<%= link_to "add assignment", new_assignment_path(colony_id:@colony.id) %><br/>
 <%= link_to "edit", edit_colony_path(@colony.id) %><br/>
 <%= link_to "destroy", colony_path(@colony.id), method: :delete %>
