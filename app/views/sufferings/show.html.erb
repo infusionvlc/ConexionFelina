@@ -3,6 +3,8 @@
 <p>Chronic: <%= @suffering.chronic %>  </p>
 <p>Status: <%= @suffering.status %>  </p>
 <p><%= link_to "Cat profile", cat_path(@suffering.cat_id) %></p>
-<p><%= link_to "Illness info", cat_path(@suffering.illness_id) %></p> <!-- This will work when the illness show works-->
+<p><%= link_to "Illness info", illness_path(@suffering.illness_id) %></p> <!-- This will work when the illness show works-->
+<p><%= link_to "Edit", edit_suffering_path(@suffering.id) %><br/></p>
+<p><%= link_to "Delete", suffering_path(:id => @suffering.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br></p>
 
 

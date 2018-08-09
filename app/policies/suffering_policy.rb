@@ -10,11 +10,27 @@ class SufferingPolicy < ApplicationPolicy
     volunteer_or_admin?
   end
 
+  def index?
+    volunteer_or_admin?
+  end
+
   def new?
     volunteer_or_admin?
   end
 
   def create?
+    volunteer_or_admin?
+  end
+
+  def edit?
+    volunteer_or_admin?
+  end
+
+  def update?
+    volunteer_or_admin?
+  end
+
+  def destroy?
     volunteer_or_admin?
   end
 

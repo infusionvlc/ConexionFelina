@@ -1,0 +1,25 @@
+<h1>Update suffering</h1>
+
+<%= form_for (@suffering) do |f| %>
+
+  <%= f.label :diagnosis_date %><br/>
+  <%= f.date_field :diagnosis_date %><br/><br/>
+
+  <%= f.label :notes %><br/>
+  <%= f.text_area :notes %><br/><br/>
+
+  <%= f.label :chronic %><br/>
+  <%= f.check_box :chronic %><br/>
+
+  <%= f.label :status %><br/>
+  <%= f.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
+
+  <%= hidden_field_tag :cat_id, params[:cat_id] %>
+
+  <%= f.label "Illness" %><br/>
+  <%= f.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
+
+  <%= link_to  "New illness", new_illness_path %><br/>
+
+  <%= f.submit %>
+<% end %>
