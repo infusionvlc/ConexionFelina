@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :colonies
   resources :sufferings
   resources :illnesses
+  resources :tasks
 
 
   HighVoltage.configure do |config|
