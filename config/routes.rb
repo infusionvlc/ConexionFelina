@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :colonies
   resources :sufferings
   resources :illnesses
-
+  resources :tasks
+  resources :assignments
 
   HighVoltage.configure do |config|
     config.home_page = "home"
