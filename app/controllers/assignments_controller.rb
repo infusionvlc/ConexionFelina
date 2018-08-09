@@ -20,7 +20,7 @@ class AssignmentsController < ApplicationController
     def destroy
         @assignment = Assignment.find(params[:id])
         @assignment.destroy
-        redirect_to(assignments_path)
+        redirect_to(colony_path(@assignment.colony_id))
     end
 
     private
