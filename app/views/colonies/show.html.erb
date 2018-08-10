@@ -7,6 +7,7 @@
   <%= link_to "destroy", assignment_path(Assignment.where(colony_id:@colony.id, task_id:task.id).first), method: :delete %><hr/>
 <% end %>
 
-<%= link_to "add assignment", new_assignment_path(colony_id:@colony.id) %><br/>
+<%= link_to "List of Assignment", assignments_path(colony_id: @colony.id) %><br/>
+<%= link_to "add assignment", new_assignment_path(colony_id: @colony.id) %><br/>
 <%= link_to "edit", edit_colony_path(@colony.id) %><br/>
 <%= link_to "destroy", colony_path(@colony.id), method: :delete %>
