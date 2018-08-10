@@ -2,7 +2,7 @@ class TurnsController < ApplicationController
   def index
     @assignment_id = params[:assignment_id]
     @colony_id = params[:colony_id]
-    @turns = Turn.where(assignment_id:@assignment_id )
+    @turns = Turn.where(assignment_id: @assignment_id)
   end
 
   def new
@@ -46,4 +46,5 @@ class TurnsController < ApplicationController
   def turn_params
     params.require(:turn).permit(:start_date, :end_date, :assignment_id)
   end
+  
 end
