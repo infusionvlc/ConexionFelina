@@ -1,0 +1,13 @@
+<h1>Assignments#index</h1>
+<% @assignments.each do |assignment| %>
+    <div class="card">
+      <div class="card-container">
+      <div class="advanced_info">
+        <h2> Assigment: <%= assignment.id %></h2>
+        Colony: <%= Colony.find(assignment.colony_id).name %></br>
+        Task: <%= Task.find(assignment.task_id).name%></br>
+        <%= link_to "New turn", new_turn_path(assignment_id: assignment.id) %><br/>
+      </div>
+    </div>
+  </div>
+<% end %>

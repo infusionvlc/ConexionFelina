@@ -1,2 +1,13 @@
 <h1>Turns#new</h1>
-<p>Find me in app/views/turns/new.html.erb</p>
+<%= form_for (@turn) do |f| %>
+
+  <%= f.label :start_date %><br/>
+  <%= f.date_field :start_date %><br/><br/>
+
+  <%= f.label :end_date %><br/>
+  <%= f.date_field :end_date %><br/><br/>
+
+  <%= hidden_field_tag :assignment_id, params[:assignment_id] %>
+
+  <%= f.submit %>
+<% end %>
