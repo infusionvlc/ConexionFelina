@@ -35,6 +35,6 @@ class TreatmentEntryPolicy < ApplicationPolicy
   end
 
   def volunteer_or_admin?
-    !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
+    !@user.nil? && (@user.role == 'volunteer' || @user.role == 'admin')
   end
 end
