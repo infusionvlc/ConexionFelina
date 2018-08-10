@@ -1,5 +1,8 @@
 class TurnsController < ApplicationController  
   def index
+    @assignment_id = params[:assignment_id]
+    @colony_id = params[:colony_id]
+    @turns = Turn.where(assignment_id: @assignment_id )
   end
 
   def show
@@ -15,11 +18,21 @@ class TurnsController < ApplicationController
     @turn.assignment_id = params[:assignment_id]
     authorize @turn
     @turn.save
-    redirect_to assignments_path(colony_id: @turn.assignment_id)
+    redirect_to assignments_path(colony_id: params[:colony_id])
   end
 
   def edit
+    @turn = Turn.find(params[:id])
+    authorize @turn
   end
+
+  def update
+    @turn = Turn.find(params[:id])
+    authorize @turn
+    @turn.update(turn_params)
+    redirect_to assignments_path(colony_id: params[:colony_id])
+  end
+
 
   def destroy
   end

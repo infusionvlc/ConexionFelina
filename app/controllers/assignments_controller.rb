@@ -1,7 +1,7 @@
 class AssignmentsController < ApplicationController
   def index
-    colony_id = params[:colony_id]
-    @assignments = Assignment.where(colony_id: colony_id)
+    @colony_id = params[:colony_id]
+    @assignments = Assignment.where(colony_id: @colony_id)
   end
 
   def new
