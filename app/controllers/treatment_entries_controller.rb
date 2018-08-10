@@ -5,6 +5,9 @@ class TreatmentEntriesController < ApplicationController
   end
 
   def show
+    treatment_entry_id = params[:id]
+    @treatment_entry = TreatmentEntry.find(treatment_entry_id)
+    authorize @treatment_entry
   end
 
   def new
