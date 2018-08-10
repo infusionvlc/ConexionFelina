@@ -1,5 +1,7 @@
 class TreatmentEntriesController < ApplicationController
   def index
+    suffering_id = params[:suffering_id]
+    @treatment_entries = TreatmentEntry.where(suffering_id: suffering_id)
   end
 
   def show
