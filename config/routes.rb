@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :illnesses
   resources :tasks
   resources :assignments
+  resources :turns
 
   HighVoltage.configure do |config|
     config.home_page = "home"
