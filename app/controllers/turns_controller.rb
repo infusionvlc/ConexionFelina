@@ -5,9 +5,6 @@ class TurnsController < ApplicationController
     @turns = Turn.where(assignment_id: @assignment_id )
   end
 
-  def show
-  end
-
   def new
     @turn = Turn.new
     authorize @turn
@@ -33,8 +30,10 @@ class TurnsController < ApplicationController
     redirect_to assignments_path(colony_id: params[:colony_id])
   end
 
-
   def destroy
+    @turn = Turn.find(params[:id])
+    @turn.destroy
+    redirect_to(assignments_path(colony_id: params[:colony_id]))
   end
 
   private

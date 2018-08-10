@@ -6,7 +6,7 @@
         Start date: <%= turn.start_date %></br>
         End date: <%= turn.end_date %></br>
         <%= link_to "Edit", edit_turn_path(id: turn.id, colony_id: @colony_id, assignment_id: @assignment_id) %><br/>
-        <%= link_to "Delete", turn_path(:id => turn.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+        <%= link_to "Delete", turn_path(id: turn.id, colony_id: @colony_id ), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
       </div>
     </div>
   </div>
