@@ -21,9 +21,15 @@ class TreatmentEntriesController < ApplicationController
   end
 
   def edit
+    @treatment_entry = TreatmentEntry.find(params[:id])
+    authorize @treatment_entry
   end
 
   def update
+    @treatment_entry = TreatmentEntry.find(params[:id])
+    authorize @treatment_entry
+    @treatment_entry.update(treatment_entry_params)
+    redirect_to treatment_entries_path(:suffering_id => @treatment_entry.suffering_id)
   end
 
   def destroy

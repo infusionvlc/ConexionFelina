@@ -1,2 +1,17 @@
 <h1>TreatmentEntry#edit</h1>
-<p>Find me in app/views/treatment_entry/edit.html.erb</p>
+
+<%= form_for (@treatment_entry) do |f| %>
+
+  <%= f.label :date %><br/>
+  <%= f.date_field :date %><br/><br/>
+
+  <%= f.label :notes %><br/>
+  <%= f.text_area :notes %><br/><br/>
+
+  <%= f.label :treatment %><br/>
+  <%= f.select :treatment, TreatmentEntry.treatments.keys.map { |w| [w.humanize, w] } %> <br/>
+
+  <%= hidden_field_tag :suffering_id, params[:suffering_id] %><br/>
+
+  <%= f.submit %> <!-- Show a alert for the date? if it's in the future -->
+<% end %>
