@@ -17,7 +17,7 @@ class TreatmentEntriesController < ApplicationController
     @treatment_entry.suffering_id = params[:suffering_id]
     authorize @treatment_entry
     @treatment_entry.save
-    redirect_to(suffering_path(params[:suffering_id]))
+    redirect_to suffering_path(@treatment_entry.suffering_id)
   end
 
   def edit
@@ -27,6 +27,10 @@ class TreatmentEntriesController < ApplicationController
   end
 
   def destroy
+    @treatment_entry = TreatmentEntry.find(params[:id])
+    authorize @treatment_entry
+    @treatment_entry.destroy
+    redirect_to treatment_entries_path(:suffering_id => @treatment_entry.suffering_id)
   end
 
   private

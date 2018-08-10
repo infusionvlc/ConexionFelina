@@ -8,7 +8,7 @@
         Notes: <%= treatment_entry.notes %><br/>        
         <%= link_to 'Details', treatment_entries_path(treatment_entry.id) %><br/>
         <%= link_to "Edit", edit_treatment_entry_path(treatment_entry.id) %><br/>
-        <%= link_to "Delete", treatment_entries_path(:id => treatment_entry.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+        <%= link_to "Delete", treatment_entry_path(:id => treatment_entry.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
       </div>
     </div>
   </div>
