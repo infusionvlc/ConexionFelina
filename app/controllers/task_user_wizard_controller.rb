@@ -9,7 +9,7 @@ class TaskUserWizardController < ApplicationController
     assignment = Assignment.new
     assignment.colony_id = params[:colony_id]
     assignment.task_id = params[:task_id]
-    assignment.save 
+    assignment.save
 
     user = User.find(params[:user_id])
     puts user.username
@@ -31,4 +31,5 @@ class TaskUserWizardController < ApplicationController
   def turn_params
     params.require(:turn).permit(:start_date, :end_date)
   end
+
 end
