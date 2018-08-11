@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   resources :turns
   resources :task_user_wizard do
     collection do
-      get 'assign_task_to_user'
-      post 'assign_task_to_user_register'
+      post 'create'
     end
   end
 

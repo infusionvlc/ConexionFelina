@@ -1,11 +1,11 @@
 <h1>Assig Task to a User</h1>
-<%= form_tag("/task_user_wizard/assign_task_to_user_register", method: "post") do %>
+<%= form_tag("/task_user_wizard/create", method: "post") do %>
   <h4>Select a Colony</h4>
   <%= select_tag "colony_id", options_from_collection_for_select(@colonies, "id", "name"), { :prompt => "Select a Colony"} %>
   </br></br>
-  <h4>Select a Task</h4>
-  <%= select_tag "task_id", options_from_collection_for_select(@tasks, "id", "name") , { :prompt => "Select a Task"} %>
-  </br></br>
+
+  <%= hidden_field_tag :task_id, params[:task_id] %>
+
   <h4>Select a User</h4>
   <%= select_tag "user_id", options_from_collection_for_select(@users, "id", "username"), { :prompt => "Select a User"} %></br>
   </br>

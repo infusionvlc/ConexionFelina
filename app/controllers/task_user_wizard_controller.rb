@@ -1,11 +1,11 @@
 class TaskUserWizardController < ApplicationController
-  def assign_task_to_user
+  def new
     @colonies = Colony.all
     @tasks = Task.all
     @users = User.all
   end
 
-  def assign_task_to_user_register
+  def create
     assignment = Assignment.new
     assignment.colony_id = params[:colony_id]
     assignment.task_id = params[:task_id]
