@@ -31,5 +31,4 @@ class TaskUserWizardController < ApplicationController
   def turn_params
     params.require(:turn).permit(:start_date, :end_date)
   end
-
 end
