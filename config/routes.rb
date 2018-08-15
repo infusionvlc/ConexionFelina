@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       post 'create'
     end
   end
+  resources :treatment_entries
 
   HighVoltage.configure do |config|
     config.home_page = "home"
