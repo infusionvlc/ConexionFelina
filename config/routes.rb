@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   resources :illnesses
   resources :tasks
   resources :assignments
+  resources :turns
+  resources :task_user_wizard do
+    collection do
+      post 'create'
+    end
+  end
   resources :treatment_entries
 
   HighVoltage.configure do |config|

@@ -1,6 +1,7 @@
 class AssignmentsController < ApplicationController
   def index
-    @assignments = Assignment.all
+    @colony_id = params[:colony_id]
+    @assignments = Assignment.where(colony_id: @colony_id)
   end
 
   def new
