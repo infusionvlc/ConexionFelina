@@ -1,7 +1,7 @@
 class TreatmentEntry < ApplicationRecord
   MAXIMUM_CHARACTERS = 1024
 
-  enum treatment: [:surgery, :diet, :medicine, :hospitalized, :hosted]
+  enum treatments: [:surgery, :diet, :medicine, :hospitalized, :hosted]
 
   belongs_to :suffering
 
