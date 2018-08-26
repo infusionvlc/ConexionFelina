@@ -1,14 +1,14 @@
-<h1>Cats#index</h1>
+<h1>Los miembros de la colonia</h1>
 <% @cats.each do |cat| %>
     <div class="card">
       <div class="card-container">
       <div class="basic_info">
-        <%= image_tag(cat.avatar) %>
+        <%= image_tag(cat.avatar) if cat.avatar %>
         <%= link_to cat.name, cat_path(cat.id) %>
        </div>
       <div class="advanced_info">
         <%= cat.bio %><br/>
-        <%= I18n.t 'cats.birthDate'%> <%= cat.birthdate_date %><br/>        
+        <%= I18n.t 'cats.birthDate'%> <%= cat.birthdate_date %><br/>
         <%= I18n.t 'cats.gender'%> <%= cat.gender %><br/>
         <%= I18n.t 'cats.sterilized'%> <%= cat.sterilized %><br/>
         <% if !cat.abandoned_date.nil?%>

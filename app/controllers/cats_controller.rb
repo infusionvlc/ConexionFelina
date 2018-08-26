@@ -5,12 +5,14 @@ class CatsController < ApplicationController
   end
 
   def index
-    @cats = Cat.all
+    @cats = Cat.all.where(saved_state: 'active')
   end
 
   def new
     @cat = Cat.new
     authorize @cat
+    @cat.save
+    redirect_to cat_build_path(:add_basic_info, cat_id: @cat.id)
   end
 
   def create
@@ -39,10 +41,16 @@ class CatsController < ApplicationController
     redirect_to cats_path
   end
 
+  def adopt
+
+  end
+
   private
 
   def cat_params
-    params.require(:cat).permit(:bio, :birthdate_date, :gender, :sterilized, :abandoned_date, :document, :colony_id)
+    params.require(:cat).permit(:name, :bio, :birthdate_date, :gender,
+                                :sterilized, :abandoned_date, :document, :colony_id, :saved_state,
+                                sufferings_attributes: [:id, :illness_id, :cat_id, :diagnosis_date, :notes, :chronic, :status, :_destroy])
   end
 
   def user_not_autorized

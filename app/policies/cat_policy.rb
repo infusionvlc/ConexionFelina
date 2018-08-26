@@ -30,6 +30,10 @@ class CatPolicy < ApplicationPolicy
     volunteer_or_admin?
   end
 
+  def adopt?
+    @user
+  end
+
   def volunteer_or_admin?
     !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
   end

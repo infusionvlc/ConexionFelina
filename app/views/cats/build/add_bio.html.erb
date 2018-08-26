@@ -1,0 +1,9 @@
+<h2>Cuéntanos más</h2>
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio, class: 'form-control' %>
+  </div>
+  <br>
+  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
+<% end %>

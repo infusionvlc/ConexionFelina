@@ -1,0 +1,7 @@
+<h2>Muchas gracias. ¿Qué quieres hacer ahora?</h2>
+
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <%= f.hidden_field :saved_state, value: 'active' %>
+  <%= f.submit "profile", :class => 'btn btn-primary' %>
+  <%= f.submit "repeat", :class => 'btn btn-primary' %>
+<% end %>

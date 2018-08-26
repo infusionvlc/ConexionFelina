@@ -1,8 +1,7 @@
 <%= image_tag(@cat.avatar) if !@cat.avatar.nil? %>
+<h1><%= @cat.name %></h1>
 <hr>
-<h1>name: <%= @cat.name %>  </h1>
-<hr>
-bio: <%= @cat.bio %></br>
+<%= @cat.bio %></br>
 birthday: <%= @cat.birthdate_date %></br>
 gender: <%= @cat.gender %></br>
 sterilized: <%= @cat.sterilized %></br>
@@ -16,4 +15,8 @@ sterilized: <%= @cat.sterilized %></br>
     <%= link_to "List of sufferings", sufferings_path(:cat_id => @cat.id) %></br>
     <%= link_to "New suffering", new_suffering_path(:cat_id => @cat.id) %></br>
     <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+<% end %>
+
+<%  if policy(@cat).adopt? %>
+    <%= link_to "Adopt", adopt_cat_path(id: @cat.id) %>
 <% end %>

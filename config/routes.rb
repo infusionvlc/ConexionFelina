@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :cats
+  resources :cats do
+    resources :build, controller: 'cats/build'
+
+    member do
+      get 'adopt'
+    end
+  end
+
   resources :locations
   resources :colonies
   resources :sufferings

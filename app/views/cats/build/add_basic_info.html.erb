@@ -1,0 +1,17 @@
+<h2>Info básica</h2>
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate_date %><br>
+    <%= f.date_field :birthdate_date, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.select(:gender, [['Male', :male], ['Female', :female]], {:prompt => 'Select'}, {class: 'form-control'} ) %>
+  </div>
+  <br>
+  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
+<% end %>
