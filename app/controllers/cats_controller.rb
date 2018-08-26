@@ -42,7 +42,9 @@ class CatsController < ApplicationController
   end
 
   def adopt
-
+    @cat = Cat.find(params[:id])
+    authorize @cat
+    Adoption.create(cat_id: @cat.id, user_id: current_user.id)
   end
 
   private
