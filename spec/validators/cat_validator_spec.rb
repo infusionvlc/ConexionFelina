@@ -51,7 +51,7 @@ RSpec.describe Cat, :type => :model do
 
   context 'given a cat with name and birth_date which is yesterday' do
     it 'must be valid' do
-      valid_cat = Cat.new(name: "Kitty", birthdate_date: Date.yesterday)
+      valid_cat = Cat.new(name: "Kitty", birthday_date: Date.yesterday)
        mock_relationships(valid_cat)
       expect(valid_cat).to be_valid
     end
@@ -59,7 +59,7 @@ RSpec.describe Cat, :type => :model do
 
   context 'given a cat with name and birth_date which is tomorrow' do
     it 'must not be valid' do
-      valid_cat = Cat.new(name: "Kitty", birthdate_date: Date.tomorrow)
+      valid_cat = Cat.new(name: "Kitty", birthday_date: Date.tomorrow)
        mock_relationships(valid_cat)
       expect(valid_cat).to_not be_valid
     end

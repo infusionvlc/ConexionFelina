@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20180821192912) do
     t.string "name"
     t.text "bio"
     t.text "avatar"
-    t.date "birthdate_date"
+    t.date "birthday_date"
     t.integer "gender"
     t.integer "sterilized"
     t.date "abandoned_date"
