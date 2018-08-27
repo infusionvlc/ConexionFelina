@@ -20,3 +20,11 @@ sterilized: <%= @cat.sterilized %></br>
 <%  if policy(@cat).adopt? %>
     <%= link_to "Adopt", adopt_cat_path(id: @cat.id) %>
 <% end %>
+
+<% if policy(@cat).edit? %>
+  <%= link_to "Edit", cat_path(:id => @cat.id), :method => :edit %> </br>
+<% end %>
+
+<% if policy(@cat).destroy? %>
+  <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+<% end %>
