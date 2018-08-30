@@ -47,6 +47,23 @@ class CatsController < ApplicationController
     Adoption.create(cat_id: @cat.id, user_id: current_user.id)
   end
 
+  def new_sponsor
+    @cat = Cat.find(params[:id])
+    authorize @cat
+  end
+
+  def sponsor
+    cat = Cat.find(params[:id])
+    renovate = params[:renovate] || false
+
+    authorize cat
+
+    Sponsor.create(amount: params[:amount], renovate: renovate,
+       last_payment_date: Date.today, start_date: Date.today, user: current_user, cat: cat)
+
+    redirect_to cats_path
+  end
+
   private
 
   def cat_params
