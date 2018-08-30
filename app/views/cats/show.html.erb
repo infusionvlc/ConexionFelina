@@ -18,5 +18,9 @@ sterilized: <%= @cat.sterilized %></br>
 <% end %>
 
 <%  if policy(@cat).adopt? %>
-    <%= link_to "Adopt", adopt_cat_path(id: @cat.id) %>
+    <%= link_to "Adopt", adopt_cat_path(id: @cat.id) %></br>
+<% end %>
+
+<% if policy(@cat).sponsor? %>
+    <%= link_to "Sponsor", new_sponsor_cat_path(id: @cat.id) %></br>
 <% end %>

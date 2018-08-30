@@ -34,6 +34,14 @@ class CatPolicy < ApplicationPolicy
     @user
   end
 
+  def new_sponsor?
+    @user
+  end
+
+  def sponsor?
+    @user
+  end
+
   def volunteer_or_admin?
     !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
   end
