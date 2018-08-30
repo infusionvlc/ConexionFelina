@@ -10,7 +10,7 @@ RSpec.feature "CatsShowSpec", type: :feature do
 
         expect(page).to have_content cat.name
         expect(page).to have_content cat.bio
-        expect(page).to have_content cat.birthdate_date
+        expect(page).to have_content cat.birthday_date
         expect(page).to have_content cat.gender
         expect(page).to have_content cat.sterilized
         expect(page).to have_content cat.abandoned_date

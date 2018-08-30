@@ -34,13 +34,13 @@ colonies = Colony.create([
 #Cats
 cats = Cat.create([
   {name: "Lorem ipsum dolor 1", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-   avatar: "http://placekitten.com/200/300", birthdate_date: "1-1-2014", gender: 0, sterilized: 0, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 1},
+   avatar: "http://placekitten.com/200/300", birthday_date: "1-1-2014", gender: 0, sterilized: 0, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 1},
   {name: "Lorem ipsum dolor 2", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-   avatar: "http://placekitten.com/200/300", birthdate_date: "1-1-2014", gender: 1, sterilized: 1, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 2},
+   avatar: "http://placekitten.com/200/300", birthday_date: "1-1-2014", gender: 1, sterilized: 1, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 2},
   {name: "Lorem ipsum dolor 3", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-   avatar: "http://placekitten.com/200/300", birthdate_date: "1-1-2014", gender: 1, sterilized: 0, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 1},
+   avatar: "http://placekitten.com/200/300", birthday_date: "1-1-2014", gender: 1, sterilized: 0, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 1},
   {name: "Lorem ipsum dolor 4", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-   avatar: "http://placekitten.com/200/300", birthdate_date: "1-1-2014", gender: 1, sterilized: 1, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 2},
+   avatar: "http://placekitten.com/200/300", birthday_date: "1-1-2014", gender: 1, sterilized: 1, abandoned_date: "1-1-2013", document: "Lorem document", colony_id: 2},
 
 ])
 
