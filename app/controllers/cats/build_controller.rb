@@ -34,7 +34,7 @@ class Cats::BuildController < ApplicationController
 
   private
   def build_params
-    params.require(:cat).permit(:name, :gender, :birthdate_date, :abandoned_date, :bio, :saved_state, :colony_id, :document, :sterilized,
+    params.require(:cat).permit(:name, :gender, :birthday_date, :abandoned_date, :bio, :saved_state, :colony_id, :document, :sterilized,
                                 sufferings_attributes: [:id, :illness_id, :cat_id, :diagnosis_date, :notes, :chronic, :status, :_destroy])
   end
 end

@@ -2,7 +2,7 @@
 <h1><%= @cat.name %></h1>
 <hr>
 <%= @cat.bio %></br>
-birthday: <%= @cat.birthdate_date %></br>
+birthday: <%= @cat.birthday_date %></br>
 gender: <%= @cat.gender %></br>
 sterilized: <%= @cat.sterilized %></br>
 <% if !(@cat.abandoned_date.nil?) %>
@@ -23,4 +23,12 @@ sterilized: <%= @cat.sterilized %></br>
 
 <% if policy(@cat).sponsor? %>
     <%= link_to "Sponsor", new_sponsor_cat_path(id: @cat.id) %></br>
+<% end %>
+
+<% if policy(@cat).edit? %>
+  <%= link_to "Edit", cat_path(:id => @cat.id), :method => :edit %> </br>
+<% end %>
+
+<% if policy(@cat).destroy? %>
+  <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
 <% end %>
