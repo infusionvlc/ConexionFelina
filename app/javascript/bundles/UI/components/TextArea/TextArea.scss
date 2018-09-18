@@ -1,0 +1,20 @@
+
+.textArea {
+    border-radius: 5px;
+  
+    &.n {
+
+    }
+  
+    &.l {
+        maxlength: 500;
+    }
+
+    &.xl {
+        maxlength: 1000;
+    }
+
+    &.xxl {
+        maxlength: 10000;
+    }
+  }
