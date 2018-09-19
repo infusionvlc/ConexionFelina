@@ -19,8 +19,7 @@ TextArea.propTypes = {
   cols: PropTypes.number,
   rows: PropTypes.number,
   name: PropTypes.string,
-  maxlength: PropTypes.number,
-  readonly: PropTypes.bool
+  maxlength: PropTypes.number
 }
 
 // Specifies the default values for props:
