@@ -1,0 +1,30 @@
+
+.tag {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+  color: black;
+  word-wrap: break-word;
+
+  &.standard {
+    background-color:#F7F2BF;
+  }
+
+  &.sky {
+    color: white;
+    background-color: #354093;
+  }
+
+  &.fire {
+    background-color: #E8654D;
+  }
+
+  &.sun {
+    background-color: #ECBB3B;
+  }
+
+  &.sea {
+    background-color: #68C1BD;
+  }
+}
