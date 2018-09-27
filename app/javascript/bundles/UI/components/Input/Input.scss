@@ -8,4 +8,8 @@
     border-color: #354093;
     outline-width: 0;
   }
+
+  &:disabled{
+    background-color: #f9f9f9;
+  }
 }

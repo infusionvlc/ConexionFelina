@@ -9,5 +9,7 @@ storiesOf('Input', module)
   .add('Text', () => <Input type="text"/>)
   .add('Text with name', () => <Input type="text" name="Alfredo"/>)
   .add('Text with default value', () => <Input type="text" value="Default value"/>)
+  .add('Text disabled', () => <Input type="text" value="Default value" disabled/>)
+
   .add('Password', () => <Input type="password" value="You're curious, aren't you?"/>)
 ; 
