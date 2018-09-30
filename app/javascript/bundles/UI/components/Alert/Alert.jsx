@@ -4,7 +4,7 @@ import css from './Alert.scss';
 import classnames from 'classnames';
 
 var types = ['standard', 'sky', 'fire', 'sun', 'sea'];
-;
+
 
 const Alert = ({type, content}) => {
   const classes = classnames('alert', {
