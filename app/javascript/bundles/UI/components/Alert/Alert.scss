@@ -1,0 +1,30 @@
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #000000;
+
+  &.alert-standard {
+    background-color: #ffffff;
+    border-color: #f2f2f2;
+  }
+  &.alert-sky {
+    color: #ffffff;
+    border-color: #b8daff;
+    background-color: #354093;
+  }
+  &.alert-fire {
+    border-color: #b8daff;
+    background-color: #e8654d;
+  }
+  &.alert-sun {
+    border-color: #b8daff;
+    background-color: #ecbb3b;
+  }
+  &.alert-sea {
+    border-color: #b8daff;
+    background-color: #68c1bd;
+  }
+}
