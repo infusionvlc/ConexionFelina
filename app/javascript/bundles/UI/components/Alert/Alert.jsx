@@ -3,20 +3,18 @@ import React from 'react';
 import css from './Alert.scss';
 import classnames from 'classnames';
 
-var types = ['standard', 'sky', 'fire', 'sun', 'sea'];
+var types = ['standard', 'error', 'warning', 'succes'];
 
 
-const Alert = ({type, content}) => {
+const Alert = ({type, children}) => {
   const classes = classnames('alert', {
     'alert-standard': type == 'standard',
-    'alert-sky': type == 'sky',
-    'alert-fire': type == 'fire',
-    'alert-sun': type == 'sun',
-    'alert-sea': type == 'sea'
+    'alert-error': type == 'error',
+    'alert-warning': type == 'warning',
+    'alert-succes': type == 'succes'
   });
-
   
-  return <div className={classes}>{content}</div>
+  return <div className={classes}>{children}</div>
 };
 
 export default Alert;
@@ -28,5 +26,5 @@ Alert.propTypes = {
 // Specifies the default values for props:
 Alert.defaultProps = {
     type: 'standard',
-    content: 'Standard alert'
+    children: 'Standard alert'
 };
