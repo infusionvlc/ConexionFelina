@@ -6,9 +6,9 @@ import { linkTo } from '@storybook/addon-links';
 import { Input, Alert } from '../../packs/ui-bundle';
 
 storiesOf('Alert', module)
-  .add('Standard', () => <Alert type='standard' content="Standard alert"/>)
-  .add('Sky', () => <Alert type='sky' content="Sky alert"/>)
-  .add('Fire', () => <Alert type='fire' content="Fire alert"/>)
-  .add('Sun', () => <Alert type='sun' content="Sun alert"/>)
-  .add('Sea', () => <Alert type='sea' content="Sea alert"/>)
-; 
+  .add('Primary', () => <Alert type='primary' content="Standard alert"/>)
+  .add('Success', () => <Alert type='success' content="Success alert"/>)
+  .add('Warning', () => <Alert type='warning' content="Warning alert"/>)
+  .add('Error', () => <Alert type='error' content="Error alert"/>)
+  .add('Disabled', () => <Alert type='disabled' content="Disabled alert"/>)
+  ; 
