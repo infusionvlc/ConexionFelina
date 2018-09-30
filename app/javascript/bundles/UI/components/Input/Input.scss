@@ -1,0 +1,15 @@
+.input{
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #f2f2f2;
+  
+  &:focus{
+    border-width: 2px;
+    border-color: #354093;
+    outline-width: 0;
+  }
+
+  &:disabled{
+    background-color: #f9f9f9;
+  }
+}
