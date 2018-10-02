@@ -77,3 +77,9 @@ es:
       article2: '¡Es la hora de la comida! Cuando veas a los voluntarios cuidando de nuestros héroes haz caso a todas sus indicaciones, ya que algunos son muy asustadizos y necesitan cuidados especiales.'
       article3: 'Los amigos de Covi siguen una alimentación equilibrada y controlada por los voluntarios para mantenerse en forma antes de cada misión. Es muy importante que no les des nada de comer para que sigan así de fuertes y poderosos.'
       article4: 'Respeta su espacio.'
+  cats:
+    birthDate: 'Nacido aproximadamente el'
+    gender: 'Género:'
+    sterilized: 'Esterilizado:'
+    abandonedDate: 'Abandonado aproximadamente el'
+    document: 'Documento:'

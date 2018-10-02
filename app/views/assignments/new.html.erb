@@ -1,0 +1,11 @@
+<h1>Create a new Assignment</h1>
+
+<%= form_for (@assignment) do |f| %>
+
+    <%= f.hidden_field :colony_id %><br/><br/>
+    
+    <%= f.label :task_id %><br/>
+    <%= f.select(:task_id, Task.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %><br/><br/>
+    
+    <%= f.submit %>
+<% end %>

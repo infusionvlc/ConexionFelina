@@ -39,12 +39,6 @@
         </ul>
       </div>
     </nav>
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= flash_class(key) %>" role="alert">
-        <a href="#" data-dismiss="alert" class="close">×</a>
-        <%= value %>
-      </div>
-    <% end %>
     <%= yield %>
     <footer class="grey-section">
       <p class="center">Conexión Felina - Colonia Viveros - 2018</p>

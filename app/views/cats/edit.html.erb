@@ -1,0 +1,67 @@
+
+<h2>Edit <%= @cat.name %></h2>
+<%= form_for(@cat) do |f| %>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio%>
+  </div>
+  <div class="field">
+    <%= f.label :birthday_date %><br>
+    <%= f.date_field :birthday_date %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.select(:gender, [['Male', :male], ['Female', :female]], :prompt => 'Select') %>
+  </div>
+  <div class="field">
+    <%= f.label :sterilized %><br>
+    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], :prompt => 'Select') %>
+  </div>
+  <div class="field">
+    <%= f.label :abandoned_date %><br>
+    <%= f.date_field :abandoned_date %>
+  </div>
+  <div class="field">
+    <%= f.label :document %><br>
+    <%= f.text_field :document %>
+  </div>
+  <div class="field">
+    <%= f.label :colony_id %><br>
+    <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
+  </div>
+  <div id="sufferings field">
+    <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+      <%= f.fields_for :sufferings do |f| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <%= f.label :status %><br/>
+          <%= f.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
+
+          <%= f.hidden_field :cat_id, params[:cat_id] %>
+
+          <%= f.label "Illness" %><br/>
+          <%= f.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
+
+          <%= f.check_box :chronic %>
+          <%= f.label :chronic %>
+
+          <%= f.label :diagnosis_date %><br>
+          <%= f.date_field :diagnosis_date, class: 'form-control' %>
+
+          <%= f.label :notes %><br>
+          <%= f.text_area :notes, class:'form-control' %><br/>
+
+          <%= f.check_box :_destroy %>
+          <%= f.label :_destroy, "Remove" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association f, :sufferings, class:'btn btn-primary' do %>Add<% end %>
+    </div>
+  </div>
+  <br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -80,6 +80,10 @@ section {
 	color: var(--eter);
 }
 
+.animated {
+	position: absolute;
+}
+
 .big-title {
 	font-size: 1.6em;
 }
@@ -108,6 +112,10 @@ section {
 	text-align: center;
 }
 
+.center-block {
+	margin: 0 auto;
+}
+
 .container {
 	margin: 0 auto;
 	width: 70%;
@@ -131,7 +139,7 @@ section {
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .grey-section {
@@ -227,6 +235,26 @@ section {
 
 .spaced-bottom {
 	margin-bottom: 3em;
+}
+
+.static {
+  position: absolute;
+	background: var(--eter);
+}
+
+.static-white {
+  position: absolute;
+	background: white;
+}
+
+
+.invisible {
+	visibility: hidden;
+	display: inline-block;
+}
+
+.static:hover, .static-white:hover {
+  opacity:0;
 }
 
 .video-container {

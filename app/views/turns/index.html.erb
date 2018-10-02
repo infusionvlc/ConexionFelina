@@ -1,0 +1,13 @@
+<h1>Turns#index</h1>
+<% @turns.each do |turn| %>
+    <div class="card">
+      <div class="card-container">
+      <div class="advanced_info">
+        Start date: <%= turn.start_date %></br>
+        End date: <%= turn.end_date %></br>
+        <%= link_to "Edit", edit_turn_path(id: turn.id, colony_id: @colony_id, assignment_id: @assignment_id) %><br/>
+        <%= link_to "Delete", turn_path(id: turn.id, colony_id: @colony_id ), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+      </div>
+    </div>
+  </div>
+<% end %>

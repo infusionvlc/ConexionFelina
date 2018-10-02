@@ -1,0 +1,9 @@
+<h2>Sentimos mucho oír eso...</h2>
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <div class="field">
+    <%= f.label :abandoned_date %><br>
+    <%= f.date_field :abandoned_date, class: 'form-control' %>
+  </div>
+  <br>
+  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
+<% end %>

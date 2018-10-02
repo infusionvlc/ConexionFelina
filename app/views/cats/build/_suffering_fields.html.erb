@@ -1,0 +1,27 @@
+<div class="nested-fields card">
+    <div class="field card-body">
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <%= f.label :status %><br/>
+          <%= f.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
+
+          <%= f.hidden_field :cat_id, value: params[:cat_id] %>
+
+          <%= f.label "Illness" %><br/>
+          <%= f.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
+
+          <%= f.check_box :chronic %>
+          <%= f.label :chronic %><br/>
+
+          <%= f.label :diagnosis_date %><br>
+          <%= f.date_field :diagnosis_date, class: 'form-control' %>
+
+          <%= f.label :notes %><br>
+          <%= f.text_area :notes, class:'form-control' %><br/>
+        </div>
+        <div class="col-sm-2">
+          <%= link_to_remove_association f, {class:'btn btn-danger', aria: {label:"#{I18n.t 'main.remove'}"}} do %>Remove<% end %>
+        </div>
+      </div>
+    </div>
+</div>
