@@ -1,0 +1,14 @@
+.modal {
+  margin: auto;
+  background-color: #68C1BD;
+  border: #E8654D;
+  border-radius: 0.25em;
+  border-radius: 5px;
+
+  &:modalInterior {
+    margin: auto;
+    position: relative;
+    height: 200px;
+    background-color: white;
+  }
+}
