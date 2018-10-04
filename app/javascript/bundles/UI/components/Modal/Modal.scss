@@ -1,14 +1,17 @@
 .modal {
-  margin: auto;
+  padding: 50px;
   background-color: #68C1BD;
-  border: #E8654D;
-  border-radius: 0.25em;
-  border-radius: 5px;
-
-  &:modalInterior {
-    margin: auto;
-    position: relative;
-    height: 200px;
-    background-color: white;
-  }
+  border: 3px solid;
+  border-color: #08C1BD;
+  vertical-align: middle; 
+  text-align: center;
+}
+.modal-inner {
+  padding: 50px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  border: 3px solid;
+  border-color: #DCDCDC;
+  vertical-align: middle; 
+  text-align: center; 
 }
