@@ -1,24 +1,21 @@
-.card {
-  border-radius: 10px;
-  border-width: 2px;
+.card-header {
+  border-radius: 15px;
+  border-width: 3px;
   border: 1px solid transparent;
   border-color: #f2f2f2;
-  padding: 0.5em;
+  padding: 1em;
   background-color: #FFFFFF;
-}
-
-.card-main {
   color: #354093;
   font-weight: bold;
 }
 
-.card-secondary {
+.card-body {
   color: #F2F2F2;
   font-weight: bold;
   margin-top: 5px;
 }
 
-.card-completed {
+.card-footer {
   color: #68C1BD;
   font-weight: bold;
   text-align: right;

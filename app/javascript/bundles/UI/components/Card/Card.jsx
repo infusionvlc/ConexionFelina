@@ -1,16 +1,14 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import css from './Card.scss';
-import classnames from 'classnames';
 
-const Card = ({ mainText, subText, completedText }) => {
-  return <div class='card card-main'>
+const Card = ({ mainText, bodyText, footerText }) => {
+  return <div class='card-header'>
     {mainText}
-    <div class='card-secondary'>
-      {subText}
+    <div class='card-body'>
+      {bodyText}
     </div>
-    <div class='card-completed'>
-      {completedText}
+    <div class='card-footer'>
+      {footerText}
     </div>
   </div>
 };
