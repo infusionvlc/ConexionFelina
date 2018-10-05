@@ -1,0 +1,52 @@
+.pagination {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    position: relative;
+    padding: 0.3rem 1rem;
+    // margin-bottom: 1rem;
+    border: none;
+    border-radius: 28px;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+
+    &.button-primary {
+        background-color: #68c1bd;
+        &.button-transparent {
+            color: #354093;
+            background-color: transparent;
+            &:hover {
+                color: #fff;
+                background-color: #354093;
+            }
+        }
+    }
+    .button-back {
+        margin-right: 2rem;
+    }
+
+    .button-next {
+        margin-left: 2rem;
+    }
+}
+
+.page {
+    position: relative;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #fff;
+    border: 1.5px solid transparent;
+    border-radius: 50%;
+    border-color: #68c1bd;
+    margin: 0 1rem;
+
+    &.page-active {
+        background-color: #68c1bd;
+    }
+}
