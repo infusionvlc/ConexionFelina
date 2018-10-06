@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74bfbde2-2aca-4da5-b986-f4252adec101" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ConexionFelina.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ConexionFelina.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/UI/components/Alert/Alert.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/bundles/UI/components/Alert/Alert.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/UI/components/Input/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/bundles/UI/components/Input/Input.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/UI/components/Picture/Picture.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/bundles/UI/components/Picture/Picture.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/spec/sum.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/stories/index.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/stories/index.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/stories/ui/alert.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/stories/ui/alert.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/stories/ui/picture.stories.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/stories/ui/picture.stories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/development.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/development.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/production.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/production.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello-world-bundle-2b04abf8d558ab8aa280.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello-world-bundle-2b04abf8d558ab8aa280.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello-world-bundle-bb308f1784fc1399dc6b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello-world-bundle-bb308f1784fc1399dc6b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello_react-4d97b60afb95d48de56f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello_react-4d97b60afb95d48de56f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello_react-ce0be634e79e1059f37e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/hello_react-ce0be634e79e1059f37e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,21 +23,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="coffee" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="js" value="22" />
+          <entry key="js" value="29" />
           <entry key="json" value="3" />
-          <entry key="jsx" value="4" />
+          <entry key="jsx" value="7" />
           <entry key="xml" value="2" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CoffeeScript" value="1" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JSON" value="3" />
-          <entry key="JSX Harmony" value="4" />
-          <entry key="JavaScript" value="22" />
+          <entry key="JSX Harmony" value="7" />
+          <entry key="JavaScript" value="29" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="2" />
           <entry key="YAML" value="1" />
@@ -73,7 +48,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="6" />
-          <entry key="js" value="162" />
+          <entry key="js" value="468" />
           <entry key="json" value="27" />
           <entry key="jsx" value="1" />
         </counts>
@@ -82,7 +57,7 @@
         <counts>
           <entry key="JSON" value="27" />
           <entry key="JSX Harmony" value="1" />
-          <entry key="JavaScript" value="162" />
+          <entry key="JavaScript" value="468" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -94,44 +69,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/spec/Alert.test.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/javascript/spec/Input.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="21" column="49" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="401">
+              <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/stories/index.stories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,45 +86,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="221">
+              <caret line="13" column="70" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="70" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/javascript/stories/ui/picture.stories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/stories/ui/alert.stories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="54" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/javascript/bundles/UI/components/Alert/Alert.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,16 +126,17 @@
         <option value="$PROJECT_DIR$/spec/models/donation_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/donation.rb" />
         <option value="$PROJECT_DIR$/app/javascript/stories/index.stories.js" />
-        <option value="$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js" />
         <option value="$PROJECT_DIR$/test/javascript/components/Alert.test.js" />
         <option value="$PROJECT_DIR$/app/javascript/spec/__mocks__/fileMock.js" />
         <option value="$PROJECT_DIR$/app/javascript/spec/__mocks__/styleMock.js" />
         <option value="$PROJECT_DIR$/app/javascript/bundles/UI/components/Alert/Alert.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/javascript/stories/ui/alert.stories.js" />
-        <option value="$PROJECT_DIR$/app/javascript/spec/Alert.test.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/javascript/stories/ui/picture.stories.js" />
+        <option value="$PROJECT_DIR$/app/javascript/spec/Alert.test.js" />
+        <option value="$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js" />
+        <option value="$PROJECT_DIR$/app/javascript/spec/Input.test.js" />
       </list>
     </option>
   </component>
@@ -272,13 +184,54 @@
             <path>
               <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
               <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
               <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="packs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConexionFelina" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConexionFelina" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -291,7 +244,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538839207301" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538841425342" />
     <property name="last_opened_file_path" value="C:/Ruby25-x64/bin/ruby.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -354,12 +307,12 @@
       <workItem from="1527718742271" duration="2854000" />
       <workItem from="1538832167304" duration="497000" />
       <workItem from="1538832871748" duration="165000" />
-      <workItem from="1538833080811" duration="6091000" />
+      <workItem from="1538833080811" duration="8303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9607000" />
+    <option name="totallyTimeSpent" value="11819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -382,7 +335,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4277959" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.38327906" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -503,16 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/UI/components/Alert/Alert.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/stories/ui/alert.stories.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -543,16 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/spec/Alert.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.postcssrc.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -577,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -593,16 +519,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/stories/index.stories.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/turns.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/stories/index.stories.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -617,6 +548,59 @@
           <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/UI/components/Alert/Alert.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/UI/components/Picture/Picture.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/spec/Alert.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/UI/components/Input/Input.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/stories/ui/input.stories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="70" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/spec/Input.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
