@@ -18,17 +18,17 @@ describe('when alert is primary', () => {
 
 describe('when alert is success', () => {
     it('should have alert-success class', () => {
-        let a = mount(
+        const wrapper = mount(
             <Alert type='success' children="Success alert"/>
         );
-        expect(a.html()).toEqual('<div class="alert alert-success">Success alert</div>');
-        a.unmount();
+        expect(wrapper.html()).toEqual('<div class="alert alert-success">Success alert</div>');
+        wrapper.unmount();
     });
 });
 
 describe('when alert is warning', () => {
     it('should have alert-warning class', () => {
-        let wrapper = mount(
+        const wrapper = mount(
             <Alert type='warning' children="Warning alert"/>
         );
         expect(wrapper.html()).toEqual('<div class="alert alert-warning">Warning alert</div>');
@@ -38,7 +38,7 @@ describe('when alert is warning', () => {
 
 describe('when alert is error', () => {
     it('should have alert-error class', () => {
-        let wrapper = mount(
+        const wrapper = mount(
             <Alert type='error' children="Error alert"/>
         );
         expect(wrapper.html()).toEqual('<div class="alert alert-error">Error alert</div>');
@@ -48,7 +48,7 @@ describe('when alert is error', () => {
 
 describe('when alert is disabled', () => {
     it('should have alert-disabled class', () => {
-        let wrapper = mount(
+        const wrapper = mount(
             <Alert type='disabled' children="Disabled alert"/>
         );
         expect(wrapper.html()).toEqual('<div class="alert alert-disabled">Disabled alert</div>');
