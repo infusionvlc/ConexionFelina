@@ -9,3 +9,4 @@ storiesOf('Alert', module)
   .add('Warning', () => <Alert type='warning' children="Warning alert"/>)
   .add('Error', () => <Alert type='error' children="Error alert"/>)
   .add('Disabled', () => <Alert type='disabled' children="Disabled alert"/>);
+
