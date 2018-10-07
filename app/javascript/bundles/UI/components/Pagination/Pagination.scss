@@ -27,24 +27,24 @@
             }
         }
     }
-    .button-back {
-        margin-right: 2rem;
+    &.button-back {
+        margin-right: 1rem;
     }
 
-    .button-next {
-        margin-left: 2rem;
+    &.button-next {
+        margin-left: 1rem;
     }
 }
 
 .page {
     position: relative;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 1.1rem;
+    height: 1.1rem;
     background-color: #fff;
     border: 1.5px solid transparent;
     border-radius: 50%;
     border-color: #68c1bd;
-    margin: 0 1rem;
+    margin: 0 .6rem;
 
     &.page-active {
         background-color: #68c1bd;
