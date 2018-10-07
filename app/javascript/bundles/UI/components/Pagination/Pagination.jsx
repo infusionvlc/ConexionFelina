@@ -3,8 +3,6 @@ import React from 'react';
 import css from './Pagination.scss';
 import classnames from 'classnames';
 
-const types = ['page', 'page-active'];
-
 const Pagination = ({nrPages, curPage}) => {
     
     const pages = [];
