@@ -28,7 +28,7 @@ Input.propTypes = {
   name: PropTypes.string,
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(sizes)
-}
+};
 
 Input.defaultProps = {
   type: "text"
