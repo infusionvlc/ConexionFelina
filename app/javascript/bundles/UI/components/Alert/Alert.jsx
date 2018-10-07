@@ -21,7 +21,7 @@ export default Alert;
 
 Alert.propTypes = {
   type: PropTypes.oneOf(types),
-}
+};
 
 // Specifies the default values for props:
 Alert.defaultProps = {
