@@ -5,10 +5,10 @@ import './Switch.scss';
 
 
 const Switch = ({
-  onLabel, offLabel, onChange, defaultChecked, large,
+  onLabel, offLabel, onChange, defaultChecked, large, disabled,
 }) => (
   <label className={classnames('switch', { large })}>
-    <input type="checkbox" onChange={onChange} defaultChecked={defaultChecked} />
+    <input type="checkbox" onChange={onChange} defaultChecked={defaultChecked} disabled={disabled} />
     <span className="labels">
       <span className="label off">
         {offLabel}
@@ -27,6 +27,7 @@ Switch.propTypes = {
   large: PropTypes.bool,
   onChange: PropTypes.func,
   defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 Switch.defaultProps = {
@@ -35,6 +36,7 @@ Switch.defaultProps = {
   large: false,
   onChange: null,
   defaultChecked: false,
+  disabled: false,
 };
 
 export default Switch;

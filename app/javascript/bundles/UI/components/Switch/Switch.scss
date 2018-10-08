@@ -4,6 +4,8 @@ $large-height: 3;
 $transition-duration: 0.3s;
 $primary: #4dc1bb;
 $secondary: #fafdfd;
+$disabled-primary: #666;
+$disabled-secondary: #ccc;
 
 
 .switch {
@@ -36,11 +38,31 @@ $secondary: #fafdfd;
         color: $primary;
       }
     }
+
+    &:disabled ~ span {
+      .selector {
+        background-color: $disabled-primary;
+      }
+      .label.on {
+        color: $disabled-primary;
+      }
+      .label.off {
+        color: $disabled-secondary;
+      }
+    }
+
+    &:checked:disabled ~ span {
+      .label.on {
+        color: $disabled-secondary;
+      }
+      .label.off {
+        color: $disabled-primary;
+      }
+    }
   }
 
   .labels {
     display: block;
-    color: $secondary;
     position: relative;
   }
 
@@ -55,10 +77,10 @@ $secondary: #fafdfd;
 
     transition: color $transition-duration;
 
-    .on {
+    &.on {
       color: $primary;
     }
-    .off {
+    &.off {
       color: $secondary;
     }
   }
