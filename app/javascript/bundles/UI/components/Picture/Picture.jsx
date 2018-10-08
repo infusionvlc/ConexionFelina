@@ -9,7 +9,7 @@ import React from 'react';
 import css from './Picture.scss';
 import classnames from 'classnames';
 
-var sizes = ['s', 'm', 'b']
+var sizes = ['s', 'm', 'b'];
 
 const Picture = ({source, alt_text, size}) => {
 
@@ -28,7 +28,7 @@ Picture.propTypes = {
   size: PropTypes.oneOf(sizes),
   source: PropTypes.string,
   alt_text: PropTypes.string
-}
+};
 
 // Specifies the default values for props:
 Picture.defaultProps = {

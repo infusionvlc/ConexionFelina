@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { storiesOf } from '@storybook/react';
 import { Picture } from '../../packs/ui-bundle';
