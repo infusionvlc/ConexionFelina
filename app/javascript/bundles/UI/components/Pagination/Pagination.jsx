@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import css from './Pagination.scss';
 import classnames from 'classnames';
+import Button from '../Button/Button';
 
 const Pagination = ({nrPages, curPage}) => {
     
@@ -16,9 +17,11 @@ const Pagination = ({nrPages, curPage}) => {
 
     return (
         <div className='pagination'>
-            <button className='button button-primary button-back'>Back</button>
+            <Button type='success' content='Success alert' children='Back' />
+            {/* <button className='button button-primary button-back'>Back</button> */}
             { pages }
-            <button className='button button-primary button-next'>Next</button>
+            <Button type='success' content='Success alert' children='Next' />
+            {/* <button className='button button-primary button-next'>Next</button> */}
         </div>
     )
         

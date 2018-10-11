@@ -4,38 +4,6 @@
     align-items: center;
 }
 
-.button {
-    position: relative;
-    padding: 0.3rem 1rem;
-    // margin-bottom: 1rem; // Margin bottom existing in issue 127 component
-    border: none;
-    border-radius: 28px;
-    color: #000000;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffffff;
-    cursor: pointer;
-
-    &.button-primary {
-        background-color: #68c1bd;
-        &.button-transparent {
-            color: #354093;
-            background-color: transparent;
-            &:hover {
-                color: #fff;
-                background-color: #354093;
-            }
-        }
-    }
-    &.button-back {
-        margin-right: 1rem;
-    }
-
-    &.button-next {
-        margin-left: 1rem;
-    }
-}
-
 .page {
     position: relative;
     width: 1.1rem;
@@ -45,6 +13,7 @@
     border-radius: 50%;
     border-color: #68c1bd;
     margin: 0 .6rem;
+    margin-bottom: 1rem; // Align page dot's with button components
 
     &.page-active {
         background-color: #68c1bd;
