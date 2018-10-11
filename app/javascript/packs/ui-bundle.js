@@ -11,8 +11,8 @@ ReactOnRails.register({
   Input,
   Picture,
   Alert,
-  Pagination,
+  Card,
   Button,
-  Card
+  Pagination,
 });
-export { Input, Picture, Alert, Card };
+export { Input, Picture, Alert, Card, Button, Pagination };
