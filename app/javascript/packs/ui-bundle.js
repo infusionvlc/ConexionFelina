@@ -15,4 +15,3 @@ ReactOnRails.register({
 });
 
 export { Input, Picture, Alert, Card, Modal };
-});

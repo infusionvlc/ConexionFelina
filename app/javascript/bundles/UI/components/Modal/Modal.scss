@@ -1,17 +1,23 @@
 .modal {
   padding: 50px;
-  background-color: #68C1BD;
+  background-color: rgba(104,193,189, 0.5);
   border: 3px solid;
   border-color: #08C1BD;
-  vertical-align: middle; 
-  text-align: center;
 }
 .modal-inner {
+  margin: auto;
   padding: 50px;
+  z-index: 2;
   border-radius: 25px;
   background-color: #ffffff;
   border: 3px solid;
   border-color: #dcdcdc;
-  vertical-align: middle; 
-  text-align: center; 
+  text-align: center;
+}
+.close-button {
+  float: right;
+  margin-top:10px; 
+  margin-right:20px; 
+  color: #dcdcdc;
+  font-size: 28px;
 }
