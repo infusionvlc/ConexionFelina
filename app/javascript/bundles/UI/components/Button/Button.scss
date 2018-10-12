@@ -1,0 +1,72 @@
+.button {
+  position: relative;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 28px;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+
+  &.button-primary {
+    background-color: #354093;
+    &.button-transparent {
+      color: #354093;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: #354093;
+      }
+    }
+  }
+  &.button-success {
+    background-color: #68c1bd;
+    &.button-transparent {
+      color: #68c1bd;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: #68c1bd;
+      }
+    }
+  }
+  &.button-warning {
+    background-color: #ecbb3b;
+    &.button-transparent {
+      color: #ecbb3b;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: #ecbb3b;
+      }
+    }
+  }
+  &.button-error {
+    background-color: #e8654d;
+    &.button-transparent {
+      color: #e8654d;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: #e8654d;
+      }
+    }
+  }
+  &.button-disabled {
+    background-color: #5e5e5e;
+    &.button-transparent {
+      color: #5e5e5e;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: #5e5e5e;
+      }
+    }
+  }
+  &.button-block {
+    padding: 1.2rem 6rem;
+    border-radius: 10px;
+  }
+}
