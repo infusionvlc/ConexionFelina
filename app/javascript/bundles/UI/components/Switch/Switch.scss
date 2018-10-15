@@ -1,0 +1,101 @@
+$border-radius: 0.8rem;
+$small-height: 1.8;
+$large-height: 3;
+$transition-duration: 0.3s;
+$primary: #4dc1bb;
+$secondary: #fafdfd;
+$disabled-primary: #666;
+$disabled-secondary: #ccc;
+
+
+.switch {
+  padding: 0.2rem;
+  border-radius: $border-radius;
+  background-color: $secondary;
+  position: relative;
+
+  display: block;
+  line-height: $small-height;
+
+
+  &.large {
+    line-height: $large-height;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+
+    &:checked ~ span {
+      .selector {
+        right: 0;
+      }
+      .label.on {
+        color: $secondary;
+      }
+      .label.off {
+        color: $primary;
+      }
+    }
+
+    &:disabled ~ span {
+      .selector {
+        background-color: $disabled-primary;
+      }
+      .label.on {
+        color: $disabled-primary;
+      }
+      .label.off {
+        color: $disabled-secondary;
+      }
+    }
+
+    &:checked:disabled ~ span {
+      .label.on {
+        color: $disabled-secondary;
+      }
+      .label.off {
+        color: $disabled-primary;
+      }
+    }
+  }
+
+  .labels {
+    display: block;
+    position: relative;
+  }
+
+  .label {
+    display: inline-block;
+    text-align: center;
+
+    width: 50%;
+    z-index: 2;
+    user-select: none;
+    position: relative;
+
+    transition: color $transition-duration;
+
+    &.on {
+      color: $primary;
+    }
+    &.off {
+      color: $secondary;
+    }
+  }
+
+  .selector {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: $border-radius;
+    background-color: $primary;
+    top: 0;
+    right: 50%;
+    z-index: 1;
+
+    transition: right $transition-duration;
+  }
+}
