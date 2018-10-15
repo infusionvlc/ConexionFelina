@@ -4,4 +4,6 @@ import { storiesOf } from '@storybook/react';
 import { Modal } from '../../packs/ui-bundle';
 
 storiesOf('Modal', module)
-  .add('Modal', () => <Modal text="Hola" />);
+  .add('Modal', () =>
+    <Modal text="Hola" show={this.isOpen}
+      onClose={this.toggleModal} />);
