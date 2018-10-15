@@ -13,4 +13,4 @@ ReactOnRails.register({
   Button,
   Card
 });
-export { Input, Picture, Alert, Card };
+export { Input, Picture, Alert, Card, Button };
