@@ -20,6 +20,7 @@
     "css-loader": "^1.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "file-loader": "^2.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "regenerator-runtime": "^0.12.1",
@@ -27,7 +28,7 @@
     "webpack-dev-server": "2.11.2"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
     "test-watch": "jest --watch"
