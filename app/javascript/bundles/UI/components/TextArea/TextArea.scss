@@ -1,0 +1,22 @@
+.textarea{
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #f2f2f2;
+    border-style: solid;
+    padding: 0.5em;
+  
+    &:focus{
+      border-width: 2px;
+      border-color: #354093;
+      outline-color: 0;
+    }
+}
+  
+.textareareadonly{
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #f2f2f2;
+    border-style: solid;
+    padding: 0.5em;
+    background-color: #f9f9f9;
+}
