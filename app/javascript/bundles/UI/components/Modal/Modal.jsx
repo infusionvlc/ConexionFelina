@@ -20,10 +20,11 @@ class Modal extends React.Component {
       return null;
     }
     return (
-      <div className='modal'>
-        <span className='close-button'
-          onClick={this.toggleModal}>&times;</span>
-        <div className="modal-inner">
+      <div className="modal">
+        <div className="modal-header">
+          <span className="close-button" onClick={this.toggleModal}>&times;</span>
+        </div>
+        <div class="modal-inner">
           {this.props.text}
         </div>
       </div>
