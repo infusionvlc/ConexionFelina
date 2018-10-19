@@ -7,6 +7,7 @@ import Button from '../bundles/UI/components/Button/Button';
 import Sidebar from '../bundles/UI/components/Sidebar/Sidebar';
 import Switch from '../bundles/UI/components/Switch/Switch';
 import TextArea from '../bundles/UI/components/TextArea/TextArea';
+import Avatar from '../bundles/UI/components/Avatar/Avatar';
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
@@ -17,6 +18,7 @@ ReactOnRails.register({
   Card,
   Switch,
   Sidebar,
-  TextArea
+  TextArea,
+  Avatar
 });
-export { Input, Picture, Alert, Card, Button, Switch, Sidebar, TextArea };
+export { Input, Picture, Alert, Button, Card, Switch, TextArea, Avatar, Sidebar };
