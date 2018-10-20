@@ -20,10 +20,10 @@ class ProgressBar extends React.Component {
     }
     render(){
         let className = "progressbar";
-        if(this.state.color == "green" | this.state.color == null){
-            className += "-green";
+        if(this.state.color == "sea" | this.state.color == null){
+            className += "-sea";
         }else{
-            className += "-blue";
+            className += "-sky";
         }
         return <progress className={className} value={this.state.value} max={this.state.max}/>
     }

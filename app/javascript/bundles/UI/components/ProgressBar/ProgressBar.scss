@@ -1,53 +1,53 @@
-.progressbar-green{
+.progressbar-sea{
 	background: rgb(255, 255, 255);
 	border-radius: 50px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid #F3F2F2;
 }
 
-.progressbar-green[value]::-webkit-progress-bar{
+.progressbar-sea[value]::-webkit-progress-bar{
     background-color: white;
     border-radius: 50px;
     padding: 1px;
 }
 
-.progressbar-green[value]::-moz-progress-bar{
-    background-color: rgb(108, 193, 188);
+.progressbar-sea[value]::-moz-progress-bar{
+    background-color: #68C1BD;
     border-radius: 50px;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid #F2F2F2;
 }
 
-.progressbar-green[value]::-webkit-progress-value{
-    background-color: rgb(108, 193, 188);
+.progressbar-sea[value]::-webkit-progress-value{
+    background-color: #68C1BD;
     border-radius: 50px;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid #F2F2F2;
 }
 
-.progressbar-blue{
+.progressbar-sky{
 	background: rgb(255, 255, 255);
 	border-radius: 50px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid #F2F2F2;
 }
 
-.progressbar-blue[value]::-webkit-progress-bar{
+.progressbar-sky[value]::-webkit-progress-bar{
     background-color: white;
     border-radius: 50px;
     padding: 1px;
 }
 
-.progressbar-blue[value]::-moz-progress-bar{
-    background-color: rgb(54, 67, 145);
+.progressbar-sky[value]::-moz-progress-bar{
+    background-color: #354093;
     border-radius: 50px;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid #F2F2F2;
 }
 
-.progressbar-blue[value]::-webkit-progress-value{
-    background-color: rgb(54, 67, 145);
+.progressbar-sky[value]::-webkit-progress-value{
+    background-color: #354093;
     border-radius: 50px;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid #F2F2F2;
 }

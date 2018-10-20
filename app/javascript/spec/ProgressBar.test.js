@@ -6,22 +6,22 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter()});
 
-describe('When ProgressBar is green', () => {
-    it('The ProgressBar color field is green', () => {
+describe('When ProgressBar is sea color', () => {
+    it('The ProgressBar color field is sea', () => {
         const wrapper = mount(
-            <ProgressBar color="green" value="25" max="100"/>
+            <ProgressBar color="sea" value="25" max="100"/>
         );
-        expect(wrapper.html()).toEqual('<progress class="progressbar-green" value="25" max="100"></progress>');
+        expect(wrapper.html()).toEqual('<progress class="progressbar-sea" value="25" max="100"></progress>');
         wrapper.unmount();
     });
 });
 
-describe('When ProgressBar is blue', () => {
+describe('When ProgressBar is sky color', () => {
     it('The ProgressBar color field is blue', () => {
         const wrapper = mount(
-            <ProgressBar color="blue" value="25" max="100"/>
+            <ProgressBar color="sky" value="25" max="100"/>
         );
-        expect(wrapper.html()).toEqual('<progress class="progressbar-blue" value="25" max="100"></progress>');
+        expect(wrapper.html()).toEqual('<progress class="progressbar-sky" value="25" max="100"></progress>');
         wrapper.unmount();
     });
 });
