@@ -7,17 +7,25 @@
 }
 
 .modal-header {
+  display: flex;
   position: relative;
-  z-index: 400;
-  top: 19%;
-  left: 81%;
+  width: 100%;
+  justify-content: space-between; 
+  align-items: baseline;
+  margin-top: 0%;
+}
+
+.modal-body {
+  position: relative;
 }
 
 .modal-inner { 
   text-align: center;
   position: relative;
   margin: 0 auto;
-  padding: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
   z-index: 200;
   align-content: center;
   border-radius: 25px;
@@ -31,5 +39,6 @@
 .close-button {
   cursor: pointer;
   color: #dcdcdc;
-  font-size: 28px;
+  font-size: 28px; 
+  position: relative;
 }

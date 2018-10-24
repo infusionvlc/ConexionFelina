@@ -21,11 +21,14 @@ class Modal extends React.Component {
     }
     return (
       <div className="modal">
-        <div className="modal-header">
-          <span className="close-button" onClick={this.toggleModal}>&times;</span>
-        </div>
-        <div class="modal-inner">
-          {this.props.text}
+        <div className="modal-inner">
+          <div className="modal-header">
+            <h2 className='modal-title'></h2>
+            <span className="close-button" onClick={this.toggleModal}>&times;</span>
+          </div>
+          <div className='modal-body'>
+            {this.props.text}
+          </div>
         </div>
       </div>
     );
