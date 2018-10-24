@@ -12,7 +12,6 @@
   width: 100%;
   justify-content: space-between; 
   align-items: baseline;
-  margin-top: 0%;
 }
 
 .modal-body {
@@ -24,7 +23,8 @@
   position: relative;
   margin: 0 auto;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 5px;
+  padding-right: 15px;
   padding-bottom: 50px;
   z-index: 200;
   align-content: center;
