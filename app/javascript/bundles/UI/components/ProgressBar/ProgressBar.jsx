@@ -9,24 +9,24 @@ import React from 'react';
 import css from './ProgressBar.scss';
 import classnames from 'classnames';
 
-class ProgressBar extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            value: this.props.value,
-            max: this.props.max,
-            color: this.props.color,
-        }
+const ProgressBar = ({value, max, color}) => {
+    let className = "progressbar";
+    if(color == "sea" | color == null){
+        className += "-sea";
+    }else{
+        className += "-sky";
     }
-    render(){
-        let className = "progressbar";
-        if(this.state.color == "sea" | this.state.color == null){
-            className += "-sea";
-        }else{
-            className += "-sky";
-        }
-        return <progress className={className} value={this.state.value} max={this.state.max}/>
-    }
-}
+    return <progress className={className} value={value} max={max}/>
+};
 
 export default ProgressBar;
+
+ProgressBar.propTypes = {
+    value: PropTypes.string,
+    max: PropTypes.string,
+    color: PropTypes.string,
+};
+
+ProgressBar.defaultProps = {
+    max: "100"
+};
