@@ -62,7 +62,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.7'
+  gem 'rspec-rails', '~> 3.8'
   gem 'rspec-activemodel-mocks'
 end
 
