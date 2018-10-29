@@ -1,0 +1,7 @@
+<h1><%= @illness.name %></h1>
+<p><%= @illness.description %></p>
+<p><%= @illness.priority %></p>
+<p><%= @illness.treatment %></p>
+
+<%= link_to "edit", edit_illness_path(@illness.id) %><br/>
+<%= link_to "destroy", illness_path(@illness.id), method: :delete %>
