@@ -67,7 +67,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda', '~> 3.5.0'
+  gem 'shoulda', '~> 3.6.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
