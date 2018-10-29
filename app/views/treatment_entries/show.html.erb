@@ -1,0 +1,8 @@
+<h1>TreatmentEntry#show</h1>
+Treatment date <%= @treatment_entry.date %><br/>    
+Treatment: <%= @treatment_entry.treatment %><br/>    
+Notes: <%= @treatment_entry.notes %><br/>        
+<%= link_to "Edit", edit_treatment_entry_path(@treatment_entry.id) %><br/>
+<%= link_to "Delete", treatment_entry_path(:id => @treatment_entry.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+      
+

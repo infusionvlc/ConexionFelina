@@ -1,0 +1,35 @@
+  <h2>Illnesses</h2>
+
+<div id="sufferings field">
+  <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+    <%= f.fields_for :sufferings do |f| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <%= f.label :status %><br/>
+        <%= f.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
+
+        <%= f.hidden_field :cat_id, params[:cat_id] %>
+
+        <%= f.label "Illness" %><br/>
+        <%= f.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
+
+        <%= f.check_box :chronic %>
+        <%= f.label :chronic %>
+
+        <%= f.label :diagnosis_date %><br>
+        <%= f.date_field :diagnosis_date, class: 'form-control' %>
+
+        <%= f.label :notes %><br>
+        <%= f.text_area :notes, class:'form-control' %><br/>
+
+        <%= f.check_box :_destroy %>
+        <%= f.label :_destroy, "Remove" %>
+      </div>
+    </div>
+  <% end %>
+  <div class="links">
+    <%= link_to_add_association f, :sufferings, class:'btn btn-primary' do %>Add<% end %>
+  </div>
+    <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
+  <% end %>
+</div>

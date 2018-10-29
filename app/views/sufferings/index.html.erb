@@ -1,0 +1,24 @@
+<h1>Suffering#index</h1>
+<% @sufferings.each do |suffering| %>
+  <% 
+    cat = Cat.find(suffering.cat_id)
+    illness = Illness.find(suffering.illness_id)
+  %>
+    <div class="card">
+      <div class="card-container">
+      <div class="advanced_info">
+        Diagnosis date <%= suffering.diagnosis_date %><br/>        
+        Notes: <%= suffering.notes %><br/>        
+        Is chronic: <%= suffering.chronic %><br/>
+        Status: <%= suffering.status %><br/>
+        Cat: <%= cat.name %><br/>
+        Illness: <%= illness.name %><br/>
+        <%= link_to 'Details', suffering_path(suffering.id) %><br/>
+        <%  if policy(@sufferings).volunteer_or_admin? %>
+          <%= link_to "Edit", edit_suffering_path(suffering.id) %><br/>
+          <%= link_to "Delete", suffering_path(:id => suffering.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

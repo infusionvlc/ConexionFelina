@@ -1,14 +1,34 @@
 <%= image_tag(@cat.avatar) if !@cat.avatar.nil? %>
+<h1><%= @cat.name %></h1>
 <hr>
-<h1>name: <%= @cat.name %>  </h1>
-<hr>
-<p>bio: <%= @cat.bio %>  </p>
-<p>birthday: <%= @cat.birthdate_date %>  </p>
-<p>gender: <%= @cat.gender %>  </p>
-<p>sterilized: <%= @cat.sterilized %>  </p>
+<%= @cat.bio %></br>
+birthday: <%= @cat.birthday_date %></br>
+gender: <%= @cat.gender %></br>
+sterilized: <%= @cat.sterilized %></br>
 <% if !(@cat.abandoned_date.nil?) %>
-    <p>abandoned: <%= @cat.abandoned_date %>  </p>
+    abandoned: <%= @cat.abandoned_date %></br>
 <% end %>
 <% if !(@cat.document.nil?) %>
-    <p>document: <%= @cat.document %>  </p>
+    document: <%= @cat.document %></br>
+<% end %>
+<%  if policy(@cat).volunteer_or_admin? %>
+    <%= link_to "List of sufferings", sufferings_path(:cat_id => @cat.id) %></br>
+    <%= link_to "New suffering", new_suffering_path(:cat_id => @cat.id) %></br>
+    <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
+<% end %>
+
+<%  if policy(@cat).adopt? %>
+    <%= link_to "Adopt", adopt_cat_path(id: @cat.id) %></br>
+<% end %>
+
+<% if policy(@cat).sponsor? %>
+    <%= link_to "Sponsor", new_sponsor_cat_path(id: @cat.id) %></br>
+<% end %>
+
+<% if policy(@cat).edit? %>
+  <%= link_to "Edit", cat_path(:id => @cat.id), :method => :edit %> </br>
+<% end %>
+
+<% if policy(@cat).destroy? %>
+  <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
 <% end %>

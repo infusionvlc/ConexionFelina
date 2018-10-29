@@ -1,0 +1,13 @@
+<h2>Info veterinaria</h2>
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <div class="field">
+    <%= f.label :document %><br>
+    <%= f.text_field :document, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :sterilized %><br>
+    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], {:prompt => 'Select'}, {class: 'form-control'} ) %>
+  </div>
+  <br>
+  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
+<% end %>

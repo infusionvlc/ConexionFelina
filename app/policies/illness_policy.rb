@@ -26,4 +26,7 @@ class IllnessPolicy < ApplicationPolicy
     new?
   end
 
+  def show?
+    !@user.nil? && (@user.role == "volunteer" || @user.role == "admin")
+  end
 end
