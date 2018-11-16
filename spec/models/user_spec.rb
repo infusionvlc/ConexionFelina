@@ -17,7 +17,7 @@ RSpec.describe User, type: :model do
 		it { should validate_numericality_of(:purrs).is_greater_than_or_equal_to 0 }
 		it { should validate_length_of(:username).is_at_most(20) }
 		it { should validate_length_of(:bio).is_at_most(512) }
-		it { should validate_uniqueness_of(:email) }
+		it { should validate_uniqueness_of(:email).case_insensitive }
 		it { should validate_uniqueness_of(:username) }
 	end
 end
