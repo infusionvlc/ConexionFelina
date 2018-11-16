@@ -15,12 +15,13 @@ RSpec.describe Adoption, :type => :model do
     end
   end
 
-  context "given a adoption without date" do
+  context "given a adoption without date when updated" do
     it "must be invalid" do
       valid_adoption = Adoption.new()
+      valid_adoption.update({})
       mock_relationships(valid_adoption)
 
-      expect(valid_adoption).to_not be_valid
+      expect(valid_adoption.errors.messages.empty?).to eq(false)
     end
   end
 end
