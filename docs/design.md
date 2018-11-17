@@ -11,10 +11,11 @@ If you find any issue, don't hesitate to
 
 ## UI mock-ups
 
-All application mockups can be found in our [Figma document](https://www.figma.com/file/PuezufmBksh475JS5nvBsSkx/ConexionFelina?node-id=0%3A1). This file intends
-to be our app's design ground truth and must be followed when developing any
-component or feature. If you find any mistake or have any suggestion, please
-open up a new issue [GitHub repo](https://github.com/infusionvlc/ConexionFelina)
-:warning:
+All application mockups can be found in our
+[Figma document](https://www.figma.com/file/PuezufmBksh475JS5nvBsSkx/ConexionFelina?node-id=0%3A1).
+This file intends to be our app's design ground truth and must be followed when
+developing any component or feature. If you find any mistake or have any
+suggestion, please open up a new issue
+[GitHub repo](https://github.com/infusionvlc/ConexionFelina) :warning:
 
 ![Sample UI mock-up](assets/ui_sample.png)
