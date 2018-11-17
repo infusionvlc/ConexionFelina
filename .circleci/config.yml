@@ -62,7 +62,9 @@ jobs:
       - run:
           name: run tests
           command: |
+            ./cc-test-reporter before-build
             rspec
+            ./cc-test-reporter after-build --exit-code $?
 
 deployment:
   staging:
