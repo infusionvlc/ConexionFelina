@@ -5,6 +5,6 @@
 > A web application for managing cat colonies.
 
 [GitHub](https://github.com/infusionvlc/ConexionFelina)
-[Get Started](#covi-conexión-felina)
+[Get Started](#covi-project)
 
 ![](assets/street_cat.jpg)
