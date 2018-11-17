@@ -1,4 +1,9 @@
-[![CircleCI](https://circleci.com/gh/infusionvlc/ConexionFelina.svg?style=svg)](https://circleci.com/gh/infusionvlc/ConexionFelina) [![Maintainability](https://api.codeclimate.com/v1/badges/da388b7d223be8725dbd/maintainability)](https://codeclimate.com/github/infusionvlc/ConexionFelina/maintainability) [![security](https://hakiri.io/github/infusionvlc/ConexionFelina/master.svg)](https://hakiri.io/github/infusionvlc/ConexionFelina/master) <img src="https://opencollective.com/infusionvlc/tiers/sponsor/badge.svg?label=sponsor&color=brightgreen" /> <img src="https://opencollective.com/infusionvlc/tiers/backer/badge.svg?label=backer&color=brightgreen" />
+[![CircleCI](https://circleci.com/gh/infusionvlc/ConexionFelina.svg?style=svg)](https://circleci.com/gh/infusionvlc/ConexionFelina)
+[![Maintainability](https://api.codeclimate.com/v1/badges/da388b7d223be8725dbd/maintainability)](https://codeclimate.com/github/infusionvlc/ConexionFelina/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/da388b7d223be8725dbd/test_coverage)](https://codeclimate.com/github/infusionvlc/ConexionFelina/test_coverage)
+[![security](https://hakiri.io/github/infusionvlc/ConexionFelina/master.svg)](https://hakiri.io/github/infusionvlc/ConexionFelina/master)
+<img src="https://opencollective.com/infusionvlc/tiers/sponsor/badge.svg?label=sponsor&color=brightgreen" />
+<img src="https://opencollective.com/infusionvlc/tiers/backer/badge.svg?label=backer&color=brightgreen" />
 
 # COVI (Conexión Felina)
 
