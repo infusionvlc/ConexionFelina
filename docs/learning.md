@@ -25,6 +25,7 @@ Feel free to open up a PR with your additions :wink:
 * [HTTP, MVC and routes](https://medium.com/the-renaissance-developer/ruby-on-rails-http-mvc-and-routes-f02215a46a84)
 * [Rails testing](https://hackernoon.com/your-guide-to-testing-in-ruby-on-rails-5-c8bd122e38ad)
 * [Rspec best practices](https://jacopretorius.net/2013/11/rspec-best-practices.html)
+* [Better Specs](http://www.betterspecs.org/)
 
 ## Front-end: React, JS
 * [Getting started with React](https://reactjs.org/docs/getting-started.html)
