@@ -12,7 +12,7 @@ import classnames from 'classnames'
 class RadioButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isChecked: false };
+    this.state = { isChecked: false, label: props.label, value: props.value };
     console.log('isChecked is ' + this.state.isChecked);
   }
 
@@ -32,7 +32,10 @@ class RadioButton extends React.Component {
 
   render() {
     return (
-      <input type="radio" className="radiobutton" onChange={function(){}} onClick={this.toggleOnClick} checked={this.state.isChecked}></input>
+      <span>
+        <input type="radio" className="radiobutton" value={this.props.value} onChange={function(){}} onClick={this.toggleOnClick} checked={this.props.checked}></input>
+        <label for="">{this.state.label}</label>
+      </span>
     );
   }
 }

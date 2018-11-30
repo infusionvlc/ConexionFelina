@@ -5,4 +5,4 @@ import { RadioButton } from '../../packs/ui-bundle';
 
 storiesOf('RadioButton', module)
   .add('RadioButton', () =>
-    <RadioButton/>);
+    <RadioButton value="Input1"/>);

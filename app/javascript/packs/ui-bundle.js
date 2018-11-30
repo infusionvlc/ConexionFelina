@@ -11,6 +11,7 @@ import Avatar from '../bundles/UI/components/Avatar/Avatar';
 import ProgressBar from '../bundles/UI/components/ProgressBar/ProgressBar';
 import Sidebar from '../bundles/UI/components/Sidebar/Sidebar';
 import RadioButton from '../bundles/UI/components/RadioButton/RadioButton';
+import RadioGroup from '../bundles/UI/components/RadioGroup/RadioGroup';
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
@@ -25,6 +26,7 @@ ReactOnRails.register({
   Avatar,
   Sidebar,
   ProgressBar,
-  RadioButton
+  RadioButton,
+  RadioGroup
 });
-export { Input, Picture, Alert, Button, Card, Switch, TextArea, Avatar, Sidebar, ProgressBar, RadioButton };
+export { Input, Picture, Alert, Button, Card, Switch, TextArea, Avatar, Sidebar, ProgressBar, RadioButton, RadioGroup };
