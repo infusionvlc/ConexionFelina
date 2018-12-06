@@ -6,9 +6,12 @@ import classnames from 'classnames';
 var types = ['text', 'password'];
 var sizes = ['full-size', 'half-size'];
 
-const Input = ({type, name, value, disabled, size}) => {
-  const customstyle = selectSize(size);  
-  return <input className="input" type={type} name={name} value={value} disabled={disabled} style={customstyle}/>;
+const Input = ({type, name, value, disabled, size, dark}) => {
+  const customstyle = selectSize(size);
+  if (dark)
+    return <input className="input input-dark" type={type} name={name} value={value} disabled={disabled} style={customstyle}/>;
+  else
+    return <input className="input" type={type} name={name} value={value} disabled={disabled} style={customstyle}/>;
 };
 
 function selectSize(size) {
@@ -32,4 +35,4 @@ Input.propTypes = {
 
 Input.defaultProps = {
   type: "text"
-}; 
+};

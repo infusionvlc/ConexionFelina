@@ -10,6 +10,11 @@
   color: #ffffff;
   cursor: pointer;
 
+  &.button-inverted {
+    border: 3px solid white;
+    color: white !important;
+  }
+
   &.button-primary {
     background-color: #354093;
     &.button-transparent {
