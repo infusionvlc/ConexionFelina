@@ -83,3 +83,6 @@ es:
     sterilized: 'Esterilizado:'
     abandonedDate: 'Abandonado aproximadamente el'
     document: 'Documento:'
+
+  users:
+    sign_up: 'Crear un perfil'
