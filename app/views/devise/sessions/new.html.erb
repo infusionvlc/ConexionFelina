@@ -23,9 +23,9 @@
 
     <div class="actions">
       <%= react_component("Button", props: {name: 'user[password_confirmation]', block: true,
-                          transparent: true, type: 'primary', inverted: true, value:'Log in',
-                          target: new_session_path(resource_name)}, prerender: false) %>
+                          transparent: true, type: 'primary', inverted: true, value:'Log in'}, prerender: false) %>
       <%= react_component("Button", props: {name: 'user[password_confirmation]', block: true,
-                          transparent: true, type: 'primary', inverted: true, value:'Sign up'}, prerender: false) %>
+                          transparent: true, type: 'primary', inverted: true, value:'Sign up',
+                          target: new_registration_path(resource_name)}, prerender: false) %>
     </div>
 <% end %>

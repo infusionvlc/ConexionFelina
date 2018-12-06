@@ -19,6 +19,7 @@
 @import url("colors.scss");
 
 body {
+	background: var(--shadow);
 	color: var(--sky);
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.2em;
@@ -69,6 +70,14 @@ section {
 	position: absolute;
 }
 
+.app-container {
+	flex-grow: 1;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 2em;
+}
+
 .big-title {
 	font-size: 1.6em;
 }
@@ -81,6 +90,33 @@ section {
 .breathe {
   display: block;
   height: 2em;
+}
+
+.card-application {
+	background: var(--eter);
+  border: none;
+	border-radius: 20px !important;
+	height: 80%;
+	left: 50%;
+	padding: 0 !important;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.card-application-container {
+	height: 100%;
+	width: 100%;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 2 !important;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4 !important;
+  }
 }
 
 .card-pic {
@@ -168,12 +204,17 @@ section {
 	font-size: 1.2em;
 }
 
+.micro-icon {
+	width: 1em;
+}
+
 .min-spacing {
 	margin-bottom: 0.1em;
 }
 
-.mini-icon {
-	width: 1.5em;
+.mini-logo {
+  margin-bottom: 2em;
+  width: 3em;
 }
 
 .navbar-nav {

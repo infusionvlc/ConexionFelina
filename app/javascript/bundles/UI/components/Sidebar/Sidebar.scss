@@ -4,6 +4,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   background-color: #69BFBA;
+  height: 100%;
   width: 200px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -12,8 +13,8 @@
   .header {
     display: flex;
     align-items: center;
-    height: 130px;
     padding: 0 1.3em;
+    padding-top: 1em;
     position: relative;
     h1 {
       font-size: 1.9em;
@@ -39,6 +40,7 @@
   .links {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     background-color: #49B1AC;
     min-height: 200px;
     padding: .5em 0;
@@ -59,7 +61,8 @@
   .footer {
     display: flex;
     align-items: center;
-    height: 70px;
+    min-height: 70px;
+    padding-top: 1em;
     p {
       font-weight: 500;
       font-size: 0.8em;

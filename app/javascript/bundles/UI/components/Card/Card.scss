@@ -1,22 +1,22 @@
-.card-header {
-  border-radius: 15px;
-  border-width: 3px;
-  border: 1px solid transparent;
-  border-color: #f2f2f2;
+.card {
+  border-radius: 15px !important;
+  border: 3px solid var(--shadow) !important;
   padding: 1em;
-  background-color: #FFFFFF;
-  color: #354093;
+  background-color: var(--eter);
+  color: var(--sky);
   font-weight: bold;
+}
+
+.card-header, .card-footer {
+  background: none !important;
+  border: none !important;
 }
 
 .card-body {
   color: #F2F2F2;
-  font-weight: bold;
   margin-top: 5px;
 }
 
 .card-footer {
-  color: #68C1BD;
-  font-weight: bold;
-  text-align: right;
+  color: var(--sea);
 }

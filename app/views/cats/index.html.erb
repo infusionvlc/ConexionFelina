@@ -1,27 +1,6 @@
 <h1>Los miembros de la colonia</h1>
-<% @cats.each do |cat| %>
-    <div class="card">
-      <div class="card-container">
-      <div class="basic_info">
-        <%= image_tag(cat.avatar) if cat.avatar %>
-        <%= link_to cat.name, cat_path(cat.id) %>
-       </div>
-      <div class="advanced_info">
-        <%= cat.bio %><br/>
-        <%= I18n.t 'cats.birthDate'%> <%= cat.birthday_date %><br/>
-        <%= I18n.t 'cats.gender'%> <%= cat.gender %><br/>
-        <%= I18n.t 'cats.sterilized'%> <%= cat.sterilized %><br/>
-        <% if !cat.abandoned_date.nil?%>
-          <%= I18n.t 'cats.abandonedDate'%> <%= cat.abandoned_date %><br/>
-        <% end %>
-        <%= I18n.t 'cats.document'%> <%= cat.document %><br/>
-        <%  if policy(@cats).volunteer_or_admin? %>
-             <%= link_to "Edit", edit_cat_path(cat.id) %></br>
-             <%= link_to "Destroy", cat_path(cat.id), method: :delete %></br>
-             <%= link_to "List of sufferings", sufferings_path(:cat_id => cat.id) %></br>
-             <%= link_to "New suffering", new_suffering_path(:cat_id => cat.id) %></br>
-        <% end %>
-      </div>
-    </div>
-  </div>
-<% end %>
+<div class="card-columns">
+  <% @cats.each do |cat| %>
+    <%= react_component("Card", props: {title: cat.name, link: cat_path(cat), image: cat.avatar, footer: 'Manage'}, class:'card', prerender: false) %>
+  <% end %>
+</div>

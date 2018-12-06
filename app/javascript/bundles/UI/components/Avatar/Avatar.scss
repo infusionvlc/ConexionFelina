@@ -1,4 +1,5 @@
 $size: 64px;
+$md-size: 128px;
 
 .avatar {
   border-radius: 50%;
@@ -7,10 +8,19 @@ $size: 64px;
   max-width: $size;
   max-height: $size;
 
-  background-size: contain;
+  margin: 0 auto;
+
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
   background-clip: padding-box;
   background-color: #dce9b2;
+
+  &.avatar-md {
+    width: $md-size;
+    height: $md-size;
+    max-width: $md-size;
+    max-height: $md-size;
+  }
 }
