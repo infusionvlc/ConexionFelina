@@ -1,0 +1,83 @@
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Zilla+Slab:400,600i,700');
+@import url("colors.scss");
+
+body {
+  background: var(--shadow);
+}
+
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4em;
+  width: 100%;
+
+  *:not(:last-child) {
+    margin-right: 1em;
+  }
+}
+
+.card-registrations {
+  background: var(--sea);
+  border: none;
+  border-radius: 20px;
+  left: 50%;
+  padding: 4em;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
+  @media screen and (min-width: 1295px) {
+    width: 50%;
+  }
+
+  h1 {
+    color: var(--sky);
+    font-weight: bold;
+  }
+
+  .card-header, .card-footer {
+    background: none;
+    border: none;
+  }
+
+  a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--sky);
+  }
+
+  .card-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+}
+
+.field {
+  margin-bottom: 1.5em;
+}
+
+.mini-logo {
+  margin-bottom: 2em;
+  width: 40%;
+
+  @media screen and (min-width: 768px) {
+    width: 4em;
+  }
+}

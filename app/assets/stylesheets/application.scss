@@ -16,22 +16,7 @@
 
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Zilla+Slab:400,600i,700');
-
-
-/* PALETA */
-
-:root {
-  --sky: #354093;
-  --heaven: #F7F2BF;
-  --eter: #FAFAFA;
-  --shadow: #F2F2F2;
-  --fire: #E8654D;
-  --sea: #68C1BD;
-  --sun: #ECBB3B;
-  --blackish: #9f9f9f;
-}
-
-/* FIN PALETA */
+@import url("colors.scss");
 
 body {
 	color: var(--sky);
