@@ -1,7 +1,8 @@
 /**
- * TextArea.jsx - Created by Josep Dols
+ * RadioGroup.jsx - Created by Josep Dols & David Redó
  * 
- * First edit: 30th Sep. 2018 - Josep Dols and David Redó
+ * First edit: 30th Nov. 2018 - Josep Dols & David Redó
+ * Released: 07th Dec. 2018
  */
 
 import PropTypes from 'prop-types';
@@ -15,6 +16,7 @@ class RadioGroup extends React.Component{
     constructor(props){
         super(props);
         this.state = {items: props.items};
+        this.state.value = props.value
     }
 
     handleChange = event => {

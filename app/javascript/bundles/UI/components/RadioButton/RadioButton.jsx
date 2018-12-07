@@ -2,7 +2,8 @@
  * RadioButton.jsx - Created by David Redó & Josep Dols
  * 
  * First edit: 30th Nov. 2018 - David Redó & Josep Dols
-*/
+ * Released: 07th Dec. 2018
+ */
 
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -13,21 +14,18 @@ class RadioButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isChecked: false, label: props.label, value: props.value };
-    console.log('isChecked is ' + this.state.isChecked);
   }
 
   toggleChecked = () => {
     this.setState({
       isChecked: !this.state.isChecked
     });
-    console.log('isChecked is ' + this.state.isChecked);
   }
 
   toggleOnClick = () => {
     this.setState({
       isChecked: true
     });
-    console.log('isChecked se va a True');
   }
 
   render() {
@@ -39,7 +37,7 @@ class RadioButton extends React.Component {
           <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
           <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
         </svg>
-        <label for="">{this.state.label}</label>
+        <label>{this.state.label}</label>
       </span>
     );
   }
