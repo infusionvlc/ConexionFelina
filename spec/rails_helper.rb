@@ -9,8 +9,6 @@ require 'rspec/rails'
 require "capybara/rspec"
 require 'support/factory_bot'
 
-Rails.application.load_seed
-
 include Warden::Test::Helpers
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
