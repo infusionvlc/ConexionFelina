@@ -91,11 +91,11 @@ assigments = Assignment.create([
 
 #Sufferings
 sufferings = Suffering.create([
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 1", chronic: true, status: 0, cat_id: 1, illness_id: 1},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 2", chronic: true, status: 1, cat_id: 2, illness_id: 2},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 3", chronic: true, status: 2, cat_id: 3, illness_id: 1},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 4", chronic: true, status: 3, cat_id: 4, illness_id: 2},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 5", chronic: true, status: 4, cat_id: 1, illness_id: 1},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 1", chronic: true, status: 0, cat_id: 1, illness_id: 1, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 2", chronic: true, status: 1, cat_id: 2, illness_id: 2, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 3", chronic: true, status: 2, cat_id: 3, illness_id: 1, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 4", chronic: true, status: 3, cat_id: 4, illness_id: 2, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 5", chronic: true, status: 4, cat_id: 1, illness_id: 1, dischargement_date: "1-1-2018"},
 ])
 
 #Turns
