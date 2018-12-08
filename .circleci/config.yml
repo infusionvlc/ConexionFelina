@@ -5,6 +5,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: bb3d2bcc9ffe079c10061804fc1baf70959b2d1ac5294791085d6e64f44f18a7
     docker:
        - image: circleci/ruby:2.4.1-node-browsers
          environment:
@@ -48,11 +50,21 @@ jobs:
             bundle exec rake db:migrate
             bundle exec rake db:schema:load
 
+      # setup code climate coverage reporter
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
+
       # run tests!
       - run:
           name: run tests
           command: |
+            ./cc-test-reporter before-build
             rspec
+            ./cc-test-reporter after-build --exit-code $?
 
 deployment:
   staging:

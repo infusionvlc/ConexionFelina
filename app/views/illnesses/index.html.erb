@@ -1,0 +1,7 @@
+<h1>Illnesses</h1>
+
+<%= link_to "create", new_illness_path  %> <br>
+
+<% @illnesses.each do | illness | %>
+  <%= link_to illness.name, illness_path( illness.id ) %><br/>
+<% end %>
