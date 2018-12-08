@@ -19,6 +19,7 @@ class CatsController < ApplicationController
     @cat = Cat.create(cat_params)
     authorize @cat
     @cat.save
+    @cat.avatar.attach(params[:cat][:avatar])
     redirect_to cat_path(@cat)
   end
 
@@ -67,7 +68,7 @@ class CatsController < ApplicationController
   private
 
   def cat_params
-    params.require(:cat).permit(:name, :bio, :birthday_date, :gender,
+    params.require(:cat).permit(:name, :bio, :birthday_date, :gender, :avatar,
                                 :sterilized, :abandoned_date, :document, :colony_id, :saved_state,
                                 sufferings_attributes: [:id, :illness_id, :cat_id, :diagnosis_date, :notes, :chronic, :status, :_destroy])
   end

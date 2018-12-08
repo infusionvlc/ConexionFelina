@@ -23,6 +23,10 @@
     <%= f.label :gender %><br>
     <%= react_component("Switch", props: {name: 'cat[gender]', onLabel:"Male", offLabel:"Female", large: true}, prerender: false) %>
   </div>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar, class: 'input full-width' %>
+  </div>
   <br>
   <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
 <% end %>

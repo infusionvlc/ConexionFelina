@@ -5,6 +5,8 @@ class Colony < ApplicationRecord
   belongs_to :location
   has_many :cats
 
+  has_one_attached :icon
+
   has_and_belongs_to_many :users
 
   has_many :assignments

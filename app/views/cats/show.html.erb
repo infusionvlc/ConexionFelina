@@ -1,7 +1,8 @@
 
 <div class="col-xs-12 col-xl-8 float-left">
 <div class="d-flex mb-4">
-    <div class="mr-4"><%= react_component("Avatar", props: {src: @cat.avatar, size: 'bg'}, prerender: false) %></div>
+
+    <div class="mr-4"><%= react_component("Avatar", props: {src: avatar_tag(@cat), size: 'bg'}, prerender: false) %></div>
     <div>
         <h1>
             <%= @cat.name %>
@@ -27,6 +28,6 @@
   <% end %>
 </div>
 <div class="col-xs-12 col-xl-4 float-right">
-    <%= react_component("Card", props: {title: @cat.colony.name, link: colony_path(@cat.colony), image: @cat.avatar, center: true}, class:'card', prerender: false) %>
+    <%= react_component("Card", props: {title: @cat.colony.name, link: colony_path(@cat.colony), image: icon_tag(@cat.colony), center: true}, class:'card', prerender: false) %>
 </div>
 

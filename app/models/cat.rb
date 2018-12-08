@@ -6,6 +6,8 @@ class Cat < ApplicationRecord
   enum gender: [:male, :female]
   enum sterilized: [:yes, :no]
 
+  has_one_attached :avatar
+
   has_many :sufferings
   has_many :illnesses, through: :sufferings
   belongs_to :colony, optional: true

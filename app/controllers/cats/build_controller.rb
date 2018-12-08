@@ -25,6 +25,7 @@ class Cats::BuildController < ApplicationController
     params[:cat][:saved_state] = step.to_s
     params[:cat][:saved_state] = 'active' if step == steps.last
     @cat.update_attributes(build_params)
+    @cat.avatar.attach(params[:cat][:avatar]) if step == :add_basic_info
 
     if step == :add_origin
       if params[:cat][:colony] == '0'
@@ -59,7 +60,7 @@ class Cats::BuildController < ApplicationController
 
   private
   def build_params
-    params.require(:cat).permit(:name, :gender, :birthday_date, :abandoned_date, :bio, :saved_state, :colony_id, :document, :sterilized,
+    params.require(:cat).permit(:name, :gender, :birthday_date, :abandoned_date, :avatar, :bio, :saved_state, :colony_id, :document, :sterilized,
                                 sufferings_attributes: [:id, :illness_id, :cat_id, :diagnosis_date, :notes, :chronic, :status, :_destroy])
   end
 end
