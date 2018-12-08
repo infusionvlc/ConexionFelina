@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 
-
-var placement = ['top', 'right', 'botton', 'left'];
+var placement = ['top', 'right', 'bottom', 'left'];
 var buttonType = ['primary', 'error', 'warning', 'success', 'disabled'];
 
 const ToolTipButton = ({ buttonType, placement, text, children, block, transparent, ...rest }) => {
-  const classes = classnames('button', {
+  const classes = classnames('button','tag-tooltip', {
     'button-primary': buttonType === 'primary',
     'button-success': buttonType === 'success',
     'button-warning': buttonType === 'warning',
@@ -33,7 +32,6 @@ export default ToolTipButton;
 
 ToolTipButton.propTypes = {
   placement: PropTypes.oneOf(placement).isRequired,
-  button: PropTypes.object.isRequired,
   text: PropTypes.string.isRequired,
   buttonType: PropTypes.oneOf(buttonType).isRequired
 };
