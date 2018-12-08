@@ -4,7 +4,7 @@ class CreateCats < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :bio
       t.text :avatar
-      t.date :birthday_date
+      t.date :birthdate_date
       t.integer :gender
       t.integer :sterilized
       t.date :abandoned_date

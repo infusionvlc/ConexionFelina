@@ -1,4 +1,3 @@
-
 <h2>Edit <%= @cat.name %></h2>
 <%= form_for(@cat) do |f| %>
   <div class="field">
@@ -30,29 +29,28 @@
     <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
   </div>
   <div id="sufferings field">
-    <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-      <%= f.fields_for :sufferings do |f| %>
+    <%= f.fields_for :sufferings do |ff| %>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <%= f.label :status %><br/>
-          <%= f.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
+          <%= ff.label :status %><br/>
+          <%= ff.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
 
-          <%= f.hidden_field :cat_id, params[:cat_id] %>
+          <%= ff.hidden_field :cat_id, params[:cat_id] %>
 
-          <%= f.label "Illness" %><br/>
-          <%= f.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
+          <%= ff.label "Illness" %><br/>
+          <%= ff.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
 
-          <%= f.check_box :chronic %>
-          <%= f.label :chronic %>
+          <%= ff.check_box :chronic %>
+          <%= ff.label :chronic %>
 
-          <%= f.label :diagnosis_date %><br>
-          <%= f.date_field :diagnosis_date, class: 'form-control' %>
+          <%= ff.label :diagnosis_date %><br>
+          <%= ff.date_field :diagnosis_date, class: 'form-control' %>
 
-          <%= f.label :notes %><br>
-          <%= f.text_area :notes, class:'form-control' %><br/>
+          <%= ff.label :notes %><br>
+          <%= ff.text_area :notes, class:'form-control' %><br/>
 
-          <%= f.check_box :_destroy %>
-          <%= f.label :_destroy, "Remove" %>
+          <%= ff.check_box :_destroy %>
+          <%= ff.label :_destroy, "Remove" %>
         </div>
       </div>
     <% end %>
