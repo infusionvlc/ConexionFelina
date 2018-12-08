@@ -8,7 +8,7 @@ jobs:
     environment:
       CC_TEST_REPORTER_ID: bb3d2bcc9ffe079c10061804fc1baf70959b2d1ac5294791085d6e64f44f18a7
     docker:
-       - image: circleci/ruby:2.4.1-node-browsers
+       - image: circleci/ruby:2.5.3-node-browsers
          environment:
            DATABASE_URL: "postgres://conexion_felina@localhost/conexion_felina-test"
            PGHOST: 127.0.0.1
@@ -63,7 +63,7 @@ jobs:
           name: run tests
           command: |
             ./cc-test-reporter before-build
-            rspec
+            bundle exec rspec
             ./cc-test-reporter after-build --exit-code $?
 
 deployment:
