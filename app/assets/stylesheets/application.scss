@@ -20,7 +20,7 @@
 
 body {
 	background: var(--shadow);
-	color: var(--sky);
+	color: var(--dark);
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.2em;
 	overflow-x: hidden;
@@ -36,6 +36,7 @@ footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: var(--sky);
 	font-weight: bold;
 	margin-bottom: 0.8em;
 }
@@ -214,7 +215,7 @@ section {
 
 .mini-logo {
   margin-bottom: 2em;
-  width: 3em;
+  width: 2em;
 }
 
 .navbar-nav {

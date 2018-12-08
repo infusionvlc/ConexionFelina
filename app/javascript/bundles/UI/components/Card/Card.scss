@@ -3,17 +3,22 @@
   border: 3px solid var(--shadow) !important;
   padding: 1em;
   background-color: var(--eter);
-  color: var(--sky);
   font-weight: bold;
 }
 
 .card-header, .card-footer {
   background: none !important;
   border: none !important;
+  color: var(--sky);
+  padding-bottom: 0 !important;
+
+  h2 {
+    margin-bottom: 0 !important;
+  }
 }
 
 .card-body {
-  color: #F2F2F2;
+  color: var(--dark);
   margin-top: 5px;
 }
 

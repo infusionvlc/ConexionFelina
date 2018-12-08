@@ -1,5 +1,6 @@
 $size: 64px;
 $md-size: 128px;
+$bg-size: 256px;
 
 .avatar {
   border-radius: 50%;
@@ -22,5 +23,16 @@ $md-size: 128px;
     height: $md-size;
     max-width: $md-size;
     max-height: $md-size;
+  }
+
+  &.avatar-bg {
+    width: $bg-size;
+    height: $bg-size;
+    max-width: $bg-size;
+    max-height: $bg-size;
+  }
+
+  &.avatar-full {
+    width: 100%;
   }
 }

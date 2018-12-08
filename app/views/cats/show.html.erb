@@ -1,34 +1,25 @@
-<%= image_tag(@cat.avatar) if !@cat.avatar.nil? %>
-<h1><%= @cat.name %></h1>
-<hr>
-<%= @cat.bio %></br>
-birthday: <%= @cat.birthday_date %></br>
-gender: <%= @cat.gender %></br>
-sterilized: <%= @cat.sterilized %></br>
-<% if !(@cat.abandoned_date.nil?) %>
-    abandoned: <%= @cat.abandoned_date %></br>
-<% end %>
-<% if !(@cat.document.nil?) %>
-    document: <%= @cat.document %></br>
-<% end %>
-<%  if policy(@cat).volunteer_or_admin? %>
-    <%= link_to "List of sufferings", sufferings_path(:cat_id => @cat.id) %></br>
-    <%= link_to "New suffering", new_suffering_path(:cat_id => @cat.id) %></br>
-    <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
-<% end %>
 
-<%  if policy(@cat).adopt? %>
-    <%= link_to "Adopt", adopt_cat_path(id: @cat.id) %></br>
-<% end %>
+<div class="col-xs-12 col-lg-8 float-left">
+<div class="d-flex mb-4">
+    <div class="mr-4"><%= react_component("Avatar", props: {src: @cat.avatar, size: 'bg'}, prerender: false) %></div>
+    <div>
+        <h1><%= @cat.name %></h1>
+        <%= react_component("Tag", props: {type: 'success', children: 'Sterilized'}, prerender: false) if @cat.sterilized %>
+        <%= time_ago_in_words @cat.birthday_date %></br>
+        <% if !(@cat.abandoned_date.nil?) %>
+            Abandonado/a hace <%= time_ago_in_words @cat.abandoned_date %></br>
+        <% end %>
+        <%= @cat.gender %>
+    </div>
+</div>
+<p><%= @cat.bio %></p>
 
-<% if policy(@cat).sponsor? %>
-    <%= link_to "Sponsor", new_sponsor_cat_path(id: @cat.id) %></br>
-<% end %>
+<h2>Health</h2>
+    <% @cat.sufferings.each do |condition| %>
+        <%= react_component("Card", props: {title: condition.illness.name, body: 'Diagnosed on ' + condition.diagnosis_date.to_s, footerLink: suffering_path(condition), footer: 'Review'}, class:'card', prerender: false) %>
+    <% end %>
+</div>
+<div class="col-xs-12 col-lg-4 float-right">
+    <%= react_component("Card", props: {title: @cat.colony.name, link: colony_path(@cat.colony), image: @cat.avatar, center: true}, class:'card', prerender: false) %>
+</div>
 
-<% if policy(@cat).edit? %>
-  <%= link_to "Edit", cat_path(:id => @cat.id), :method => :edit %> </br>
-<% end %>
-
-<% if policy(@cat).destroy? %>
-  <%= link_to "Delete", cat_path(:id => @cat.id), :method => :delete, data: { confirm: 'Are you sure?' } %></br>
-<% end %>
