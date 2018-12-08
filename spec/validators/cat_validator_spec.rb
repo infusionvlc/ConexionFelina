@@ -10,10 +10,10 @@ RSpec.describe Cat, :type => :model do
   end
 
   context 'given a cat with only name' do
-    it 'must be valid' do
+    it 'must not be valid' do
       valid_cat = Cat.new(name: "Kitty", saved_state: "active")
        mock_relationships(valid_cat)
-      expect(valid_cat).to be_valid
+      expect(valid_cat).to_not be_valid
     end
   end
 
@@ -35,7 +35,7 @@ RSpec.describe Cat, :type => :model do
 
   context 'given a cat with name and bio with 250 words' do
     it 'must be valid' do
-      valid_cat = Cat.new(name: "Kitty", bio: LORE_IPSUM_250, saved_state: "active")
+      valid_cat = Cat.new(name: "Kitty",  birthday_date: Date.yesterday, bio: LORE_IPSUM_250, saved_state: "active")
        mock_relationships(valid_cat)
       expect(valid_cat).to be_valid
     end
@@ -43,7 +43,7 @@ RSpec.describe Cat, :type => :model do
 
   context 'given a cat with name and bio with 513 words' do
     it 'must not be valid' do
-      valid_cat = Cat.new(name: "Kitty", bio: LORE_IPSUM_513, saved_state: "active")
+      valid_cat = Cat.new(name: "Kitty",  birthday_date: Date.yesterday, bio: LORE_IPSUM_513, saved_state: "active")
        mock_relationships(valid_cat)
       expect(valid_cat).to_not be_valid
     end
