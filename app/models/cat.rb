@@ -16,9 +16,11 @@ class Cat < ApplicationRecord
   accepts_nested_attributes_for :sufferings, reject_if: :all_blank, allow_destroy: true
 
   validates :name, presence: true, :if => :active_or_basic_info?
-  validate :birthday_date_must_be_in_the_past, :if => :active_or_basic_info?
-  validates :name, length: { maximum: MAXIMUM_NAME_LENGTH }, :if => :active_or_basic_info?
+  validates :birthday_date, presence: true, :if => :active_or_basic_info?
 
+  validate :birthday_date_must_be_in_the_past, :if => :active_or_basic_info?
+
+  validates :name, length: { maximum: MAXIMUM_NAME_LENGTH }, :if => :active_or_basic_info?
   validates :bio,  length: { maximum: MAXIMUM_BIO_LENGTH }, :if => :active_or_bio?
 
   validates :colony_id, presence: true, :if => :active_or_colony?

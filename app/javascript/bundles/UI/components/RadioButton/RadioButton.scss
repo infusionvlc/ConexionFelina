@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:500,600,700');
 .radiobutton {
-    font-family: 'Raleway', sans-serif;
-    color: rgb(128, 128, 128);
-    background-color: #f2f2f2;
     display: inline-block;
     margin-top: 6px;
     margin-left: 3px;
@@ -10,7 +6,7 @@
     cursor: pointer;
     &:not(:first-child){
         margin-left: 15px;
-    }   
+    }
     @media screen {
         display: block;
         float: none;
@@ -21,32 +17,8 @@
     }
     -webkit-user-select: none;
     user-select: none;
-} 
 
 
-label{
-    font-family: 'Raleway', sans-serif;
-    display: inline-block;
-    position: relative;
-    font-weight: 300;
-    font-size: 1.35em;
-    padding-left: 15px;
-    height: 30px;
-    z-index: 9;
-    color: rgb(128, 128, 128);
-    cursor: default;
-    -webkit-transition: all 0.25s linear;
-}
-
-span {
-    display: block;
-    position: relative;
-    white-space: nowrap;
-    align-content: center;
-}
-
-input {
-    display: none;
     opacity: 0;
     &:checked + svg {
         path {
@@ -60,6 +32,25 @@ input {
             }
         }
     }
+
+}
+
+
+.radio-label{
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+    height: 30px;
+    z-index: 9;
+    cursor: default;
+    -webkit-transition: all 0.25s linear;
+}
+
+.radio-span {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    align-content: center;
 }
 
 svg {
@@ -67,10 +58,10 @@ svg {
     vertical-align: -3px;
     circle {
         stroke-width: 2;
-        stroke: #C8CCD4;
+        stroke: var(--shadow);
     }
     path {
-        stroke: #69BFBA;
+        stroke: var(--sea);
         &.inner {
             stroke-width: 6;
             stroke-dasharray: 19;

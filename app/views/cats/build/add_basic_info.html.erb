@@ -1,16 +1,27 @@
-<h2>Info básica</h2>
+<h1>New cat</h1>
+<p>We're willing to know more about this new hero<p>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+
+  <% if @cat.errors.any? %>
+    <div class="form-errors">
+        <h2>There are <%= pluralize(@cat.errors.count, "error") %> errors in your data:</h2>
+        <% @cat.errors.full_messages.each do |msg| %>
+          <h4><%= msg %></h4>
+        <% end %>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= react_component("Input", props: {name: 'cat[name]', size:'full-size'}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :birthday_date %><br>
-    <%= f.date_field :birthday_date, class: 'form-control' %>
+    <%= react_component("Input", props: {name: 'cat[birthday_date]', type: 'date', size:'full-size'}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.select(:gender, [['Male', :male], ['Female', :female]], {:prompt => 'Select'}, {class: 'form-control'} ) %>
+    <%= react_component("Switch", props: {name: 'cat[gender]', onLabel:"Male", offLabel:"Female", large: true}, prerender: false) %>
   </div>
   <br>
   <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>

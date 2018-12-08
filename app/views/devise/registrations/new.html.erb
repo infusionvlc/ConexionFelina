@@ -31,11 +31,10 @@
       </div>
     </div>
     <div class="actions">
-      <%= react_component("Button", props: {name: 'user[password_confirmation]', block: true,
-                          transparent: true, type: 'primary', inverted: true, value:'Log in',
+      <%= react_component("Button", props: {block: true, transparent: true, type: 'primary', inverted: true, value:'Log in',
                           target: new_session_path(resource_name)}, prerender: false) %>
-      <%= react_component("Button", props: {name: 'user[password_confirmation]', block: true,
-                          transparent: true, type: 'primary', inverted: true, value:'Sign up'}, prerender: false) %>
+      <%= react_component("Button", props: {block: true, transparent: true, type: 'primary', inverted: true, value:'Sign up'
+                          }, prerender: false) %>
     </div>
   <% end %>
 </div>

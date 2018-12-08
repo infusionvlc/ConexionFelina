@@ -2,7 +2,7 @@
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
   <div class="field">
     <%= f.label :abandoned_date %><br>
-    <%= f.date_field :abandoned_date, class: 'form-control' %>
+    <%= react_component("Input", props: {name: 'cat[abandoned_date]', type: 'date', size:'full-size'}, prerender: false) %>
   </div>
   <br>
   <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>

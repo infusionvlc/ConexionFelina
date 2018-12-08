@@ -2,7 +2,7 @@
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
   <div class="field">
     <%= f.label :bio %><br>
-    <%= f.text_area :bio, class: 'form-control' %>
+    <%= react_component("TextArea", props: {name: 'cat[bio]', full: true, rows: 10}, prerender: false) %>
   </div>
   <br>
   <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>

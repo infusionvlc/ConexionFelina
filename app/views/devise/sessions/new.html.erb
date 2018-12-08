@@ -22,10 +22,9 @@
     <% end %>
 
     <div class="actions">
-      <%= react_component("Button", props: {name: 'user[password_confirmation]', block: true,
-                          transparent: true, type: 'primary', inverted: true, value:'Log in'}, prerender: false) %>
-      <%= react_component("Button", props: {name: 'user[password_confirmation]', block: true,
-                          transparent: true, type: 'primary', inverted: true, value:'Sign up',
+      <%= react_component("Button", props: {block: true, transparent: true, type: 'primary', inverted: true, value:'Log in'
+                          }, prerender: false) %>
+      <%= react_component("Button", props: {block: true, transparent: true, type: 'primary', inverted: true, value:'Sign up',
                           target: new_registration_path(resource_name)}, prerender: false) %>
     </div>
 <% end %>

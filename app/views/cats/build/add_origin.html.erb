@@ -1,8 +1,18 @@
-<h2>Colonia o abandono</h2>
-<div class="field">
-  <%= link_to 'colony', wizard_path(:add_colony) %>
-</div>
-<div class="field">
-  <%= link_to 'abandoned', wizard_path(:add_abandoned_date) %>
-</div>
-<br>
+<h1>New cat</h1>
+<p>Tell us a bit more about <%= @cat.name %></p>
+
+
+<p>Was <%= @cat.name %> abandoned?</p>
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <%= f.submit 'Siguiente', class:'btn btn-success' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-8">
+      <div class="field">
+        <%= react_component("RadioGroup", props: {name: 'cat[colony]', items: [{label: 'Yes'}, {label: 'No'}], value: 0}, prerender: false) %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <img src="/ciudad.svg" class="full-width" />
+    </div>
+  </div>
+<% end %>

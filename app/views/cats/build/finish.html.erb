@@ -2,6 +2,14 @@
 
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
   <%= f.hidden_field :saved_state, value: 'active' %>
-  <%= f.submit "profile", :class => 'btn btn-primary' %>
-  <%= f.submit "repeat", :class => 'btn btn-primary' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-6 center">
+      <img src="/adorables.svg" class="full-width" />
+      <%= react_component("Button", props: {transparent: true, name: 'commit', type: 'primary', value:'repeat'}, prerender: false) %>
+    </div>
+    <div class="col-xs-12 col-lg-6 center">
+      <img src="/corazon.svg" class="full-width"/>
+      <%= react_component("Button", props: {transparent: true, name: 'commit', type: 'primary', value:'profile'}, prerender: false) %>
+    </div>
+  </div>
 <% end %>

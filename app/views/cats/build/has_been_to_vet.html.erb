@@ -1,8 +1,18 @@
-<h2>¿Ha ido al veterinario alguna vez?</h2>
-<div class="field">
-  <%= link_to 'sí', wizard_path(:add_vet_info) %>
-</div>
-<div class="field">
-  <%= link_to 'no', wizard_path(:add_bio) %>
-</div>
-<br>
+<h1>New cat</h1>
+<p>Tell us a bit more about <%= @cat.name %></p>
+
+<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <%= f.submit 'Siguiente', class:'btn btn-success' %>
+  <p>Did you already go to the vet with <%= @cat.name %>?</p>
+
+  <div class="row">
+    <div class="col-xs-12 col-lg-8">
+      <div class="field">
+        <%= react_component("RadioGroup", props: {name: 'cat[vet]', items: [{label: 'Yes'}, {label: 'No'}], value: 0}, prerender: false) %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <img src="/vet.svg" class="full-width" />
+    </div>
+  </div>
+<% end %>

@@ -2,16 +2,11 @@ $border-radius: 0.8rem;
 $small-height: 1.8;
 $large-height: 3;
 $transition-duration: 0.3s;
-$primary: #4dc1bb;
-$secondary: #fafdfd;
-$disabled-primary: #666;
-$disabled-secondary: #ccc;
-
 
 .switch {
   padding: 0.2rem;
   border-radius: $border-radius;
-  background-color: $secondary;
+  background-color: var(--eter);
   position: relative;
 
   display: block;
@@ -32,31 +27,31 @@ $disabled-secondary: #ccc;
         right: 0;
       }
       .label.on {
-        color: $secondary;
+        color: var(--eter);
       }
       .label.off {
-        color: $primary;
+        color: var(--sea);
       }
     }
 
     &:disabled ~ span {
       .selector {
-        background-color: $disabled-primary;
+        background-color: var(--blackish);
       }
       .label.on {
-        color: $disabled-primary;
+        color: var(--blackish);
       }
       .label.off {
-        color: $disabled-secondary;
+        color: var(--eter);
       }
     }
 
     &:checked:disabled ~ span {
       .label.on {
-        color: $disabled-secondary;
+        color: var(--eter);
       }
       .label.off {
-        color: $disabled-primary;
+        color: var(--blackish);
       }
     }
   }
@@ -67,6 +62,7 @@ $disabled-secondary: #ccc;
   }
 
   .label {
+    cursor: pointer;
     display: inline-block;
     text-align: center;
 
@@ -78,10 +74,10 @@ $disabled-secondary: #ccc;
     transition: color $transition-duration;
 
     &.on {
-      color: $primary;
+      color: var(--sea);
     }
     &.off {
-      color: $secondary;
+      color: var(--eter);
     }
   }
 
@@ -91,7 +87,7 @@ $disabled-secondary: #ccc;
     width: 50%;
     height: 100%;
     border-radius: $border-radius;
-    background-color: $primary;
+    background-color: var(--sea);
     top: 0;
     right: 50%;
     z-index: 1;

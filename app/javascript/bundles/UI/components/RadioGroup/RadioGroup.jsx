@@ -1,14 +1,12 @@
 /**
  * RadioGroup.jsx - Created by Josep Dols & David Redó
- * 
+ *
  * First edit: 30th Nov. 2018 - Josep Dols & David Redó
  * Released: 07th Dec. 2018
  */
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import css from './RadioGroup.scss';
-import classnames from 'classnames';
 
 import RadioButton from '../RadioButton/RadioButton'
 
@@ -26,12 +24,12 @@ class RadioGroup extends React.Component{
     render(){
         let buttons = [];
         for (let i = 0; i < this.state.items.length; i++) {
-            buttons.push(<RadioButton value={i} checked={this.state.value == i} label={this.state.items[i].label}></RadioButton>);
+            buttons.push(<RadioButton value={i} name={this.props.name} checked={this.state.value == i} label={this.state.items[i].label}></RadioButton>);
         }
         return (
-            <form action="" value={this.state.value} onChange={this.handleChange}>
+            <div value={this.state.value} onChange={this.handleChange}>
                 {buttons}
-            </form>
+            </div>
         )
     }
 }

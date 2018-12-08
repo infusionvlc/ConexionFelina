@@ -1,6 +1,6 @@
 /**
  * TextArea.jsx - Created by Josep Dols
- * 
+ *
  * First edit: 19th Sep. 2018 - Josep Dols
  */
 
@@ -9,10 +9,12 @@ import React from 'react';
 import css from './TextArea.scss';
 import classnames from 'classnames';
 
-const TextArea = ({readonly, cols, rows, name, maxlength}) => {
+const TextArea = ({readonly, cols, rows, name, maxlength, full}) => {
   let className = "textarea";
   if (readonly)
-    className += "readonly";
+    className += " readonly";
+  if (full)
+    className += " full-width";
   return <textarea className={className} name={name} cols={cols} rows={rows} maxLength={maxlength} readOnly={readonly}/>;
 };
 
@@ -28,5 +30,4 @@ TextArea.propTypes = {
 
 // Specifies the default values for props:
 TextArea.defaultProps = {
-
 };

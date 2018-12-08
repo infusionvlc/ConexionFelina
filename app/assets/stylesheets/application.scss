@@ -112,11 +112,20 @@ section {
 }
 
 .card-columns {
+	@include media-breakpoint-only(xs) {
+    column-count: 1 !important;
+	}
+	@include media-breakpoint-only(sm) {
+    column-count: 1 !important;
+	}
+	@include media-breakpoint-only(md) {
+    column-count: 1 !important;
+  }
   @include media-breakpoint-only(lg) {
     column-count: 2 !important;
   }
   @include media-breakpoint-only(xl) {
-    column-count: 4 !important;
+    column-count: 3 !important;
   }
 }
 

@@ -3,23 +3,34 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import './Switch.scss';
 
+class Switch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { disabled: props.disabled };
+  }
+  toggleChecked = () => {
+    this.setState({
+      isChecked: !this.state.isChecked
+    });
+  }
 
-const Switch = ({
-  onLabel, offLabel, onChange, defaultChecked, large, disabled,
-}) => (
-  <label className={classnames('switch', { large })}>
-    <input type="checkbox" onChange={onChange} defaultChecked={defaultChecked} disabled={disabled} />
-    <span className="labels">
-      <span className="label off">
-        {offLabel}
-      </span>
-      <span className="label on">
-        {onLabel}
-      </span>
-      <span className="selector" />
-    </span>
-  </label>
-);
+  render() {
+    return (
+      <label className={classnames('switch', {'large': this.props.large === true})}>
+        <input type="checkbox" name={this.props.name} onClick={this.toggleChecked} defaultChecked={this.state.isChecked} disabled={this.props.disabled} />
+        <span className="labels">
+          <span className="label off">
+            {this.props.offLabel}
+          </span>
+          <span className="label on">
+            {this.props.onLabel}
+          </span>
+          <span className="selector" />
+        </span>
+      </label>
+    );
+  }
+}
 
 Switch.propTypes = {
   onLabel: PropTypes.string,

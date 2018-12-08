@@ -32,12 +32,12 @@ class Button extends React.Component {
     });
     if (this.state.target)
       return (
-        <input type='button' value={this.state.value} onClick={this.redirectTo} className={classes}>
+        <input type='button' name={this.props.name} value={this.state.value} onClick={this.redirectTo} className={classes}>
         </input>
       );
     else
       return (
-        <button className={classes}>
+        <button className={classes} name={this.props.name} value={this.state.value}>
           {this.state.value}
         </button>
       );
