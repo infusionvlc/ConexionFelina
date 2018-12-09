@@ -48,7 +48,7 @@ gem 'wicked'
 gem 'cocoon'
 
 gem 'webpacker', '~> 3.5'
-gem 'react_on_rails', '11.1.4'
+gem 'react_on_rails', '11.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

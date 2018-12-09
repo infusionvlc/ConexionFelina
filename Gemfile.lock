@@ -216,7 +216,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    react_on_rails (11.1.4)
+    react_on_rails (11.2.1)
       addressable
       connection_pool
       execjs (~> 2.5)
@@ -364,7 +364,7 @@ DEPENDENCIES
   rails (~> 5.2.2)
   rails-controller-testing
   rails_real_favicon
-  react_on_rails (= 11.1.4)
+  react_on_rails (= 11.2.1)
   rspec-activemodel-mocks
   rspec-rails (~> 3.7)
   rubocop

@@ -32,5 +32,3 @@ ReactOnRails.register({
   RadioGroup,
   Tag
 });
-
-export { Input, Picture, Alert, Button, Card, Switch, TextArea, Avatar, Sidebar, ProgressBar, RadioButton, RadioGroup, Tag };
