@@ -2,11 +2,12 @@
 
     <%= f.label :name %><br/>
     <%= f.text_field :name %><br/><br/>
-  
+
     <%= f.label :bio %><br/>
     <%= f.text_area :bio %><br/><br/>
-  
-    <%= f.select(:location_id, Location.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %><br/><br/>
-  
+
+    <%= f.label :location %><br/>
+    <%= f.text_field :location%><br/><br/>
+    
     <%= f.submit %>
 <% end %>
