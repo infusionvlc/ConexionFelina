@@ -4,7 +4,8 @@ class SufferingValidator < ActiveModel::Validator
       record.errors[:diagnosis_date] << "Diagnosis date must be in the past"
     end
     if record.dischargement_date.nil? && record.status != 'healty'
-      record.errors[:dischargement_date] << 'needs to be filled in for a sick cat'
+      record.errors.add(:dischargement_date, 
+                        'Needs to be filled in for a sick cat')
     end
   end
 end
