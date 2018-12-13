@@ -1,18 +1,25 @@
-<h1><%= @colony.name %></h1>
-<p><%= @colony.bio %></p>
-<br/>
-Tasks
-<%=react_component('Tag', props: {type: 'error', children: '1' })%>
-<%=react_component('Button', props: {type: 'success', value: 'New task', target: new_task_path })%>
+<h1>
+  <%= @colony.name %>
+</h1>
+<p>
+  <%= @colony.bio %>
+</p>
+<br />
+<div class='d-flex'>
+  <div class='p-2'>Tasks</div>
+  <div class='p-2'><%=react_component('Tag', props: {type: 'error', children: '1' })%></div>
+  <div class='ml-auto p-2'><%=react_component('Button', props: {type: 'success', value: 'New task', target: new_task_path })%></div>
+</div>
 <% @colony.tasks.each do | task | %>
-  <%= react_component("Card", props: {title: task.name, body: task.description, link: task_path(task), footer: "assigned to"}, class:'card', prerender: false) %>
+<%= react_component("Card", props: {title: task.name, body: task.description, link: task_path(task), footer: "assigned to"}, class:'card', prerender: false) %>
 <% end %>
-
-Cats
-<%=react_component('Tag', props: {type: 'error', children: '1' })%>
-<%=react_component('Button', props: {type: 'success', value: "New cat", target: new_cat_path })%>
+<div class='d-flex'>
+  <div class='p-2'>Cats</div>
+  <div class='p-2'><%=react_component('Tag', props: {type: 'error', children: '1' })%></div>
+  <div class='ml-auto p-2'><%=react_component('Button', props: {type: 'success', value: "New cat", target: new_cat_path })%></div>
+</div>
 <div class="card-columns">
   <% @colony.cats.each do |cat| %>
-    <%= react_component('Card', props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: 'Manage'}, class:'card', prerender: false) %>
+  <%= react_component('Card', props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: 'Manage'}, class:'card', prerender: false) %>
   <% end %>
 </div>
