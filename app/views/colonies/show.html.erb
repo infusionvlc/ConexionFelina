@@ -1,14 +1,18 @@
 <h1><%= @colony.name %></h1>
 <p><%= @colony.bio %></p>
 <br/>
+Tasks
+<%=react_component('Tag', props: {type: 'error', children: '1' })%>
+<%=react_component('Button', props: {type: 'success', value: "New task" })%>
 <% @colony.tasks.each do | task | %>
-  <%= link_to task.name, task_path( task.id ) %><br/>
-  <%= task.description %><br/>
-  <%= link_to "Assign this task to a user", new_task_user_wizard_path(task_id: task.id) %><br/>
-  <%= link_to "destroy", assignment_path(Assignment.where(colony_id:@colony.id, task_id:task.id).first), method: :delete %><hr/>
+  <%= react_component("Card", props: {title: task.name, body: task.description, link: task_path(task), footer: "assigned to"}, class:'card', prerender: false) %>
 <% end %>
 
-<%= link_to "List of Assignment", assignments_path(colony_id: @colony.id) %><br/>
-<%= link_to "add assignment", new_assignment_path(colony_id: @colony.id) %><br/>
-<%= link_to "edit", edit_colony_path(@colony.id) %><br/>
-<%= link_to "destroy", colony_path(@colony.id), method: :delete %>
+Cats
+<%=react_component('Tag', props: {type: 'error', children: '1' })%>
+<%=react_component('Button', props: {type: 'success', value: "New cat" })%>
+<div class="card-columns">
+  <% @colony.cats.each do |cat| %>
+    <%= react_component('Card', props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: 'Manage'}, class:'card', prerender: false) %>
+  <% end %>
+</div>

@@ -143,6 +143,7 @@ ActiveRecord::Schema.define(version: 2018_12_08_213448) do
     t.datetime "updated_at", null: false
     t.integer "cat_id"
     t.integer "illness_id"
+    t.datetime "dischargement_date"
   end
 
   create_table "tasks", force: :cascade do |t|
