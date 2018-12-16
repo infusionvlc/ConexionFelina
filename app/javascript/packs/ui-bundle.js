@@ -13,7 +13,7 @@ import Sidebar from '../bundles/UI/components/Sidebar/Sidebar';
 import RadioButton from '../bundles/UI/components/RadioButton/RadioButton';
 import RadioGroup from '../bundles/UI/components/RadioGroup/RadioGroup';
 import Tag from '../bundles/UI/components/Tag/Tag';
-
+import Dropdown from '../bundles/UI/components/Dropdown/Dropdown';
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
@@ -22,6 +22,7 @@ ReactOnRails.register({
   Alert,
   Button,
   Card,
+  Dropdown,
   Switch,
   Modal,
   TextArea,
