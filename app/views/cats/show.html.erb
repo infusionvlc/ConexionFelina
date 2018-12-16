@@ -28,6 +28,7 @@
   <% end %>
 </div>
 <div class="col-xs-12 col-xl-4 float-right">
+    <%= react_component("Button", props: {type: 'success', value: t('cats.edit'), target: edit_cat_path(@cat)}, prerender: false) %>
     <%= react_component("Card", props: {title: @cat.colony.name, link: colony_path(@cat.colony), image: icon_tag(@cat.colony), center: true}, class:'card', prerender: false) %>
 </div>
 

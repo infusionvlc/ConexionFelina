@@ -9,7 +9,7 @@ class CatsController < ApplicationController
   end
 
   def new
-    @cat = Cat.new
+    @cat = Cat.new(colony_id: 1)
     authorize @cat
     @cat.save
     redirect_to cat_build_path(:add_basic_info, cat_id: @cat.id)

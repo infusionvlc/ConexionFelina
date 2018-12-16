@@ -1,65 +1,51 @@
-<h2>Edit <%= @cat.name %></h2>
+<h2><%= @cat.name %></h2>
 <%= form_for(@cat) do |f| %>
+  <% if @cat.errors.any? %>
+    <div class="form-errors">
+        <h2>There are <%= pluralize(@cat.errors.count, "error") %> errors in your data:</h2>
+        <% @cat.errors.full_messages.each do |msg| %>
+          <h4><%= msg %></h4>
+        <% end %>
+    </div>
+  <% end %>
+
   <div class="field">
-    <%= f.label :bio %><br>
-    <%= f.text_area :bio%>
+    <%= f.label :name %><br>
+    <%= react_component("Input", props: {name: 'cat[name]', size:'full-size'}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :birthday_date %><br>
-    <%= f.date_field :birthday_date %>
+    <%= react_component("Input", props: {name: 'cat[birthday_date]', type: 'date', size:'full-size'}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.select(:gender, [['Male', :male], ['Female', :female]], :prompt => 'Select') %>
+    <%= react_component("Switch", props: {name: 'cat[gender]', onLabel:"Male", offLabel:"Female", large: true}, prerender: false) %>
   </div>
   <div class="field">
-    <%= f.label :sterilized %><br>
-    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], :prompt => 'Select') %>
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar, class: 'input full-width' %>
   </div>
   <div class="field">
     <%= f.label :abandoned_date %><br>
-    <%= f.date_field :abandoned_date %>
+    <%= react_component("Input", props: {name: 'cat[abandoned_date]', type: 'date', size:'full-size'}, prerender: false) %>
+  </div>
+  <div class="field">
+    <%= f.label :colony %><br>
+    <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, {:prompt => 'Select'}, {class: 'form-control'}) %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= react_component("TextArea", props: {name: 'cat[bio]', full: true, rows: 10}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :document %><br>
-    <%= f.text_field :document %>
+    <%= f.text_field :document, class: 'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :colony_id %><br>
-    <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
+    <%= f.label :sterilized %><br>
+    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], {:prompt => 'Select'}, {class: 'form-control'} ) %>
   </div>
-  <div id="sufferings field">
-    <%= f.fields_for :sufferings do |ff| %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <%= ff.label :status %><br/>
-          <%= ff.select :status, Suffering.statuses.keys.map { |w| [w.humanize, w] } %> <br/>
 
-          <%= ff.hidden_field :cat_id, params[:cat_id] %>
-
-          <%= ff.label "Illness" %><br/>
-          <%= ff.collection_select(:illness_id, Illness.all, :id, :name ) %><br/>
-
-          <%= ff.check_box :chronic %>
-          <%= ff.label :chronic %>
-
-          <%= ff.label :diagnosis_date %><br>
-          <%= ff.date_field :diagnosis_date, class: 'form-control' %>
-
-          <%= ff.label :notes %><br>
-          <%= ff.text_area :notes, class:'form-control' %><br/>
-
-          <%= ff.check_box :_destroy %>
-          <%= ff.label :_destroy, "Remove" %>
-        </div>
-      </div>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association f, :sufferings, class:'btn btn-primary' do %>Add<% end %>
-    </div>
-  </div>
   <br/>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= react_component("Button", props: {type: 'success', value: t('cats.edit')}, prerender: false) %>
 <% end %>
