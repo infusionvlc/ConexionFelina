@@ -5,11 +5,11 @@ class Dropdown extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isOpen: false};
-        console.log('isOpen is: ' + this.state.isOpen)
         this.state.items = [];
         this.state.lastClick = '';
+        this.state.lastLabel = '';
         for (let i = 0; i < props.items.length; i++) {
-           this.state.items.push(<li onClick={this.getValue} value={props.items[i]['value']}>{props.items[i]['label']}</li>);
+           this.state.items.push(<li onClick={this.getValue} value={props.items[i][1]}>{props.items[i][0]}</li>);
         }
     }
 
@@ -21,15 +21,15 @@ class Dropdown extends React.Component {
 
     getValue = (event) => {
         this.state.lastClick = event.target.value;
+        this.state.lastLabel = event.target.innerHTML;
         this.toggleDropdown();
-        console.log(this.state.lastClick)
     }
 
     render() {
         return (
             <div className='dropdown'>
                 <input name={this.props.name} value={this.state.lastClick} type="hidden"/>
-                <div className='dropdown-component' onClick={this.toggleDropdown}><span>{this.state.lastClick}</span><img src="/down.svg" className='arrow'/></div>
+                <div className='dropdown-component' onClick={this.toggleDropdown}><span>{this.state.lastLabel}</span><img src="/down.svg" className='arrow'/></div>
                 {
                     this.state.isOpen ? (
                         <div className='dropdown-list'>{ this.state.items }</div>
@@ -38,11 +38,11 @@ class Dropdown extends React.Component {
                         null
                     )
                 }
-         
+
             </div>
 
         );
-        
+
     }
 }
 

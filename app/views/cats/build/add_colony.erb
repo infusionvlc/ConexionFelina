@@ -2,7 +2,7 @@
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
   <div class="field">
     <%= f.label :colony %><br>
-    <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, {:prompt => 'Select'}, {class: 'form-control'}) %><br/>
+    <%= react_component("Dropdown", props: {name: 'cat[colony_id]', items: Colony.all.collect {|u| [u.name, u.id]}}, prerender: false) %>
   </div>
   <br>
   <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>

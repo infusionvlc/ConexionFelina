@@ -6,7 +6,7 @@
   </div>
   <div class="field">
     <%= f.label :sterilized %><br>
-    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], {:prompt => 'Select'}, {class: 'form-control'} ) %>
+    <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [['Yes', :yes], ['No', :no]]}, prerender: false) %>
   </div>
   <br>
   <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>

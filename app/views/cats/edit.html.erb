@@ -31,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :colony %><br>
-    <%= f.select(:colony_id, Colony.all.collect {|u| [u.name, u.id]}, {:prompt => 'Select'}, {class: 'form-control'}) %>
+    <%= react_component("Dropdown", props: {name: 'cat[colony_id]', items: Colony.all.collect {|u| [u.name, u.id]}}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :bio %><br>
@@ -39,11 +39,11 @@
   </div>
   <div class="field">
     <%= f.label :document %><br>
-    <%= f.text_field :document, class: 'form-control' %>
+    <%= react_component("Input", props: {name: 'cat[document]', size:'full-size'}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :sterilized %><br>
-    <%= f.select(:sterilized, [['Yes', :yes], ['No', :no]], {:prompt => 'Select'}, {class: 'form-control'} ) %>
+    <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [['Yes', :yes], ['No', :no]]}, prerender: false) %>
   </div>
 
   <br/>
