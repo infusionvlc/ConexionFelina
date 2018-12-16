@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :adoptions
   resources :locations
   resources :colonies
   resources :sufferings

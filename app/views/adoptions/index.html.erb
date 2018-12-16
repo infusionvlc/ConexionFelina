@@ -1,0 +1,6 @@
+<h1>Adoptions</h1>
+<h2>Pending</h2>
+<% @adoptions.each do |adoption| %>
+  <%= react_component("Card", props: {title: cat.name, body: 'adopted by' ,link: cat_path(cat), image: avatar_tag(cat), footer: 'Contact'}, class:'card', prerender: false) %>
+<% end %>
+<h2>Completed</h2>
