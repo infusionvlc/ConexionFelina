@@ -1,8 +1,6 @@
 <h1>Colonies</h1>
-
-<%= link_to "create", new_colony_path  %> <br>
-
+<div class="card-columns">
 <% @colonies.each do | colony | %>
-  <%= link_to colony.name, colony_path( colony.id ) %><br/>
-  <%= colony.bio %><hr/>
+  <%= react_component("Card", props: {title: colony.name, link: colony_path(colony), image: 'colony_icon.png', footer: 'Manage'}, class:'card', prerender: false) %>
 <% end %>
+</div>
