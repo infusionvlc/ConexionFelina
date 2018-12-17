@@ -1,0 +1,29 @@
+.pagination {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.page {
+    position: relative;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #fff;
+    border: 1.5px solid transparent;
+    border-radius: 50%;
+    border-color: #68c1bd;
+    margin: 0 .6rem;
+    margin-bottom: 1rem; // Align page dot's with button components
+
+    &.page-active {
+        background-color: #68c1bd;
+    }
+
+    &.page-past {
+        background-color: #e2e4e4;
+        border-color: #e2e4e4;
+        -webkit-transform:scale(0.5);
+        -moz-transform:scale(0.5);
+        transform: scale(0.5);
+    }
+}

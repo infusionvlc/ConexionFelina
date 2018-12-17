@@ -15,7 +15,7 @@
           <%= I18n.t 'cats.abandonedDate'%> <%= cat.abandoned_date %><br/>
         <% end %>
         <%= I18n.t 'cats.document'%> <%= cat.document %><br/>
-        <%  if policy(@cats).volunteer_or_admin? %>
+        <%  if policy(cat).volunteer_or_admin? %>
              <%= link_to "Edit", edit_cat_path(cat.id) %></br>
              <%= link_to "Destroy", cat_path(cat.id), method: :delete %></br>
              <%= link_to "List of sufferings", sufferings_path(:cat_id => cat.id) %></br>

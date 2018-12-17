@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -51,7 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'capybara', '~> 3.11'
   gem 'selenium-webdriver'
   gem 'factory_bot_rails'
 
@@ -64,13 +64,15 @@ group :development do
   gem 'rails_real_favicon'
 end
 
-group :development, :test do
+group :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'rspec-activemodel-mocks'
-end
 
-group :test do
-  gem 'shoulda', '~> 3.5.0'
+  gem 'simplecov'
+  gem 'simplecov-console'
+
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '4.0.0.rc1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
