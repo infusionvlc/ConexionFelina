@@ -77,8 +77,13 @@ es:
       article2: '¡Es la hora de la comida! Cuando veas a los voluntarios cuidando de nuestros héroes haz caso a todas sus indicaciones, ya que algunos son muy asustadizos y necesitan cuidados especiales.'
       article3: 'Los amigos de Covi siguen una alimentación equilibrada y controlada por los voluntarios para mantenerse en forma antes de cada misión. Es muy importante que no les des nada de comer para que sigan así de fuertes y poderosos.'
       article4: 'Respeta su espacio.'
+
+  shared:
+    save: Guardar
+
   cats:
     new: Nuevo gato
+    edit: Actualizar datos
     index_intro: 'Este es el lugar para ver toda la información sobre nuestros héroes y su salud.'
     birthDate: 'Nacido aproximadamente el'
     gender: 'Género:'
@@ -86,8 +91,14 @@ es:
     abandonedDate: 'Abandonado aproximadamente el'
     document: 'Documento:'
 
+  colonies:
+    new: Nueva colonia
+    edit: Actualizar datos
+    index_intro: 'These are the locations where our heroes rest and have fun.'
+
   users:
     sign_up: 'Crear un perfil'
+    sign_up_volunteer: 'Conviértete en voluntario/a'
 
   activerecord:
     errors:

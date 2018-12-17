@@ -1,5 +1,4 @@
 <%= form_for (@colony) do |f| %>
-
   <div class="field">
     <%= f.label :name %><br/>
     <%= react_component("Input", props: {name: 'colony[name]', size:'full-size'}, prerender: false) %>

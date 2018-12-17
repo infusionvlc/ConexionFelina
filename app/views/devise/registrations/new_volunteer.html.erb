@@ -1,0 +1,39 @@
+<div class="card-header">
+  <h1 class="d-inline-block"><%= t 'users.sign_up_volunteer' %></h1>
+  <img src="/logo.svg" class="mini-logo"/>
+</div>
+<div class="card-body">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="row justify-content-between">
+      <div class="col-xs-12 col-lg-6">
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= react_component("Input", props: {dark: true, name: 'user[email]', type: 'email', size:'full-size'}, prerender: false) %>
+        </div>
+        <div class="field">
+          <%= f.label :username %><br />
+          <%= react_component("Input", props: {dark: true, name: 'user[username]', size:'full-size'}, prerender: false) %>
+        </div>
+      </div>
+      <%= f.hidden_field :role, value: :volunteer %>
+      <%= f.hidden_field :purrs, value: 0 %>
+      <div class="col-xs-12 col-lg-6">
+        <div class="field">
+          <%= f.label :password %>
+          <%= react_component("Input", props: {dark: true, name: 'user[password]', type: 'password', size:'full-size'}, prerender: false) %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= react_component("Input", props: {dark: true, name: 'user[password_confirmation]', type: 'password', size:'full-size'}, prerender: false) %>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <%= react_component("Button", props: {block: true, transparent: true, type: 'primary', inverted: true, value:'Sign up'
+                          }, prerender: false) %>
+    </div>
+  <% end %>
+</div>
+
