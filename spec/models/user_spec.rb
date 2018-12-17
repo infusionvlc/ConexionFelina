@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-	it { should have_and_belong_to_many :colonies}
+	it { should have_many :team_members }
+  it { should have_many :applications }
   it { should have_and_belong_to_many :turns}
   it { should have_many :sponsors}
   it { should have_many :adoptions}

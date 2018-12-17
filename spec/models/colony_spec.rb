@@ -4,7 +4,8 @@ RSpec.describe Colony, type: :model do
   MAXIMUM_NAME_COLONY_LENGTH = 20
 
   it { should belong_to :location }
-  it { should have_and_belong_to_many :users }
+  it { should have_many :team_members }
+  it { should have_many :applications }
   it { should have_many :cats }
   it { should have_many :assignments }
 
