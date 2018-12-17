@@ -1,0 +1,26 @@
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  color: #000000;
+
+  &.alert-primary {
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-color: #b8daff;
+    background-color: #354093;
+  }
+  &.alert-success {
+    background-color: #68c1bd;
+  }
+  &.alert-warning {
+    background-color: #ecbb3b;
+  }
+  &.alert-error {
+    background-color: #e8654d;
+  }  
+  &.alert-disabled{
+    background-color: #f2f2f2;
+  }
+}

@@ -54,4 +54,8 @@ bower.json
 node_modules/
 
 # Ignore .vs
-.vs/
+.vs//public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity

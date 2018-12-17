@@ -1,0 +1,27 @@
+.tag {
+  position: relative;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 28px;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  &.tag-primary {
+    background-color: #354093;
+  }
+  &.tag-success {
+    background-color: #68c1bd;
+  }
+  &.tag-warning {
+    background-color: #ecbb3b;
+  }
+  &.tag-error {
+    background-color: #e8654d;
+  }
+  &.tag-secondary {
+    background-color: #5e5e5e;
+  }
+}

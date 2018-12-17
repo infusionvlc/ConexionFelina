@@ -1,5 +1,50 @@
 {
   "name": "conexion_felina",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-on-rails": "11.1.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10",
+    "@storybook/addons": "^3.4.10",
+    "@storybook/react": "^3.4.10",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "file-loader": "^2.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1",
+    "style-loader": "^0.23.0",
+    "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript/spec"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "app/javascript/packs"
+    ]
+  },
+  "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
 }

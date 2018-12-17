@@ -1,0 +1,16 @@
+
+.picture {
+    border-radius: 5px;
+  
+    &.s {
+      max-width: 200px;
+    }
+  
+    &.m {
+      max-width: 400px;
+    }
+
+    &.b {
+        max-width: 800px;
+    }
+  }

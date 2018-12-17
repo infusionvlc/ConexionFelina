@@ -1,0 +1,16 @@
+$size: 64px;
+
+.avatar {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  max-width: $size;
+  max-height: $size;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-clip: padding-box;
+  background-color: #dce9b2;
+}
