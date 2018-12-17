@@ -43,7 +43,7 @@ class ColonyPolicy < ApplicationPolicy
   end
 
   def member_of_team?
-    @colony.users.include?(@user)
+    @colony.team_members.exists?(user_id: @user.id)
   end
 
   def volunteer_or_admin?
