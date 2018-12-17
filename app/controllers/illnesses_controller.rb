@@ -1,6 +1,8 @@
 class IllnessesController < ApplicationController
-
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  before_action :enforce_volunteer_colony
+
 
   def index
     @illnesses = Illness.all

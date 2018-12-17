@@ -17,6 +17,9 @@
         <%= react_component("Sidebar", props: {links: sidebar_links, username: current_user&.username}, prerender: false) %>
         <div class="app-container">
           <img src="/logo.svg" class="mini-logo float-right"/>
+          <% flash.each do |key, value| %>
+            <%= react_component("Alert", props: {type: key, children: value}, prerender: false) %>
+          <% end %>
           <%= yield %>
           <div class="pb-4 pt-4 w-100 clearfix"></div>
         </div>

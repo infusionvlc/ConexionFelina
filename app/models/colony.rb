@@ -7,7 +7,11 @@ class Colony < ApplicationRecord
 
   has_one_attached :icon
 
-  has_and_belongs_to_many :users
+  has_many :team_members
+	has_many :users, through: :team_members
+
+  has_many :applications, class_name: 'ColonyApplication'
+  has_many :applicants, through: :applications, source: :user
 
   has_many :assignments
   has_many :tasks, through: :assignments

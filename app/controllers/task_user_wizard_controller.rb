@@ -1,4 +1,6 @@
 class TaskUserWizardController < ApplicationController
+  before_action :enforce_volunteer_colony
+
   def new
     @colonies = Colony.all
     @tasks = Task.all

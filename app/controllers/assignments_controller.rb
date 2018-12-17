@@ -1,4 +1,6 @@
 class AssignmentsController < ApplicationController
+  before_action :enforce_volunteer_colony
+
   def index
     @colony_id = params[:colony_id]
     @assignments = Assignment.where(colony_id: @colony_id)

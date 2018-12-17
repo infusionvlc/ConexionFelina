@@ -5,6 +5,12 @@
 </div>
 <div class="card-columns">
 <% @colonies.each do | colony | %>
-  <%= react_component("Card", props: {title: colony.name, link: colony_path(colony), image: 'colony_icon.png', footer: 'Manage'}, class:'card', prerender: false) %>
+  <% if policy(colony).join? %>
+    <%= react_component("Card", props: {title: colony.name, link: join_colony_path(colony), image: 'colony_icon.png', footer: 'Join'}, class:'card', prerender: false) %>
+  <% elsif policy(colony).manage? %>
+    <%= react_component("Card", props: {title: colony.name, link: colony_path(colony), image: 'colony_icon.png', footer: 'Manage'}, class:'card', prerender: false) %>
+  <% else %>
+    <%= react_component("Card", props: {title: colony.name, image: 'colony_icon.png', footer: 'Application sent'}, class:'card', prerender: false) %>
+  <% end %>
 <% end %>
 </div>

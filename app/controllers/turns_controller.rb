@@ -1,4 +1,6 @@
 class TurnsController < ApplicationController
+  before_action :enforce_volunteer_colony
+
   def index
     @assignment_id = params[:assignment_id]
     @colony_id = params[:colony_id]

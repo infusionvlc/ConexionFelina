@@ -1,0 +1,7 @@
+<h1>You have successfully joined <%= @colony.name %> colony</h1>
+
+<p>Click on the following link to visit the colony dashboard:</p>
+
+<%= link_to colony_url(@colony) do %>
+   Go!
+<% end %>

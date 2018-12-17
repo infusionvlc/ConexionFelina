@@ -21,7 +21,18 @@ Rails.application.routes.draw do
   end
 
   resources :locations
-  resources :colonies
+  resources :colonies do
+
+    member do
+      get 'join'
+    end
+  end
+  resources :colony_applications do
+    member do
+      get 'approve'
+      get 'dismiss'
+    end
+  end
   resources :sufferings
   resources :illnesses
   resources :tasks

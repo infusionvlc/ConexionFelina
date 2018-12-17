@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :enforce_volunteer_colony
+
   def index
     @tasks = Task.all
   end

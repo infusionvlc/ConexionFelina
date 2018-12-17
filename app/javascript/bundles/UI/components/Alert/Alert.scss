@@ -2,7 +2,7 @@
   position: relative;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 15px !important;
   color: #000000;
 
   &.alert-primary {
@@ -19,7 +19,7 @@
   }
   &.alert-error {
     background-color: #e8654d;
-  }  
+  }
   &.alert-disabled{
     background-color: #f2f2f2;
   }

@@ -1,6 +1,7 @@
 class CatsController < ApplicationController
-
   layout :resolve_layout
+
+  before_action :enforce_volunteer_colony
 
   def show
     cat_id = params[:id]

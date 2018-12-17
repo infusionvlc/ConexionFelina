@@ -1,4 +1,6 @@
 class SufferingsController < ApplicationController
+  before_action :enforce_volunteer_colony
+
   def show
     suffering_id = params[:id]
     @suffering = Suffering.find(suffering_id)

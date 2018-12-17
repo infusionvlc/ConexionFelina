@@ -1,0 +1,17 @@
+<h1>There's a new application for joining <%= @colony.name %> colony</h1>
+
+<p>
+  A new volunteer has just applied for joining <%= @colony.name %> and left this message:
+</p>
+
+<p>
+  <%= @msg %>
+</p>
+
+<p>
+  Click on the following link to approve this new member on your team:
+</p>
+
+<%= link_to approve_colony_application_url(@app) do %>
+   Approve application
+<% end %>

@@ -1,4 +1,6 @@
 class TreatmentEntriesController < ApplicationController
+  before_action :enforce_volunteer_colony
+
   def index
     suffering_id = params[:suffering_id]
     @treatment_entries = TreatmentEntry.where(suffering_id: suffering_id)

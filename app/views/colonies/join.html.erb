@@ -1,0 +1,11 @@
+<h1>Join <%= @colony.name %> team</h1>
+
+<%= form_for ([@colony, @application]) do |f| %>
+  <div class="field">
+    <%= f.label :message %><br/>
+    <%= react_component("TextArea", props: {name: 'colony_application[message]', size:'full-size', full: true, rows: 10}, prerender: false) %>
+  </div>
+
+  <br/>
+  <%= react_component("Button", props: {type: 'success', value: t('shared.save')}, prerender: false) %>
+<% end %>
