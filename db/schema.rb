@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_08_213448) do
+ActiveRecord::Schema.define(version: 2018_12_17_190749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,17 @@ ActiveRecord::Schema.define(version: 2018_12_08_213448) do
     t.integer "colony_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "colony_applications", force: :cascade do |t|
+    t.bigint "colony_id"
+    t.bigint "user_id"
+    t.integer "status"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["colony_id"], name: "index_colony_applications_on_colony_id"
+    t.index ["user_id"], name: "index_colony_applications_on_user_id"
   end
 
   create_table "donations", force: :cascade do |t|
@@ -152,6 +163,16 @@ ActiveRecord::Schema.define(version: 2018_12_08_213448) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "team_members", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "colony_id"
+    t.integer "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["colony_id"], name: "index_team_members_on_colony_id"
+    t.index ["user_id"], name: "index_team_members_on_user_id"
+  end
+
   create_table "treatment_entries", force: :cascade do |t|
     t.date "date"
     t.integer "treatment"
@@ -199,4 +220,8 @@ ActiveRecord::Schema.define(version: 2018_12_08_213448) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "colony_applications", "colonies"
+  add_foreign_key "colony_applications", "users"
+  add_foreign_key "team_members", "colonies"
+  add_foreign_key "team_members", "users"
 end
