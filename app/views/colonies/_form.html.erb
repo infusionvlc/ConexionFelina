@@ -1,12 +1,25 @@
 <%= form_for (@colony) do |f| %>
 
+  <div class="field">
     <%= f.label :name %><br/>
-    <%= f.text_field :name %><br/><br/>
-  
-    <%= f.label :bio %><br/>
-    <%= f.text_area :bio %><br/><br/>
-  
-    <%= f.select(:location_id, Location.all.collect {|u| [u.name, u.id]}, :prompt => 'Select') %><br/><br/>
-  
-    <%= f.submit %>
+    <%= react_component("Input", props: {name: 'colony[name]', size:'full-size'}, prerender: false) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br/>
+    <%= react_component("TextArea", props: {name: 'colony[bio]', size:'full-size', full: true, rows: 10}, prerender: false) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %><br/>
+    <%= react_component("Input", props: {name: 'colony[location]', size:'full-size'}, prerender: false) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %><br/>
+    <%= f.file_field :avatar, class: 'input full-width' %>
+  </div>
+
+  <br/>
+  <%= react_component("Button", props: {type: 'success', value: t('shared.save')}, prerender: false) %>
 <% end %>

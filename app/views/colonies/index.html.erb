@@ -1,4 +1,8 @@
 <h1>Colonies</h1>
+<div class="d-flex justify-content-between mb-4">
+  <p><%= t 'colonies.index_intro' %></p>
+  <%= react_component("Button", props: {type: 'success', value: t('colonies.new'), target: new_colony_path}, prerender: false) %>
+</div>
 <div class="card-columns">
 <% @colonies.each do | colony | %>
   <%= react_component("Card", props: {title: colony.name, link: colony_path(colony), image: 'colony_icon.png', footer: 'Manage'}, class:'card', prerender: false) %>
