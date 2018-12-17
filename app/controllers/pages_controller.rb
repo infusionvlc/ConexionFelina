@@ -7,5 +7,4 @@ class PagesController < ApplicationController
 
   def principles; end
 
-  def league; end
 end

@@ -24,6 +24,7 @@ body {
   background: var(--sea);
   border: none;
   border-radius: 20px;
+  color: white;
   left: 50%;
   padding: 4em;
   position: fixed;
@@ -67,10 +68,14 @@ body {
     }
   }
 
+  label {
+    color: white;
+  }
+
 }
 
 .field {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 .mini-logo {

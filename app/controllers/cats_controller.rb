@@ -1,10 +1,17 @@
 class CatsController < ApplicationController
+
+  layout :resolve_layout
+
   def show
     cat_id = params[:id]
     @cat = Cat.find(cat_id)
   end
 
   def index
+    @cats = Cat.all.where(saved_state: 'active')
+  end
+
+  def league
     @cats = Cat.all.where(saved_state: 'active')
   end
 
@@ -76,5 +83,14 @@ class CatsController < ApplicationController
   def user_not_autorized
     flash[:alert] = "You are not autorized to perform this action"
     redirect_to cats_path
+  end
+
+  def resolve_layout
+    case action_name
+    when "league"
+      "league"
+    else
+      "application"
+    end
   end
 end

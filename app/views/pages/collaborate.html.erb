@@ -49,7 +49,7 @@
           <img src="dona.png" class="full-width static" />
           <img src="dona.png" class="full-width invisible" />
         </div>
-        <button type="button" class="btn btn-primary action-button"><%= t 'landing.shared.action_button' %></button>
+        <a class="btn btn-primary action-button" target="_blank" href="https://opencollective.com/infusionvlc"><%= t 'landing.shared.action_button' %></a>
       </div>
     </div>
   </div>
@@ -58,27 +58,12 @@
 <section class="row container">
   <div class="col-sm-12">
     <div class="row">
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
         <h1><%= t 'landing.collaborate.volunteer.title' %></h1>
         <p><%= t 'landing.collaborate.volunteer.text' %></p>
       </div>
-      <div class="col-sm-12 col-md-1"></div>
-      <div class="col-sm-12 col-md-7">
-        <form>
-          <div class="form-group">
-            <label for="inputEmail"><%= t 'landing.collaborate.form.email' %></label>
-            <input type="email" class="form-control" id="inputEmail">
-          </div>
-          <div class="form-group">
-            <label for="inputName"><%= t 'landing.collaborate.form.name' %></label>
-            <input type="text" class="form-control" id="inputName">
-          </div>
-          <div class="form-group">
-            <label for="inputMessage"><%= t 'landing.collaborate.form.message' %></label>
-            <textarea class="form-control" id="inputMessage" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary action-button"><%= t 'landing.collaborate.form.submit' %></button>
-        </form>
+      <div class="col-sm-12 col-md-6 center">
+        <a class="btn btn-primary action-button" href="/join"><%= t 'landing.shared.action_button' %></a>
       </div>
     </div>
   </div>
