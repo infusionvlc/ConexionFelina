@@ -6,12 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#Locations
-locations = Location.create([
-  {name: "Lorem ipsum dolor 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque viverra ante, a ornare risus placerat quis. Nam dapibus metus ac velit sodales ornare.", longitude: 39.480653, latitude: -0.367741, address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-  {name: "Lorem ipsum dolor 2", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque viverra ante, a ornare risus placerat quis. Nam dapibus metus ac velit sodales ornare.", longitude: -0.367741, latitude: 39.480653, address: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
-])
-
 #Products
 products = Product.create([
   {name: "Lorem ipsum dolor 1", stock: 100, price: 5.5},
@@ -91,11 +85,11 @@ assigments = Assignment.create([
 
 #Sufferings
 sufferings = Suffering.create([
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 1", chronic: true, status: 0, cat_id: 1, illness_id: 1},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 2", chronic: true, status: 1, cat_id: 2, illness_id: 2},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 3", chronic: true, status: 2, cat_id: 3, illness_id: 1},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 4", chronic: true, status: 3, cat_id: 4, illness_id: 2},
-  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 5", chronic: true, status: 4, cat_id: 1, illness_id: 1},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 1", chronic: true, status: 0, cat_id: 1, illness_id: 1, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 2", chronic: true, status: 1, cat_id: 2, illness_id: 2, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 3", chronic: true, status: 2, cat_id: 3, illness_id: 1, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 4", chronic: true, status: 3, cat_id: 4, illness_id: 2, dischargement_date: "1-1-2018"},
+  {diagnosis_date: "1-1-2017", notes: "Lorem ipsum 5", chronic: true, status: 4, cat_id: 1, illness_id: 1, dischargement_date: "1-1-2018"},
 ])
 
 #Turns

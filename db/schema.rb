@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2018_12_17_190749) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "location_id"
+    t.string "location"
   end
 
   create_table "colonies_users", force: :cascade do |t|
@@ -104,16 +105,6 @@ ActiveRecord::Schema.define(version: 2018_12_17_190749) do
     t.text "description"
     t.integer "priority"
     t.text "treatment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.decimal "longitude"
-    t.decimal "latitude"
-    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -154,6 +145,7 @@ ActiveRecord::Schema.define(version: 2018_12_17_190749) do
     t.datetime "updated_at", null: false
     t.integer "cat_id"
     t.integer "illness_id"
+    t.datetime "dischargement_date"
   end
 
   create_table "tasks", force: :cascade do |t|
