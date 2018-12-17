@@ -1,5 +1,5 @@
 class ColoniesController < ApplicationController
-  before_action :enforce_volunteer_colony, except: [:join, :index]
+  before_action :enforce_volunteer_colony, except: [:join, :index, :new, :create]
 
   def index
     @colonies = Colony.all
