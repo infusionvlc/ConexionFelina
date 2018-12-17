@@ -5,6 +5,6 @@ class Suffering < ApplicationRecord
   belongs_to :cat
   belongs_to :illness
 
-  validates :status, inclusion: { in: valid_status.values }
+  validates :status, inclusion: { in: valid_statuses.values }
   validates_with SufferingValidator
 end

@@ -4,5 +4,5 @@ class ColonyApplication < ApplicationRecord
   belongs_to :colony
   belongs_to :user
 
-  validates :status, inclusion: { in: valid_status.values }
+  validates :status, inclusion: { in: valid_statuses.values }
 end

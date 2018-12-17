@@ -62,7 +62,6 @@ jobs:
       - run:
           name: run tests
           command: |
-            bundle exec rails db:seed RAILS_ENV=test
             ./cc-test-reporter before-build
             bundle exec rspec
             ./cc-test-reporter after-build --exit-code $?
