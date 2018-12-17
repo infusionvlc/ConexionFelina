@@ -10,6 +10,7 @@ import TextArea from '../bundles/UI/components/TextArea/TextArea';
 import Avatar from '../bundles/UI/components/Avatar/Avatar';
 import ProgressBar from '../bundles/UI/components/ProgressBar/ProgressBar';
 import Sidebar from '../bundles/UI/components/Sidebar/Sidebar';
+import Pagination from '../bundles/UI/components/Pagination/Pagination';
 import RadioButton from '../bundles/UI/components/RadioButton/RadioButton';
 import RadioGroup from '../bundles/UI/components/RadioGroup/RadioGroup';
 import Tag from '../bundles/UI/components/Tag/Tag';
@@ -28,6 +29,7 @@ ReactOnRails.register({
   TextArea,
   Avatar,
   Sidebar,
+  Pagination,
   ProgressBar,
   RadioButton,
   RadioGroup,
