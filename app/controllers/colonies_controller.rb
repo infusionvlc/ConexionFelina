@@ -38,6 +38,7 @@ class ColoniesController < ApplicationController
 
   def show
     @colony = Colony.find(params[:id])
+    @cats = @colony.cats.where(saved_state: 'active')
     authorize @colony
     @applications = @colony.applications.where(status: :pending)
   end

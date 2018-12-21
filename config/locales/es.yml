@@ -87,6 +87,9 @@ es:
     reject: 'No'
     save: 'Guardar'
 
+  applications:
+    title: 'Solicitudes'
+
   cats:
     abandoned_label: 'Abandonado/a hace'
     diagnosed_label: 'Diagnosticado/a el'
@@ -98,6 +101,7 @@ es:
     edit: Actualizar datos
     index_intro: 'Este es el lugar para ver toda la información sobre nuestros héroes y su salud.'
     index_title: 'Liga gatuna'
+    title: 'Gatos'
 
     wizard_abandoned_intro: 'Sentimos mucho oír eso...'
     wizard_basic_intro: 'Tenemos muchas ganas de conocer al nuevo superhéroe'
@@ -112,13 +116,39 @@ es:
   colonies:
     new: Nueva colonia
     edit: Actualizar datos
-    index_intro: 'These are the locations where our heroes rest and have fun.'
+    index_intro: 'Estos son los lugares donde nuestros héroes descansan y lo pasan bien.'
+    index_title: 'Colonias'
+    join_title: 'Únete al equipo de %{colony}'
+    new_title: 'Nueva colonia'
+    title: 'Colonias'
+
+  tasks:
+    title: 'Tareas'
 
   users:
     sign_up: 'Crear un perfil'
     sign_up_volunteer: 'Conviértete en voluntario/a'
 
   activerecord:
+    models:
+      cat:
+        one: Gato
+        other: Gatos
+
+    attributes:
+      cat:
+        name: Nombre
+        bio: Historia
+        birthday_date: Cumpleaños
+        gender: Género
+        abandoned_date: Fecha de abandono
+        colony: Colonia
+        document: Chip
+        sterilized: Esterilizado/a
+      colony:
+        name: Nombre
+        bio: Historia
+        location: Localización
     errors:
       messages:
         record_invalid: "La validación falló: %{errors}"

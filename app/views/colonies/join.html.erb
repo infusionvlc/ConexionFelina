@@ -1,4 +1,4 @@
-<h1>Join <%= @colony.name %> team</h1>
+<h1><%= t('colonies.join_title', colony: @colony.name) %></h1>
 
 <%= form_for @application do |f| %>
   <div class="field">

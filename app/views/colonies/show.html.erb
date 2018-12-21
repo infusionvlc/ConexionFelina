@@ -8,7 +8,7 @@
 
 <% if @colony.tasks.count > 0 %>
 <div class='d-flex'>
-  <div class='p-2'>Tasks</div>
+  <div class='p-2'><%= t('tasks.title') %></div>
   <div class='p-2'><%=react_component('Tag', props: {type: 'error', children: @colony.tasks.count })%></div>
   <div class='ml-auto p-2'><%=react_component('Button', props: {type: 'success', value: 'New task', target: new_task_path })%></div>
 </div>
@@ -19,7 +19,7 @@
 
 <% if @applications.count > 0 %>
 <div class='d-flex'>
-  <div class='p-2'>Applications</div>
+  <div class='p-2'><%= t('applications.title') %></div>
   <div class='p-2'><%=react_component('Tag', props: {type: 'error', children: @applications.count })%></div>
 </div>
   <% @applications.each do | app | %>
@@ -29,13 +29,13 @@
 
 
 <div class='d-flex'>
-  <div class='p-2'>Cats</div>
+  <div class='p-2'><%= t('cats.title') %></div>
   <div class='p-2'><%=react_component('Tag', props: {type: 'error', children: @colony.cats.count })%></div>
   <div class='ml-auto p-2'><%=react_component('Button', props: {type: 'success', value: "New cat", target: new_cat_path(colony_id: @colony.id) })%></div>
 </div>
-<% if @colony.cats.count > 0 %>
+<% if @cats.count > 0 %>
   <div class="card-columns">
-    <% @colony.cats.each do |cat| %>
+    <% @cats.each do |cat| %>
     <%= react_component('Card', props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: 'Manage'}, class:'card', prerender: false) %>
     <% end %>
   </div>

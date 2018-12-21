@@ -1,4 +1,4 @@
-<h1>Colonies</h1>
+<h1><%= t('colonies.index_title') %></h1>
 <div class="d-flex justify-content-between mb-4">
   <p><%= t 'colonies.index_intro' %></p>
   <%= react_component("Button", props: {type: 'success', value: t('colonies.new'), target: new_colony_path}, prerender: false) %>
