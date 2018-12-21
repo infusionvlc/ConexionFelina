@@ -33,7 +33,7 @@ class ColonyApplicationsController < ApplicationController
 
   def approve
     @application = ColonyApplication.find(params[:id])
-    @application.update(status: :approved)
+    @application.update(status: 'approved')
     @application.colony.team_members.create(user_id: @application.user.id, role: :basic)
     ColonyApplicationMailer.notify_approval(@application, @application.user).deliver
     redirect_to @application.colony

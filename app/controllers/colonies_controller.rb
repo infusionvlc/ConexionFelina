@@ -40,7 +40,7 @@ class ColoniesController < ApplicationController
     @colony = Colony.find(params[:id])
     @cats = @colony.cats.where(saved_state: 'active')
     authorize @colony
-    @applications = @colony.applications.where(status: :pending)
+    @applications = @colony.applications.where(status: 'pending')
   end
 
   def destroy
@@ -53,7 +53,7 @@ class ColoniesController < ApplicationController
   def join
     @colony = Colony.find(params[:id])
     authorize @colony
-    @application = ColonyApplication.new(colony_id: @colony.id, user_id: current_user.id, status: :pending)
+    @application = ColonyApplication.new(colony_id: @colony.id, user_id: current_user.id, status: 'pending')
   end
 
   private
