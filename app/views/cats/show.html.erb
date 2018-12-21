@@ -6,12 +6,12 @@
     <div>
         <h1>
             <%= @cat.name %>
-            <%= react_component("Tag", props: {type: 'success', children: 'Sterilized'},
+            <%= react_component("Tag", props: {type: 'success', children: t('cats.sterilized')},
                                 html_options: {style: 'display: inline-block; margin-left: 0.5em; ',
                                 prerender: false}) if @cat.sterilized %></h1>
         <%= time_ago_in_words @cat.birthday_date %></br>
         <% if !(@cat.abandoned_date.nil?) %>
-            Abandonado/a hace <%= time_ago_in_words @cat.abandoned_date %></br>
+            <%= t('cats.abandoned_label') %> <%= time_ago_in_words @cat.abandoned_date %></br>
         <% end %>
         <%= @cat.gender %>
     </div>
@@ -21,10 +21,10 @@
 <h2>Health</h2>
   <% if @cat.sufferings.count > 0 %>
     <% @cat.sufferings.each do |condition| %>
-        <%= react_component("Card", props: {title: condition.illness.name, body: 'Diagnosed on ' + condition.diagnosis_date.to_s, footerLink: suffering_path(condition), footer: 'Review'}, class:'card', prerender: false) %>
+        <%= react_component("Card", props: {title: condition.illness.name, body: t('cats.diagnosed_label') + condition.diagnosis_date.to_s, footerLink: suffering_path(condition), footer: 'Review'}, class:'card', prerender: false) %>
     <% end %>
   <% else %>
-    <p>It's all good! <%= @cat.name %> has never looked as good as now.</p>
+    <p><%= t('cats.no_sufferings', cat: @cat.name) %></p>
   <% end %>
 </div>
 <div class="col-xs-12 col-xl-4 float-right">

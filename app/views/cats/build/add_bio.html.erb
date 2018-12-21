@@ -1,9 +1,10 @@
-<h2>Cuéntanos más</h2>
+<h1><%= t('cats.wizard_bio_intro', cat: @cat.name) %></h1>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <%= react_component("Pagination", props: {nPages: 6, currentPage: 6, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 6, backText: t('shared.back'), nextText: t('shared.next'), backUrl: previous_wizard_path}, prerender: false) %>
   <%= render 'cat_errors' %>
   <div class="field">
     <%= f.label :bio %><br>
     <%= react_component("TextArea", props: {name: 'cat[bio]', full: true, rows: 10}, prerender: false) %>
   </div>
+  <%= f.hidden_field :saved_state, value: 'active' %>
 <% end %>

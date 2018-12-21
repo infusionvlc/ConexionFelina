@@ -11,7 +11,12 @@ class CatsController < ApplicationController
   end
 
   def index
-    @cats = Cat.all.where(saved_state: 'active')
+    @cats = []
+    Cat.where(saved_state: 'active').each do |cat|
+      if cat.colony.team_members.exists?(user_id: current_user.id)
+        @cats << cat
+      end
+    end
   end
 
   def league
@@ -19,7 +24,7 @@ class CatsController < ApplicationController
   end
 
   def new
-    @cat = Cat.new(colony_id: params[:colony_id])
+    @cat = Cat.new(colony_id: params[:colony_id], name: '')
     authorize @cat
     @cat.save
     redirect_to cat_build_path(:add_basic_info, cat_id: @cat.id)

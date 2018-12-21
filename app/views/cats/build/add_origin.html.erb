@@ -1,15 +1,13 @@
-<h1>New cat</h1>
-<p>Tell us a bit more about <%= @cat.name %></p>
+<h1><%= t('cats.wizard_origin_intro', cat: @cat.name) %></h1>
 
 
-<p>Was <%= @cat.name %> abandoned?</p>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <%= react_component("Pagination", props: {nPages: 6, currentPage: 2, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 2, backText: t('shared.back'), nextText: t('shared.next'), backUrl: previous_wizard_path}, prerender: false) %>
   <%= render 'cat_errors' %>
   <div class="row">
     <div class="col-xs-12 col-lg-8">
       <div class="field">
-        <%= react_component("RadioGroup", props: {name: 'cat[colony]', items: [{label: 'Yes'}, {label: 'No'}], value: 0}, prerender: false) %>
+        <%= react_component("RadioGroup", props: {name: 'cat[colony]', items: [{label: t('shared.accept')}, {label: t('shared.reject')}], value: 0}, prerender: false) %>
       </div>
     </div>
     <div class="col-xs-12 col-lg-4">

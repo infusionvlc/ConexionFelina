@@ -79,18 +79,35 @@ es:
       article4: 'Respeta su espacio.'
 
   shared:
-    next: Continuar
-    save: Guardar
+    accept: 'Sí'
+    back: 'Anterior'
+    index_title: 'Los miembros de la colonia'
+    form_ errors: 'Parece que hay algún problema con lo que nos has dicho:'
+    next: 'Siguiente'
+    reject: 'No'
+    save: 'Guardar'
 
   cats:
+    abandoned_label: 'Abandonado/a hace'
+    diagnosed_label: 'Diagnosticado/a el'
+    sterilized: 'Esterilizado/a'
+    female: Hembra
+    male: Macho
     new: Nuevo gato
+    no_sufferings: '¡Todo está en orden! %{cat} nunca ha estado tan bien.'
     edit: Actualizar datos
     index_intro: 'Este es el lugar para ver toda la información sobre nuestros héroes y su salud.'
-    birthDate: 'Nacido aproximadamente el'
-    gender: 'Género:'
-    sterilized: 'Esterilizado:'
-    abandonedDate: 'Abandonado aproximadamente el'
-    document: 'Documento:'
+    index_title: 'Liga gatuna'
+
+    wizard_abandoned_intro: 'Sentimos mucho oír eso...'
+    wizard_basic_intro: 'Tenemos muchas ganas de conocer al nuevo superhéroe'
+    wizard_been_to_vet_intro: '¿Ya has ido al veterinario con %{cat}?'
+    wizard_bio_intro: 'Cuéntanos más sobre %{cat}'
+    wizard_origin_intro: '¿%{cat} fue abandonado/a?'
+    wizard_finish_intro: 'Muchas gracias. ¿Qué quieres hacer ahora?'
+    wizard_vet_intro: 'Info veterinaria'
+    wizard_repeat: 'Añadir otro gato'
+    wizard_profile: 'Ver el perfil de %{cat}'
 
   colonies:
     new: Nueva colonia

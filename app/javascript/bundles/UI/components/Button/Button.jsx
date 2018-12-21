@@ -10,9 +10,11 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
     this.redirectTo = this.redirectTo.bind(this);
-    this.state = {type: props.type, block: props.block,
-                  transparent: props.transparent, target: props.target,
-                  value: props.value, inverted: props.inverted}
+    this.state = {
+      type: props.type, block: props.block,
+      transparent: props.transparent, target: props.target,
+      value: props.value, inverted: props.inverted
+    }
   }
 
   redirectTo(event) {

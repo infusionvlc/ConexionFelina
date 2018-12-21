@@ -2,7 +2,7 @@
 <%= form_for(@cat) do |f| %>
   <% if @cat.errors.any? %>
     <div class="form-errors">
-        <h2>There are <%= pluralize(@cat.errors.count, "error") %> errors in your data:</h2>
+        <h2><%= t 'shared.form_errors' %></h2>
         <% @cat.errors.full_messages.each do |msg| %>
           <h4><%= msg %></h4>
         <% end %>
@@ -19,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= react_component("Switch", props: {name: 'cat[gender]', onLabel:"Male", offLabel:"Female", large: true}, prerender: false) %>
+    <%= react_component("Switch", props: {name: 'cat[gender]', onLabel: t('cats.male'), offLabel: t('cats.female'), large: true}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :avatar %><br>
@@ -28,10 +28,6 @@
   <div class="field">
     <%= f.label :abandoned_date %><br>
     <%= react_component("Input", props: {name: 'cat[abandoned_date]', type: 'date', size:'full-size'}, prerender: false) %>
-  </div>
-  <div class="field">
-    <%= f.label :colony %><br>
-    <%= react_component("Dropdown", props: {name: 'cat[colony_id]', items: Colony.all.collect {|u| [u.name, u.id]}}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :bio %><br>
@@ -43,7 +39,7 @@
   </div>
   <div class="field">
     <%= f.label :sterilized %><br>
-    <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [['Yes', :yes], ['No', :no]]}, prerender: false) %>
+    <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [[t('yes'), :yes], [t('no'), :no]]}, prerender: false) %>
   </div>
 
   <br/>

@@ -1,6 +1,6 @@
-<h2>Info veterinaria</h2>
+<h1><%= t('cats.wizard_vet_intro') %></h1>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <%= react_component("Pagination", props: {nPages: 6, currentPage: 5, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 5, backText: t('shared.back'), nextText: t('shared.next'), backUrl: previous_wizard_path}, prerender: false) %>
   <%= render 'cat_errors' %>
   <div class="field">
     <%= f.label :document %><br>
@@ -8,6 +8,6 @@
   </div>
   <div class="field">
     <%= f.label :sterilized %><br>
-    <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [['Yes', :yes], ['No', :no]]}, prerender: false) %>
+    <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [[t('shared.accept'), :yes], [t('shared.reject'), :no]]}, prerender: false) %>
   </div>
 <% end %>

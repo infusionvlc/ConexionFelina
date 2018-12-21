@@ -6,6 +6,8 @@ class Cat < ApplicationRecord
   enum gender: [:male, :female]
   enum sterilized: [:yes, :no]
 
+  before_save :caps_name
+
   has_one_attached :avatar
 
   has_many :sufferings
@@ -44,6 +46,9 @@ class Cat < ApplicationRecord
     saved_state && ( saved_state.include?('colony') || active?)
   end
 
+  def caps_name
+    self.name.capitalize!
+  end
 
   def birthday_date_must_be_in_the_past
     if birthday_date != nil

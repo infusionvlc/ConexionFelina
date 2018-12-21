@@ -1,10 +1,12 @@
 .pagination {
-    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .page {
+    display: inline-block;
     position: relative;
     width: 1.1rem;
     height: 1.1rem;

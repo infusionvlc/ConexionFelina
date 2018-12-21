@@ -1,6 +1,5 @@
 <% if @cat.errors.any? %>
     <div class="form-errors">
-        <h2>There are <%= pluralize(@cat.errors.count, "error") %> errors in your data:</h2>
         <% @cat.errors.full_messages.each do |msg| %>
           <h4><%= msg %></h4>
         <% end %>

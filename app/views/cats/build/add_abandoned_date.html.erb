@@ -1,6 +1,6 @@
-<h2>Sentimos mucho oír eso...</h2>
+<h1><%= t('cats.wizard_abandoned_intro') %></h1>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <%= react_component("Pagination", props: {nPages: 6, currentPage: 3, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 3, backText: t('shared.back'), nextText: t('shared.next'), backUrl: previous_wizard_path}, prerender: false) %>
   <%= render 'cat_errors' %>
   <div class="field">
     <%= f.label :abandoned_date %><br>

@@ -1,7 +1,6 @@
-<h1>New cat</h1>
-<p>We're willing to know more about this new hero<p>
+<h1><%= t('cats.wizard_basic_intro') %></h1>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <%= react_component("Pagination", props: {nPages: 6, currentPage: 1, backText: 'Back', nextText: 'Next'}, prerender: false) %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 1, backText: t('shared.back'), nextText: t('shared.next')}, prerender: false) %>
   <%= render 'cat_errors' %>
 
   <div class="field">

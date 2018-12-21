@@ -12,9 +12,6 @@ class Pagination extends React.Component {
 
         this.nextPage = this.nextPage.bind(this);
         this.previousPage = this.previousPage.bind(this);
-
-        console.log('nPages is: ' + this.state.nPages)
-        console.log('currentPage is: ' + this.state.currentPage)
     }
 
     nextPage() {
