@@ -1,7 +1,7 @@
 <h1>Los miembros de la colonia</h1>
 <div class="d-flex justify-content-between mb-4">
   <p><%= t 'cats.index_intro' %></p>
-  <%= react_component("Button", props: {type: 'success', value: t('cats.new'), target: new_cat_path}, prerender: false) %>
+  <!--%= react_component("Button", props: {type: 'success', value: t('cats.new'), target: new_cat_path}, prerender: false) %-->
 </div>
 <div class="card-columns">
   <% @cats.each do |cat| %>

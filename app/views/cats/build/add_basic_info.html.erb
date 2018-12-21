@@ -1,15 +1,8 @@
 <h1>New cat</h1>
 <p>We're willing to know more about this new hero<p>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-
-  <% if @cat.errors.any? %>
-    <div class="form-errors">
-        <h2>There are <%= pluralize(@cat.errors.count, "error") %> errors in your data:</h2>
-        <% @cat.errors.full_messages.each do |msg| %>
-          <h4><%= msg %></h4>
-        <% end %>
-    </div>
-  <% end %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 1, backText: 'Back', nextText: 'Next'}, prerender: false) %>
+  <%= render 'cat_errors' %>
 
   <div class="field">
     <%= f.label :name %><br>
@@ -27,6 +20,4 @@
     <%= f.label :avatar %><br>
     <%= f.file_field :avatar, class: 'input full-width' %>
   </div>
-  <br>
-  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
 <% end %>

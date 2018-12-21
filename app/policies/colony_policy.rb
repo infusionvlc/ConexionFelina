@@ -10,6 +10,10 @@ class ColonyPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    volunteer_or_admin? && member_of_team?
+  end
+
   def new?
     volunteer_or_admin?
   end

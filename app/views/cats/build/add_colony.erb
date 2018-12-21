@@ -1,9 +1,0 @@
-<h2>¿A qué colonia pertenece?</h2>
-<%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <div class="field">
-    <%= f.label :colony %><br>
-    <%= react_component("Dropdown", props: {name: 'cat[colony_id]', items: Colony.all.collect {|u| [u.name, u.id]}}, prerender: false) %>
-  </div>
-  <br>
-  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
-<% end %>

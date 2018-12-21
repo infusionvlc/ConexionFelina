@@ -1,8 +1,7 @@
 class Cats::BuildController < ApplicationController
   include Wicked::Wizard
 
-  steps :add_basic_info, :add_origin, :add_abandoned_date,
-        :add_colony, :has_been_to_vet, :add_vet_info, :add_illnesses,
+  steps :add_basic_info, :add_origin, :add_abandoned_date, :has_been_to_vet, :add_vet_info,
         :add_bio, :finish
 
   def show
@@ -20,6 +19,10 @@ class Cats::BuildController < ApplicationController
       else
         params[:cat][:gender] = :female
       end
+    end
+
+    if params[:cat][:sterilized]
+      params[:cat][:sterilized] = params[:cat][:sterilized].to_i
     end
 
     params[:cat][:saved_state] = step.to_s

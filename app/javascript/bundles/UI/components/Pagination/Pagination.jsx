@@ -41,28 +41,36 @@ class Pagination extends React.Component {
             }
         };
 
+        let backButton = null;
+
+        if (this.props.backUrl) {
+            backButton = <Button type='success' target={this.props.backUrl} value={this.props.backText}></Button>;
+        } else {
+            backButton = <Button type='success' onClick={this.previousPage} value={this.props.backText}></Button>;
+        }
+
         if (this.state.currentPage == 1) {
             return (
                 <div className='pagination'>
-                    <Button style={{ visibility: 'hidden' }} type='success' onClick={this.previousPage}>Back</Button>
+                    <Button style={{ visibility: 'hidden' }} type='success' onClick={this.previousPage} value={this.props.backText}></Button>
                     {pages}
-                    <Button type='success' onClick={this.nextPage}>Next</Button>
+                    <Button type='success' onClick={this.nextPage} value={this.props.nextText}></Button>
                 </div>
             )
         } else if (this.state.currentPage == this.state.nPages) {
             return (
                 <div className='pagination'>
-                    <Button type='success' onClick={this.previousPage}>Back</Button>
+                    {backButton}
                     {pages}
-                    <Button style={{ visibility: 'hidden' }} type='success' onClick={this.nextPage}>Next</Button>
+                    <Button style={{ visibility: 'hidden' }} type='success' onClick={this.nextPage} value={this.props.nextText}></Button>
                 </div>
             )
         } else {
             return (
                 <div className='pagination'>
-                    <Button type='success' onClick={this.previousPage}>Back</Button>
+                    {backButton}
                     {pages}
-                    <Button type='success' onClick={this.nextPage}>Next</Button>
+                    <Button type='success' onClick={this.nextPage} value={this.props.nextText}></Button>
                 </div>
             )
         }
@@ -73,10 +81,15 @@ export default Pagination;
 
 Pagination.propTypes = {
     nPages: PropTypes.number,
-    currentPage: PropTypes.number
+    currentPage: PropTypes.number,
+    backText: PropTypes.string,
+    nextText: PropTypes.string,
+    backUrl: PropTypes.string
 };
 
 Pagination.defaultProps = {
     nPages: 3,
-    currentPage: 1
+    currentPage: 1,
+    backText: 'Back',
+    nextText: 'Next'
 };

@@ -1,13 +1,13 @@
 <h2>Info veterinaria</h2>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 5, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= render 'cat_errors' %>
   <div class="field">
     <%= f.label :document %><br>
-    <%= f.text_field :document, class: 'form-control' %>
+    <%= react_component("Input", props: {name: 'cat[document]', size:'full-size'}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :sterilized %><br>
     <%= react_component("Dropdown", props: {name: 'cat[sterilized]', items: [['Yes', :yes], ['No', :no]]}, prerender: false) %>
   </div>
-  <br>
-  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
 <% end %>

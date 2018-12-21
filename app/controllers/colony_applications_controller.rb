@@ -10,8 +10,9 @@ class ColonyApplicationsController < ApplicationController
   end
 
   def create
-    @application = Colony.find(params[:colony_id]).applications.build(colonies_params)
+    @application = ColonyApplication.new(colonies_params)
     @application.user_id = current_user.id
+    @application.status = 'pending'
 
     if @application.save
       flash[:success] = "Hooray! We will send you an email when this team accepts your application."

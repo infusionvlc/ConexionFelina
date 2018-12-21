@@ -3,6 +3,8 @@ class CatsController < ApplicationController
 
   before_action :enforce_volunteer_colony
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   def show
     cat_id = params[:id]
     @cat = Cat.find(cat_id)
@@ -17,7 +19,7 @@ class CatsController < ApplicationController
   end
 
   def new
-    @cat = Cat.new(colony_id: 1)
+    @cat = Cat.new(colony_id: params[:colony_id])
     authorize @cat
     @cat.save
     redirect_to cat_build_path(:add_basic_info, cat_id: @cat.id)
@@ -81,8 +83,8 @@ class CatsController < ApplicationController
                                 sufferings_attributes: [:id, :illness_id, :cat_id, :diagnosis_date, :notes, :chronic, :status, :_destroy])
   end
 
-  def user_not_autorized
-    flash[:alert] = "You are not autorized to perform this action"
+  def user_not_authorized
+    flash[:warning] = "You are not autorized to perform this action"
     redirect_to cats_path
   end
 

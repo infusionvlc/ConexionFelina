@@ -4,7 +4,8 @@
 
 <p>Was <%= @cat.name %> abandoned?</p>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
-  <%= f.submit 'Siguiente', class:'btn btn-success' %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 2, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= render 'cat_errors' %>
   <div class="row">
     <div class="col-xs-12 col-lg-8">
       <div class="field">

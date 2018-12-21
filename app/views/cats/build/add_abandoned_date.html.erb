@@ -1,9 +1,10 @@
 <h2>Sentimos mucho oír eso...</h2>
 <%= form_for(@cat, :url => wizard_path, :method => :put) do |f| %>
+  <%= react_component("Pagination", props: {nPages: 6, currentPage: 3, backText: 'Back', nextText: 'Next', backUrl: previous_wizard_path}, prerender: false) %>
+  <%= render 'cat_errors' %>
   <div class="field">
     <%= f.label :abandoned_date %><br>
     <%= react_component("Input", props: {name: 'cat[abandoned_date]', type: 'date', size:'full-size'}, prerender: false) %>
   </div>
   <br>
-  <%= f.submit 'Siguiente', :class => 'btn btn-primary' %>
 <% end %>

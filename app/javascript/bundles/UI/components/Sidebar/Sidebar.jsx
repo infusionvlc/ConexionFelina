@@ -6,7 +6,7 @@ const Sidebar = ({ links, username }) => {
   return (
     <div className="sidebar">
       <div className="header">
-        <h1>Hi,<br />{username}</h1>
+        {username ? <h1>Hi,<br />{username}</h1> : <h1>Hi!</h1>}
         <a href="#" className="notification"></a>
       </div>
       <div className="links">
@@ -25,6 +25,7 @@ const Sidebar = ({ links, username }) => {
 export default Sidebar;
 
 Sidebar.propTypes = {
+  username: PropTypes.string,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -36,5 +37,6 @@ Sidebar.propTypes = {
 
 // // Specifies the default values for props:
 Sidebar.defaultProps = {
+  username: "",
   links: []
 };

@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   resources :cats do
     resources :build, controller: 'cats/build'
 
-
     member do
       get 'adopt'
       get 'new_sponsor'
