@@ -12,7 +12,7 @@ class ColonyApplicationsController < ApplicationController
   def create
     @application = ColonyApplication.new(colonies_params)
     @application.user_id = current_user.id
-    @application.status = 'pending'
+    @application.status = 0
 
     if @application.save
       flash[:success] = "Hooray! We will send you an email when this team accepts your application."
@@ -33,15 +33,15 @@ class ColonyApplicationsController < ApplicationController
 
   def approve
     @application = ColonyApplication.find(params[:id])
-    @application.update(status: 'approved')
-    @application.colony.team_members.create(user_id: @application.user.id, role: :basic)
+    @application.update(status: 1)
+    @application.colony.team_members.create(user_id: @application.user.id, role: 1)
     ColonyApplicationMailer.notify_approval(@application, @application.user).deliver
     redirect_to @application.colony
   end
 
   def dismiss
     @application = ColonyApplication.find(params[:id])
-    @application.update(status: 'dismissed')
+    @application.update(status: 2)
     redirect_to @application.colony
   end
 
