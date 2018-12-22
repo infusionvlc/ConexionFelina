@@ -39,6 +39,12 @@ class ColonyApplicationsController < ApplicationController
     redirect_to @application.colony
   end
 
+  def dismiss
+    @application = ColonyApplication.find(params[:id])
+    @application.update(status: 'dismissed')
+    redirect_to @application.colony
+  end
+
   private
 
   def colonies_params

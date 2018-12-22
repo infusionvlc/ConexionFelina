@@ -21,7 +21,7 @@
 <h2>Health</h2>
   <% if @cat.sufferings.count > 0 %>
     <% @cat.sufferings.each do |condition| %>
-        <%= react_component("Card", props: {title: condition.illness.name, body: t('cats.diagnosed_label') + condition.diagnosis_date.to_s, footerLink: suffering_path(condition), footer: t('shared.review')}, class:'card', prerender: false) %>
+        <%= react_component("Card", props: {title: condition.illness.name, body: t('cats.diagnosed_label') + condition.diagnosis_date.to_s, action1Link: suffering_path(condition), action1: t('shared.review')}, class:'card', prerender: false) %>
     <% end %>
   <% else %>
     <p><%= t('cats.no_sufferings', cat: @cat.name) %></p>

@@ -13,7 +13,7 @@
   <div class='ml-auto p-2'><%=react_component('Button', props: {type: 'success', value: t('tasks.new'), target: new_task_path })%></div>
 </div>
   <% @colony.tasks.each do | task | %>
-    <%= react_component("Card", props: {title: task.name, body: task.description, link: task_path(task), footer: t('tasks.assigned_to', user: current_user.username)}, class:'card', prerender: false) %>
+    <%= react_component("Card", props: {title: task.name, body: task.description, link: task_path(task), action1: t('tasks.assigned_to', user: current_user.username)}, class:'card', prerender: false) %>
   <% end %>
 <% end %>
 
@@ -23,7 +23,7 @@
   <div class='p-2'><%=react_component('Tag', props: {type: 'error', children: @applications.count })%></div>
 </div>
   <% @applications.each do | app | %>
-  <%= react_component("Card", props: {title: app.user.email, body: app.message, link: approve_colony_application_path(app), footer: t('applications.approve')}, class:'card', prerender: false) %>
+  <%= react_component("Card", props: {title: app.user.email, body: app.message, action1Link: approve_colony_application_path(app), action1: t('applications.approve'), action2Link: dismiss_colony_application_path(app), action2: t('applications.dismiss')}, class:'card', prerender: false) %>
   <% end %>
 <% end %>
 
@@ -36,7 +36,7 @@
 <% if @cats.count > 0 %>
   <div class="card-columns">
     <% @cats.each do |cat| %>
-    <%= react_component('Card', props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: t('shared.manage')}, class:'card', prerender: false) %>
+    <%= react_component('Card', props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), action1: t('shared.manage')}, class:'card', prerender: false) %>
     <% end %>
   </div>
 <% end %>

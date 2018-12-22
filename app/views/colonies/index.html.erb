@@ -6,11 +6,11 @@
 <div class="card-columns">
 <% @colonies.each do | colony | %>
   <% if policy(colony).join? %>
-    <%= react_component("Card", props: {title: colony.name, link: join_colony_path(colony), image: 'colony_icon.png', footer: t('colonies.join')}, class:'card', prerender: false) %>
+    <%= react_component("Card", props: {title: colony.name, link: join_colony_path(colony), image: 'colony_icon.png', action1: t('colonies.join')}, class:'card', prerender: false) %>
   <% elsif policy(colony).manage? %>
-    <%= react_component("Card", props: {title: colony.name, link: colony_path(colony), image: 'colony_icon.png', footer: t('shared.manage')}, class:'card', prerender: false) %>
+    <%= react_component("Card", props: {title: colony.name, link: colony_path(colony), image: 'colony_icon.png', action1: t('shared.manage')}, class:'card', prerender: false) %>
   <% else %>
-    <%= react_component("Card", props: {title: colony.name, image: 'colony_icon.png', footer: t('colonies.application_sent')}, class:'card', prerender: false) %>
+    <%= react_component("Card", props: {title: colony.name, image: 'colony_icon.png', action1: t('colonies.application_sent')}, class:'card', prerender: false) %>
   <% end %>
 <% end %>
 </div>

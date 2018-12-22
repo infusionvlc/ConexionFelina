@@ -13,7 +13,7 @@
 		</div>
 		<div class="card-columns">
 			<% Cat.all.where(saved_state: 'active').each do |cat| %>
-				<%= react_component("Card", props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: 'Manage'}, class:'card', prerender: false) %>
+				<%= react_component("Card", props: {title: cat.name, image: avatar_tag(cat), class:'card', prerender: false) %>
 			<% end %>
 		</div>
 	</div>
