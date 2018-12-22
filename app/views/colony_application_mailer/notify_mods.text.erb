@@ -1,12 +1,12 @@
-There's a new application for joining <%= @colony.name %> colony
+<%= t('mailers.colony_application.notify_mods.title', colony: @colony.name) %>
 
-A new volunteer has just applied for joining <%= @colony.name %> and left this message:
+<%= t('mailers.colony_application.notify_mods.intro', colony: @colony.name) %>
 
-"<%= @msg %>"
+<%= @msg %>
 
 
-Click on the following link to approve this new member on your team:
+<%= t('mailers.colony_application.notify_mods.body') %>
 
 <%= link_to approve_colony_application_url(@app) do %>
-   Approve application
+  <%= t('applications.approve') %>
 <% end %>

@@ -90,7 +90,7 @@ class CatsController < ApplicationController
   end
 
   def user_not_authorized
-    flash[:warning] = "You are not autorized to perform this action"
+    flash[:warning] = t('flash.shared')
     redirect_to colonies_path
   end
 

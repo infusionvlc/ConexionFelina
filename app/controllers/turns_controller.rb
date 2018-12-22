@@ -40,8 +40,8 @@ class TurnsController < ApplicationController
 
   private
 
-  def user_not_autorized
-    flash[:alert] = 'You are not autorized to perform this action'
+  def user_not_authorized
+    flash[:warning] = t('flash.shared')
     redirect_to turns_path
   end
 

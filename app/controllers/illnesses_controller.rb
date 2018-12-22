@@ -50,7 +50,7 @@ class IllnessesController < ApplicationController
     end
 
     def user_not_authorized
-      flash[:alert] = "You are not autorized to perform this action"
+      flash[:warning] = t('flash.shared')
       redirect_to illnesses_path
     end
 end

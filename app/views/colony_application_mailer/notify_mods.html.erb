@@ -1,17 +1,13 @@
-<h1>There's a new application for joining <%= @colony.name %> colony</h1>
+<h1><%= t('mailers.colony_application.notify_mods.title', colony: @colony.name) %></h1>
 
-<p>
-  A new volunteer has just applied for joining <%= @colony.name %> and left this message:
-</p>
+<p><%= t('mailers.colony_application.notify_mods.intro', colony: @colony.name) %></p>
 
 <p>
   <%= @msg %>
 </p>
 
-<p>
-  Click on the following link to approve this new member on your team:
-</p>
+<p><%= t('mailers.colony_application.notify_mods.body') %></p>
 
 <%= link_to approve_colony_application_url(@app) do %>
-   Approve application
+  <%= t('applications.approve') %>
 <% end %>

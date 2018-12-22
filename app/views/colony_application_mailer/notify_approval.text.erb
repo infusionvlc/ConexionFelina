@@ -1,7 +1,7 @@
-You have successfully joined <%= @colony.name %> colony
+<%= t('mailers.colony_application.approval.title', colony: @colony.name) %>
 
-Click on the following link to visit the colony dashboard:
+<%= t('mailers.colony_application.approval.body') %>
 
 <%= link_to colony_url(@colony) do %>
-   Go!
+  <%= t('shared.go') %>
 <% end %>

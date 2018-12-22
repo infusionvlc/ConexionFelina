@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def enforce_volunteer_colony
     current_path = request.original_url
     if current_user&.role == 'volunteer' && current_user&.colonies.count == 0
-      flash[:warning] = "You must join a colony first!"
+      flash[:warning] = t('flash.colonies')
       redirect_to colonies_path
     end
   end

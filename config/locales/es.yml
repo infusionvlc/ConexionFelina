@@ -86,11 +86,16 @@ es:
       article3: 'Los amigos de Covi siguen una alimentación equilibrada y controlada por los voluntarios para mantenerse en forma antes de cada misión. Es muy importante que no les des nada de comer para que sigan así de fuertes y poderosos.'
       article4: 'Respeta su espacio.'
 
+  flash:
+    colonies: Debes formar parte de alguna colonia para hacer eso.
+    shared: Parece que no estás autorizado/a para hacer eso.
+
   shared:
     accept: 'Sí'
     back: 'Anterior'
     index_title: 'Los miembros de la colonia'
     form_ errors: 'Parece que hay algún problema con lo que nos has dicho:'
+    go: '¡Vamos!'
     manage: 'Ver'
     next: 'Siguiente'
     reject: 'No'
@@ -182,6 +187,17 @@ es:
         restrict_dependent_destroy:
           has_one: No se puede eliminar el registro porque existe un %{record} dependiente
           has_many: No se puede eliminar el registro porque existen %{record} dependientes
+
+  mailers:
+    colony_application:
+      approval:
+        title: '🎉 Acaban de aceptarte en el equipo de %{colony}'
+        body: 'Click on the following link to visit the colony dashboard:'
+      notify_mods:
+        title: 'There's a new application for joining %{colony} colony'
+        body: 'Click on the following link to approve this new member on your team:'
+        intro: 'A new volunteer has just applied for joining %{colony} and left this message:'
+
   date:
     abbr_day_names:
     - dom
