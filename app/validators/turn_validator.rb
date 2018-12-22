@@ -6,7 +6,7 @@ class TurnValidator < ActiveModel::Validator
     dates_exists = !start_date.nil? && !end_date.nil?
 
     if dates_exists && record.start_date > record.end_date
-      record.errors[:start_date] << t('errors.turns.dates')
+      record.errors[:start_date] << I18n.t('errors.turns.dates')
     end
   end
 end

@@ -59,14 +59,14 @@ class Cat < ApplicationRecord
   def birthday_date_must_be_in_the_past
     if birthday_date != nil
       if birthday_date > Date.today
-        errors.add(:birthday_date, t('errors.shared.date_past'))
+        errors.add(:birthday_date, I18n.t('errors.shared.date_past'))
       end
     end
   end
 
   def abandoned_date_must_be_plausible
-    if abandoned_date < birthday_date
-      errors.add(:abandoned_date, t('errors.cats.dates'))
+    if abandoned_date && birthday_date && abandoned_date < birthday_date
+      errors.add(:abandoned_date, I18n.t('errors.cats.dates'))
     end
   end
 
