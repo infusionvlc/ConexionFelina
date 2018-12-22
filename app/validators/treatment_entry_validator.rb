@@ -3,7 +3,7 @@ class TreatmentEntryValidator < ActiveModel::Validator
 
   def validate(record)
     if !record.date.nil? && record.date > Date.today
-      record.errors[:date] << " date must be in the past"
+      record.errors[:date] << t('errors.shared.date_past')
     end
   end
 end

@@ -182,21 +182,30 @@ es:
           approved: Aprobada
           dismissed: Rechazada
     errors:
+      cats:
+        dates: 'La fecha de abandono no puede ser anterior al nacimiento del gato.'
       messages:
         record_invalid: "La validación falló: %{errors}"
         restrict_dependent_destroy:
-          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
-          has_many: No se puede eliminar el registro porque existen %{record} dependientes
+          has_one: 'No se puede eliminar porque existe un %{record} dependiente.'
+          has_many: 'No se puede eliminar porque existen %{record} dependientes.'
+      shared:
+        date_past: 'La fecha debe ser anterior al día actual.'
+        date_not_nil: 'Debe indicarse una fecha.'
+      sufferings:
+        dischargement_not_nil: 'Debe indicarse una fecha de alta si el gato ya está sano.'
+      turns:
+        dates: 'La fecha de fin debe ser posterior a la de inicio.'
 
   mailers:
     colony_application:
       approval:
         title: '🎉 Acaban de aceptarte en el equipo de %{colony}'
-        body: 'Click on the following link to visit the colony dashboard:'
+        body: 'Haz click en este enlace para ver el panel de la colonia:'
       notify_mods:
-        title: 'There's a new application for joining %{colony} colony'
-        body: 'Click on the following link to approve this new member on your team:'
-        intro: 'A new volunteer has just applied for joining %{colony} and left this message:'
+        title: "😺 Hay una nueva solicitud para unirse a la colonia de %{colony}"
+        body: 'Haz click en este enlace para aceptar la solicitud:'
+        intro: 'Una nueva persona acaba de solicitar unirse a la colonia de %{colony} y ha escrito este mensaje:'
 
   date:
     abbr_day_names:

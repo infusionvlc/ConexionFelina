@@ -3,13 +3,13 @@ class PosessionValidator < ActiveModel::Validator
     date = record.date
 
     if date.nil?
-      record.errors[:date] << 'Possesion date is nil'
+      record.errors[:date] << t('errors.shared.date_not_nil')
     end
 
     dates_exists = !date.nil?
 
     if dates_exists && record.date >= Date.today
-      record.errors[:date] << 'Today must be later than the date'
+      record.errors[:date] << t('errors.shared.date_past')
     end
   end
 end
