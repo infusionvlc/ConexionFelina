@@ -12,6 +12,7 @@ class CatsController < ApplicationController
 
   def index
     @cats = []
+    authorize Cat.first
     Cat.where(saved_state: 'active').each do |cat|
       if cat.colony.team_members.exists?(user_id: current_user.id)
         @cats << cat
@@ -90,7 +91,7 @@ class CatsController < ApplicationController
 
   def user_not_authorized
     flash[:warning] = "You are not autorized to perform this action"
-    redirect_to cats_path
+    redirect_to colonies_path
   end
 
   def resolve_layout

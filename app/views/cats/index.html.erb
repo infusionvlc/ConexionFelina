@@ -5,6 +5,6 @@
 </div>
 <div class="card-columns">
   <% @cats.each do |cat| %>
-    <%= react_component("Card", props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: 'Manage'}, class:'card', prerender: false) %>
+    <%= react_component("Card", props: {title: cat.name, link: cat_path(cat), image: avatar_tag(cat), footer: t('shared.manage')}, class:'card', prerender: false) %>
   <% end %>
 </div>

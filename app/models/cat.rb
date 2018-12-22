@@ -24,6 +24,8 @@ class Cat < ApplicationRecord
 
   validate :birthday_date_must_be_in_the_past, :if => :active_or_basic_info?
 
+  validate :abandoned_date_must_be_plausible, if: :active_or_abandon?
+
   validates :name, length: { maximum: MAXIMUM_NAME_LENGTH }, :if => :active_or_basic_info?
   validates :bio,  length: { maximum: MAXIMUM_BIO_LENGTH }, :if => :active_or_bio?
 
@@ -36,6 +38,10 @@ class Cat < ApplicationRecord
 
   def active_or_basic_info?
     saved_state && (saved_state.include?('basic_info') || active?)
+  end
+
+  def active_or_abandon?
+    saved_state && (saved_state.include?('abandoned_date') || active?)
   end
 
   def active_or_bio?
@@ -53,8 +59,14 @@ class Cat < ApplicationRecord
   def birthday_date_must_be_in_the_past
     if birthday_date != nil
       if birthday_date > Date.today
-        errors.add(:expiration_date, "Birthdate must be in the past")
+        errors.add(:birthday_date, "Birthday date must be in the past")
       end
+    end
+  end
+
+  def abandoned_date_must_be_plausible
+    if abandoned_date < birthday_date
+      errors.add(:abandoned_date, "Abandon date must not be earlier than birthday")
     end
   end
 

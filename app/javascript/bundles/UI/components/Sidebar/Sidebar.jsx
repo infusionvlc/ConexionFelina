@@ -2,21 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './Sidebar.scss';
 
-const Sidebar = ({ links, username }) => {
+const Sidebar = ({ greeting, links, username, footer }) => {
   return (
     <div className="sidebar">
       <div className="header">
-        {username ? <h1>Hi,<br />{username}</h1> : <h1>Hi!</h1>}
-        <a href="#" className="notification"></a>
+        {username ? <span><h1>{greeting},<br />{username}!</h1> <a href="#" className="notification"></a></span> : <h1>{greeting}!</h1>}
       </div>
       <div className="links">
         {links.map(link => link.delete ?
           <a data-method="delete" href={link.url} rel="nofollow">{link.title}</a>
-        :
+          :
           <a href={link.url}>{link.title}</a>)}
       </div>
       <div className="footer">
-        <p>Conexión Felina<br />Made with ❤ by INFUSIÓN</p>
+        <p>{footer}</p>
       </div>
     </div>
   );
@@ -25,7 +24,9 @@ const Sidebar = ({ links, username }) => {
 export default Sidebar;
 
 Sidebar.propTypes = {
+  greeting: PropTypes.string,
   username: PropTypes.string,
+  footer: PropTypes.string,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -37,6 +38,7 @@ Sidebar.propTypes = {
 
 // // Specifies the default values for props:
 Sidebar.defaultProps = {
+  greeting: "Hi",
   username: "",
   links: []
 };

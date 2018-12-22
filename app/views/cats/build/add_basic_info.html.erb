@@ -13,7 +13,7 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= react_component("Switch", props: {name: 'cat[gender]', onLabel:"Male", offLabel:"Female", large: true}, prerender: false) %>
+    <%= react_component("Switch", props: {name: 'cat[gender]', onLabel:  t('activerecord.enums.cat.genders.male'), offLabel: t('activerecord.enums.cat.genders.female'), large: true}, prerender: false) %>
   </div>
   <div class="field">
     <%= f.label :avatar %><br>

@@ -14,7 +14,7 @@
   <body>
     <div class="card card-application">
       <div class="d-flex card-application-container">
-        <%= react_component("Sidebar", props: {links: sidebar_links, username: current_user&.username}, prerender: false) %>
+        <%= react_component("Sidebar", props: {greeting: random_greeting, links: sidebar_links, username: current_user&.username, footer: t('navbar.footer')}, prerender: false) %>
         <div class="app-container">
           <img src="/logo.svg" class="mini-logo float-right"/>
           <% flash.each do |key, value| %>

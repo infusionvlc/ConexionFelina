@@ -1,4 +1,12 @@
 es:
+  navbar:
+    home: 'Inicio'
+    cats: 'Gatos'
+    colonies: 'Colonias'
+    sign_in: 'Entrar'
+    sign_out: 'Salir'
+    sign_up: 'Únete'
+    footer: 'Hecho con ❤ por INFUSIÓN'
   landing:
     shared:
       default_button: 'Ir'
@@ -83,19 +91,21 @@ es:
     back: 'Anterior'
     index_title: 'Los miembros de la colonia'
     form_ errors: 'Parece que hay algún problema con lo que nos has dicho:'
+    manage: 'Ver'
     next: 'Siguiente'
     reject: 'No'
+    review: 'Revisar'
     save: 'Guardar'
 
   applications:
     title: 'Solicitudes'
+    approve: 'Aceptar'
+    dismiss: 'Rechazar'
 
   cats:
     abandoned_label: 'Abandonado/a hace'
-    diagnosed_label: 'Diagnosticado/a el'
+    diagnosed_label: 'Diagnosticado/a el '
     sterilized: 'Esterilizado/a'
-    female: Hembra
-    male: Macho
     new: Nuevo gato
     no_sufferings: '¡Todo está en orden! %{cat} nunca ha estado tan bien.'
     edit: Actualizar datos
@@ -114,16 +124,21 @@ es:
     wizard_profile: 'Ver el perfil de %{cat}'
 
   colonies:
+    application_sent: 'Solicitud enviada'
     new: Nueva colonia
     edit: Actualizar datos
     index_intro: 'Estos son los lugares donde nuestros héroes descansan y lo pasan bien.'
     index_title: 'Colonias'
+    join: 'Únete'
     join_title: 'Únete al equipo de %{colony}'
     new_title: 'Nueva colonia'
     title: 'Colonias'
 
   tasks:
+    assigned_to: 'Asignada a %{user}'
+    new: 'Nueva tarea'
     title: 'Tareas'
+
 
   users:
     sign_up: 'Crear un perfil'
@@ -149,6 +164,18 @@ es:
         name: Nombre
         bio: Historia
         location: Localización
+      colony_application:
+        message: Mensaje
+    enums:
+      cat:
+        genders:
+          male: Macho
+          female: Hembra
+      colony_application:
+        valid_statuses:
+          pending: Pendiente
+          approved: Aprobada
+          dismissed: Rechazada
     errors:
       messages:
         record_invalid: "La validación falló: %{errors}"

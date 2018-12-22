@@ -7,7 +7,7 @@ class CatPolicy < ApplicationPolicy
   end
 
   def index?
-    true
+    volunteer_or_admin?
   end
 
   def new?
