@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.8'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootstrap', '~> 4.1.0'
+gem 'bootstrap', '~> 4.3.0'
 gem 'jquery-rails'
 
 gem 'high_voltage'
