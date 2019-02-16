@@ -12,7 +12,9 @@ class CatsController < ApplicationController
 
   def index
     @cats = []
-    authorize Cat.first
+    if !Cat.first.nil? 
+      authorize Cat.first 
+    end
     Cat.where(saved_state: 'active').each do |cat|
       if cat.colony.team_members.exists?(user_id: current_user.id)
         @cats << cat

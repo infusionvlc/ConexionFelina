@@ -21,8 +21,8 @@ illnesses = Illness.create([
 
 #Colonies
 colonies = Colony.create([
-  {name: "Lorem ipsum dolor 1", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing", location_id: 1},
-  {name: "Lorem ipsum dolor 2", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing", location_id: 2},
+  {name: "Lorem ipsum dolor 1", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing"},
+  {name: "Lorem ipsum dolor 2", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing"},
 ])
 
 #Cats
