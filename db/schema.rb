@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 2018_12_17_190749) do
     t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "location_id"
     t.string "location"
   end
 
