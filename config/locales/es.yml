@@ -117,7 +117,8 @@ es:
     index_intro: 'Este es el lugar para ver toda la información sobre nuestros héroes y su salud.'
     index_title: 'Liga gatuna'
     title: 'Gatos'
-
+    female: 'Hembra'
+    male: 'Macho'
     wizard_abandoned_intro: 'Sentimos mucho oír eso...'
     wizard_basic_intro: 'Tenemos muchas ganas de conocer al nuevo superhéroe'
     wizard_been_to_vet_intro: '¿Ya has ido al veterinario con %{cat}?'
@@ -143,6 +144,10 @@ es:
     assigned_to: 'Asignada a %{user}'
     new: 'Nueva tarea'
     title: 'Tareas'
+    create: 'Crear tarea'
+    edit: 'Editar tarea'
+    assign_to: 'Asignar'
+    delete: 'Borrar tarea'
 
 
   users:

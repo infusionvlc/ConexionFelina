@@ -25,6 +25,7 @@ default: &default
 development:
   <<: *default
   database: conexion_felina_development
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -34,7 +35,6 @@ development:
 
   # The password associated with the postgres role (username).
   password: postgres
-
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.

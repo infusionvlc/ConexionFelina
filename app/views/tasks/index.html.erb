@@ -1,10 +1,15 @@
 <h1>Tasks</h1>
 
-<%= link_to "create", new_task_path  %> </br></br>
-
+<%=react_component('Button', props: {type: 'success', value: t('tasks.new'), target: new_task_path  })%>
 <% @tasks.each do | task | %>
-  <%= link_to task.name, task_path( task.id ) %><br/>
-  <%= task.description %>
-  <%= link_to "Assign this task to a user", new_task_user_wizard_path(task_id: task.id) %><br/>
-  <hr/>
+  <%= react_component("Card", 
+    props: {
+      title: task.name,
+      body: task.description, 
+      link: new_task_user_wizard_path(task_id: task.id),
+      action1: t('tasks.assign_to')
+    }, 
+    class:'card',
+    prerender: false)
+   %> 
 <% end %>

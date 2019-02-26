@@ -1,3 +1,16 @@
 <h1>edit Task</h1>
 
-<%= render 'form' %>
+<%= form_for (@task) do |f| %>
+ 
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= react_component("Input", props: {name: 'task[name]', size:'full-size', value: @task.name}, prerender: false) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= react_component("TextArea", props: {name: 'task[description]', full: true, rows: 10, value: @task.description}, prerender: false) %>
+    </div>
+
+    <%= react_component("Button", props: {type: 'success', value: t('tasks.edit')},  prerender: false) %>
+<% end %>
