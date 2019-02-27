@@ -1,8 +1,4 @@
 <h1><%= @task.name %></h1>
 <p><%= @task.description %></p>
-
-<%= link_to "edit", edit_task_path(@task.id) %><br/>
-<%= link_to "destroy", task_path(@task.id), method: :delete %>
-
 <%=react_component('Button', props: {type: 'success', value: t('tasks.edit'), target: edit_task_path(@task.id)  })%>
 <%=react_component('Button', props: {type: 'success', value: t('tasks.delete'), target: task_path(@task.id), method: :delete  })%>
