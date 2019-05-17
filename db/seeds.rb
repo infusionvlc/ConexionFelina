@@ -65,8 +65,8 @@ posessions = Posession.create([
   {date: "1-1-2014", user_id: 3, product_id: 2},
 ])
 
-#Sponsors
-sponsors = Sponsor.create([
+#Sponsorships
+sponsorships = Sponsorship.create([
   {start_date: "1-1-2018", last_payment_date: Date.today, amount: 5, renovate: true, user_id: 3, cat_id: 3},
   {start_date: "1-1-2018", last_payment_date: Date.today, amount: 5, renovate: true, user_id: 3, cat_id: 4},
 ])

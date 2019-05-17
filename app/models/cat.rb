@@ -10,8 +10,8 @@ class Cat < ApplicationRecord
   has_many :illnesses, through: :sufferings
   belongs_to :colony
   has_one :adoption
-  has_many :sponsors
-  has_many :users, through: :sponsors
+  has_many :sponsorships
+  has_many :users, through: :sponsorships
 
   accepts_nested_attributes_for :sufferings, reject_if: :all_blank, allow_destroy: true
 

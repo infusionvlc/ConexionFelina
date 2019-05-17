@@ -16,8 +16,8 @@ class User < ApplicationRecord
 	has_many :donations
 	has_many :adoptions
 	has_many :cats, through: :adoptions
-	has_many :sponsors
-	has_many :cats, through: :sponsors
+	has_many :sponsorships
+	has_many :cats, through: :sponsorships
 
 	validates :username, :email, :role, :purrs, presence: true
  	validates :username, length: { maximum: MAXIMUM_USERNAME_LENGTH }

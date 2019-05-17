@@ -34,11 +34,11 @@ class CatPolicy < ApplicationPolicy
     @user
   end
 
-  def new_sponsor?
+  def new_sponsorship?
     @user
   end
 
-  def sponsor?
+  def sponsorship?
     @user
   end
 

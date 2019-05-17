@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
     member do
       get 'adopt'
-      get 'new_sponsor'
-      post 'sponsor'
+      get 'new_sponsorship'
+      post 'sponsorship'
     end
   end
 

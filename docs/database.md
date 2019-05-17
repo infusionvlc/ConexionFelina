@@ -68,7 +68,7 @@ from a cat.
 ## Adoption
 An Adoption holds the date a [cat](#cat) was adopted by a [user](#user).
 
-## Sponsor (sponsorship)
+## Sponsorship
 Any [user](#user) is able to sponsor a [cat](#cat) by making a monthly donation
 to support a [**colony**](#colony). Volunteers will send them back updates and photos about their
 sponsored cat's life.

@@ -1,4 +1,4 @@
-class Sponsor < ApplicationRecord
+class Sponsorship < ApplicationRecord
 
   MINIMUM_AMOUNT_VALUE = 0
 
@@ -11,5 +11,5 @@ class Sponsor < ApplicationRecord
   validates_inclusion_of :renovate, in: [true, false]
 
   validates :amount, numericality: {greater_than: MINIMUM_AMOUNT_VALUE}
-  validates_with SponsorValidator
+  validates_with SponsorshipValidator
 end
