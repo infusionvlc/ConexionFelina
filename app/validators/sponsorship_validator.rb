@@ -1,4 +1,4 @@
-class SponsorValidator < ActiveModel::Validator
+class SponsorshipValidator < ActiveModel::Validator
   MINIMUM_AMOUNT_VALUE = 0
 
   def validate(record)
