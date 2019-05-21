@@ -37,7 +37,7 @@ gem 'jquery-rails'
 
 gem 'high_voltage'
 
-gem 'devise'
+gem 'devise', '>= 4.6.0'
 gem 'pundit'
 
 gem 'cocoon'
